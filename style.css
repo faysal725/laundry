@@ -1,0 +1,147 @@
+/* CSS Variables */
+:root {
+  --color-black: #24262D;
+
+  --color-primary-50: #EDFCF4;
+  --color-primary-100: #D4F7E3;
+  --color-primary-200: #ADEDCC;
+  --color-primary-300: #77DEAE;
+  --color-primary-400: #42C88E;
+  --color-primary-500: #1CAD73;
+  --color-primary-600: #108B5D;
+  --color-primary-700: #0D6F4C;
+  --color-primary-800: #0D583E;
+  --color-primary-900: #0B4935;
+  --color-primary-950: #05291E;
+
+  --color-primary2-50: #F1F7FE;
+  --color-primary2-100: #E3EEFB;
+  --color-primary2-200: #C0DDF7;
+  --color-primary2-300: #89C1F0;
+  --color-primary2-400: #4AA1E6;
+  --color-primary2-500: #2285D5;
+  --color-primary2-600: #1469B5;
+  --color-primary2-700: #125492;
+  --color-primary2-800: #134879;
+  --color-primary2-900: #153D65;
+  --color-primary2-950: #0E2743;
+
+  --color-status-50: #F6F7F9;
+  --color-gray-100: #EDEEF1;
+  --color-gray-200: #D7DAE0;
+  --color-gray-300: #B3BAC6;
+  --color-gray-400: #8A94A6;
+  --color-gray-500: #687387;
+  --color-gray-600: #565F73;
+  --color-gray-700: #464D5E;
+  --color-gray-800: #3D434F;
+  --color-gray-900: #363A44;
+
+  --color-status-success: #F6F7F9;
+  --color-status-warning: #EDEEF1;
+  --color-status-danger: #D7DAE0;
+  --color-status-info: #B3BAC6;
+
+  --color-driver-50: #F6F4FE;
+  --color-driver-100: #EDEBFC;
+  --color-driver-200: #DFDBF9;
+  --color-driver-300: #C7BDF5;
+  --color-driver-400: #AA98ED;
+  --color-driver-500: #8E6DE5;
+  --color-driver-600: #8154DA;
+  --color-driver-700: #6C3CC5;
+  --color-driver-800: #5B32A5;
+  --color-driver-900: #4C2B87;
+  --color-driver-950: #2F1A5B;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Base font setup */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+.menu_link {
+  color: var(--color-black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menu_link_active {
+  color: var(--primary2-600, #1469B5);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  /* 150% */
+}
+
+
+/* sidebar code  */
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.main-content {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+/* scrollbar section  */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* for Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+.scrollbar-style::-webkit-scrollbar {
+  height: 2px;
+  width: 4px;
+}
+
+/* Track */
+.scrollbar-style::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(187, 187, 187);
+  border-radius: 10px;
+}
+
+/* Handle */
+.scrollbar-style::-webkit-scrollbar-thumb {
+  background: rgb(187, 187, 187);
+  border-radius: 90px;
+
+}
+
+.scrollbar-style::-webkit-scrollbar-corner {}
+
+/* Handle on hover */
+.scrollbar-style::-webkit-scrollbar-thumb:hover {
+  background: rgb(187, 187, 187)
+}
