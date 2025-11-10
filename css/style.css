@@ -160,3 +160,14 @@ body {
 .scrollbar-style::-webkit-scrollbar-thumb:hover {
   background: rgb(187, 187, 187)
 }
+
+
+/* manage-address */
+
+.rs-manage-addresses-section {
+  background: var(--color-neutral-50);
+}
+
+.rs-add-new-address-btn {
+  background: var(--color-mint-600) linear-gradient(4deg, rgba(232, 251, 244, 0.3) 0%, rgba(26, 112, 88, 0.3) 100%);
+}
