@@ -84,23 +84,28 @@ body {
 
 
 .menu_link {
-  color: var(--color-black);
-  font-size: 1rem;
+  color: var(--color-neutral-700);
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 100%;
   text-transform: capitalize;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_link:hover {
+  color: var(--color-mint-600, #32D3A0);
 }
 
 .menu_link_active {
-  color: var(--primary2-600, #1469B5);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
+  color: var(--color-mint-600, #32D3A0);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 100%;
   /* 150% */
 }
 
@@ -159,4 +164,92 @@ body {
 /* Handle on hover */
 .scrollbar-style::-webkit-scrollbar-thumb:hover {
   background: rgb(187, 187, 187)
+}
+
+
+
+
+
+/* buttons */
+.btn_solid {
+  border-radius: 12px;
+  /* border: 1px solid transparent; */
+  outline: 2px solid transparent;
+  padding: 14px 20px;
+  width: fit-content;
+  height: fit-content;
+  background: linear-gradient(1deg, var(--color-mint-300) 0%, var(--color-mint-700) 100%);
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn_solid:hover img {
+  transform: translateX(5px);
+
+
+  /* color: var(--color-mint-600, #32D3A0);
+  background: white;
+  outline: 1px solid var(--color-mint-600, #32D3A0); */
+}
+
+.btn_solid p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}
+
+.btn_solid img {
+  transition: all 0.3s ease-in-out;
+  height: 15px;
+  width: 15px;
+}
+
+
+
+
+.btn_outline {
+  border-radius: 12px;
+  border: 1.50px solid var(--color-mint-600);
+
+  padding: 14px 20px;
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  color: var(--color-mint-600);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn_outline:hover img {
+  transform: translateX(5px);
+
+
+  /* color: var(--color-mint-600, #32D3A0);
+  background: white;
+  outline: 1px solid var(--color-mint-600, #32D3A0); */
+}
+
+.btn_outline p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}
+
+.btn_outline img {
+  transition: all 0.3s ease-in-out;
+  height: 15px;
+  width: 15px;
 }
