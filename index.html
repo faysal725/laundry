@@ -34,7 +34,7 @@
 
     <!-- navbar -->
     <nav class="bg-white sticky top-0 py-4 md:py-6 z-40">
-        <section class="max-w-2lg mx-auto px-4 xl:px-0 flex items-center justify-between">
+        <section class="max-w-2lg mx-auto px-4 xl-1:px-0 flex items-center justify-between">
             <a href="#" class="w-auto h-6 md:w-auto md:h-8 inline-block">
                 <img src="./assets/logo/logo-green.png" alt="" class="h-full w-full">
 
@@ -151,18 +151,17 @@
 
     </main>
 
-    <!-- <img src="./assets/images/footer/footer-bg.png" alt=""> -->
 
     <!-- footer section  -->
     <footer class=" bg-no-repeat bg-cover" style="background-image: url('./assets/images/footer/footer-bg.png');">
 
         <!-- top footer  -->
         <div class="relative overflow-hidden">
-            <div class="max-w-2lg mx-auto pt-[60px] relative z-10">
+            <div class="max-w-2lg mx-auto pt-[60px] relative z-10 px-4 xl-1:px-0">
 
 
                 <!-- links section -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-[65px]">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-[65px] relative z-10">
                     <!-- logo section -->
                     <div class="space-y-[30px]">
                         <img src="./assets/logo/logo-white.png" alt="" class=" w-auto h-28 md:w-auto md:h-[51.58px]">
@@ -238,19 +237,23 @@
 
 
                             <div class="flex justify-start items-center gap-[10px]">
-                                <button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
                                     <img src="./assets/icons/facebook.svg" alt="">
                                 </button>
-                                <button>
-                                    <img src="./assets/icons/facebook.svg" alt="">
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/twitter.svg" alt="">
 
                                 </button>
-                                <button>
-                                    <img src="./assets/icons/facebook.svg" alt="">
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/youtube.svg" alt="">
 
                                 </button>
-                                <button>
-                                    <img src="./assets/icons/facebook.svg" alt="">
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/pinterest.svg" alt="">
 
                                 </button>
                             </div>
@@ -260,65 +263,36 @@
                 </div>
 
 
-
-                <div class="pt-[50px] pb-[30px]">
-                    asdfasdfsdf
+                <div class="relative z-0 pb-[30px] pt-[50px]">
+                    <img src="./assets/images/footer/laundry.svg" alt="">
                 </div>
+
+
+                <div class="flex items-center justify-between py-6 border-t border-white/10 relative z-10">
+                    <p class="text-sm text-white/40 font-normal">Professional laundry services you can trust.</p>
+                    <p class="text-sm text-white/40 font-normal">ⓒ2025 Laundry. All Rights Reserved.</p>
+                </div>
+
+
+
+
+                <!-- glows -->
+                <div class="w-[400px] h-[400px] absolute -top-[70%] left-[10%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+                <div
+                    class="w-[400px] h-[400px] absolute -bottom-[50%] left-[30%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+
             </div>
 
-
-            <!-- circle -->
-            <!-- <div class="absolute top-0 right-0 h-full w-full flex justify-center items-center z-0">
-                <div class="w-[511px] h-[511px]  bg-blue-600 rounded-full blur-[350px]"></div>
-            </div> -->
         </div>
-        <!-- <div class="bg-white py-2">
-            <p class="self-stretch text-center justify-start text-slate-800 text-xs font-normal leading-tight">
-                © 2023 All rights reserved. Developed by Razinsoft</p>
-        </div> -->
     </footer>
 
 
-    <!-- modal -->
-    <!-- create industry -->
-    <section id="role" class="modal_container">
-
-        <!-- backdrop -->
-        <div onclick="toggleModal('role')" class="modal_backdrop"></div>
-
-        <!-- modal content -->
-        <div class="modal_content">
-            <form class="flex flex-col gap-5 w-full lg:w-[485px]  relative z-10">
-
-                <p
-                    class="text-center justify-start text-gray-900 text-xl md:text-2xl font-bold font-['Poppins'] leading-loose">
-                    Create
-                    New Role </p>
-
-
-                <label for="industry_name" class="space-y-2">
-                    <p class="text-black text-base md:text-lg font-medium font-['Poppins'] leading-relaxed">Role
-                        Name</p>
-                    <input type="text" name="industry_name" id="industry_name"
-                        class="h-12 md:h-14 p-4 bg-white rounded-lg outline outline-1 outline-offset-[-1px] outline-gray-300 w-full placeholder:text-slate-500 text-sm md:text-lg "
-                        placeholder="Enter Role name">
-                </label>
-
-
-                <button class="h-12 px-6 py-3.5 bg-cyan-700 rounded inline-flex justify-center items-center gap-2">
-                    <p
-                        class="text-center justify-start text-white text-lg font-medium font-['Poppins'] leading-relaxed">
-                        Create</p>
-                </button>
-            </form>
-
-        </div>
-    </section>
 
 
     <script src="./js/accordion.js"></script>
     <script src="./js/sidebar.js"></script>
-    <script src="./js/modal.js"></script>
 </body>
 
 </html>
