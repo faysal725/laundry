@@ -27,6 +27,7 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/manage-address.css">
 
 
 </head>
@@ -34,8 +35,65 @@
 <body>
 
 
+
+    <!-- manage-address-modal -->
+    <section id="role" class="modal_container">
+
+        <!-- backdrop -->
+        <div onclick="toggleModal('role')" class="modal_backdrop"></div>
+
+        <!-- modal content -->
+        <div class="modal_content">
+            <form action="#" class="rs-manage-addresses-form">
+                <div class="flex justify-between items-center mb-[30px]">
+                    <h3 class="text-neutral-700 text-lg font-semibold">Add New Address</h3>
+                    <button type="button" onclick="toggleModal('role')"
+                        class="transition-transform duration-300 hover:rotate-90">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">Label</label>
+                    <input type="text" placeholder="Example : Home, Office ..."
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">Street Address</label>
+                    <input type="text" placeholder="123 Lovely Road, Apt 6B"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="flex gap-3 mb-4">
+                    <div class="w-[50%]">
+                        <label class="text-neutral-700 text-base font-medium">City</label>
+                        <input type="text" placeholder="New York"
+                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                    </div>
+                    <div class="w-[50%]">
+                        <label class="text-neutral-700 text-base font-medium">State</label>
+                        <input type="text" placeholder="NY"
+                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">ZIP Code</label>
+                    <input type="text" placeholder="10003"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="mb-[30px]">
+                    <label class="text-neutral-700 text-base font-medium">Phone Number</label>
+                    <input type="text" placeholder="+1 (555) 545-5421"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <button
+                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center leading-[48px] w-[100%] rounded-xl">
+                    Save Address
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- navbar -->
-    <nav class="bg-white sticky top-0 py-4 md:py-6 z-40">
+    <nav class="bg-white sticky top-0 py-4 md:py-6 z-40 shadow-md">
         <section class="max-w-2lg mx-auto px-4 xl:px-0 flex items-center justify-between">
             <a href="#" class="w-auto h-6 md:w-auto md:h-8 inline-block">
                 <img src="../assets/logo/logo-green.png" alt="" class="h-full w-full">
@@ -53,7 +111,7 @@
 
 
 
-            <div class="hidden lg:flex justify-cente items-center gap-4">
+            <div class="hidden lg:flex justify-center items-center gap-4">
                 <button class="btn_solid">
                     <p>Sign In</p>
 
@@ -119,28 +177,158 @@
         <section
             class="rs-breadcrumb-area bg-[#1A7058] h-[260px] w-full bg-[url('../assets/images/header/breadcrumb.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
             <div class="rs-breadcrumb-content">
-                <div class="rs-breadcrumb-top-content mb-[10px]">
+                <div class="rs-breadcrumb-top-content mb-[5px] sm:mb-[10px]">
                     <a href="#" class="text-lg text-white font-normal leading-[100%]">Dashboard / </a>
                     <a href="#" class="text-lg text-white font-normal leading-[100%]">Manage Address</a>
                 </div>
-                <h1 class="rs-breadcrumb-title text-4xl text-white font-semibold leading-[140%]">
+                <h1 class="rs-breadcrumb-title text-[30px] md:text-4xl text-white font-semibold leading-[140%]">
                     Manage Addresses
                 </h1>
             </div>
         </section>
 
         <!-- manage addresses area -->
-        <section class="rs-manage-addresses-section pt-[60px]">
+        <section class="rs-manage-addresses-section pt-[60px] pb-[80px] px-4 xl:px-0">
             <div class="rs-manage-addresses-area max-w-2lg mx-auto">
-                <button
-                    class="rs-add-new-address-btn bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[290px] rounded-xl">
+                <button onclick="toggleModal('role')"
+                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[190px] sm:w-[290px] rounded-xl">
                     <i class="fa-solid fa-plus mr-[8px]"></i>
                     Add New Address
                 </button>
-                <div class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px]">
-                    <div class="rs-manage-addresses-content">
-                        <div class="rs-manage-addresses-icon w-[56px] h-[56px] flex bg-mint-50 rounded-lg">
-                            <img src="../assets/icons/home-icon.svg" alt="" class="m-auto">
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/home-icon.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
+                        </div>
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Home</a>
+                                <span
+                                    class="text-mint-600 rounded-[25px] border-[1.5px] border-mint-200 flex gap-[4px] justify-center bg-mint-50 h-[24px] w-[78px] leading-[24px] text-xs font-normal">
+                                    <img class="h-[10px] w-[10px] mt-auto mb-auto" src="../assets/icons/star.svg"
+                                        alt="">
+                                    Default
+                                </span>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                123 Main Street, Apt 4B New York, NY 10001
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-edit-btn">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/location-green.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
+                        </div>
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Parent's House</a>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                789 Family Lane Brooklyn, NY 11201
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                Set as Default
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
+                                    alt="">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/city-icon.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
+                        </div>
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Office</a>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                Riverview Golden Street, Apt 8B New York, NY 10064
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                Set as Default
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
+                                    alt="">
+                                Delete
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -150,9 +338,8 @@
 
     <!-- footer section  -->
 
-
-
     <script src="../js/sidebar.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
