@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- accordion cdn  -->
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script src="../tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <nav class="bg-white sticky top-0 py-4 md:py-6 z-40">
+        <section class="max-w-2lg mx-auto px-4 xl:px-0 flex items-center justify-between">
+            <a href="#" class="w-auto h-6 md:w-auto md:h-8 inline-block">
+                <img src="../assets/logo/logo-green.png" alt="" class="h-full w-full">
+
+            </a>
+
+
+            <div class=" items-center justify-center gap-6 hidden lg:flex">
+                <a class="menu_link menu_link_active" href="#">Home</a>
+                <a class="menu_link" href="#Services">Services</a>
+                <a class="menu_link" href="#Services">Nearest Store</a>
+                <a class="menu_link" href="#FAQ">FAQ</a>
+                <a class="menu_link" href="#Contact">Contact</a>
+            </div>
+
+
+
+            <div class="hidden lg:flex justify-cente items-center gap-4">
+                <button class="btn_solid">
+                    <p>Sign In</p>
+
+                    <img src="../assets/icons/arrow-left.svg" alt="">
+                </button>
+
+                <button class="btn_outline">
+                    <p>Sign Up</p>
+                </button>
+            </div>
+
+
+            <!-- sidebar opening button  -->
+            <button
+                class="h-10 w-10 border border-primary2-600 rounded p-1 flex lg:hidden flex-col justify-around items-center  "
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-7 text-primary2-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="text-primary2-600" />
+                </svg>
+
+            </button>
+        </section>
+    </nav>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar fixed top-0 left-0 w-full h-full bg-gradient-to-tl from-mint-500 from-10% via-mint-500 via-30% to-aqua-500 to-90% text-white  z-50"
+        id="sidebar">
+        <div class="h-full w-full flex justify-center items-center flex-col relative">
+
+            <button
+                class="absolute top-6 right-6 border h-10 w-10 border-white rounded-lg flex justify-center items-center"
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <ul class="space-y-4 flex flex-col items-center">
+                <li onclick="toggleSidebar()">
+                    <a href="#" class="text-lg hover:text-blue-400 cursor-pointer">Home</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#pricing" class="text-lg hover:text-blue-400 cursor-pointer">Services</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#features" class="text-lg hover:text-blue-400 cursor-pointer">Nearest Store</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#services" class="text-lg hover:text-blue-400 cursor-pointer">FAQ</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#support" class="text-lg hover:text-blue-400 cursor-pointer">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <!-- breadcrumb -->
+        <section
+            class="rs-breadcrumb-area bg-[#1A7058] h-[260px] w-full bg-[url('../assets/images/header/breadcrumb.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
+            <div class="rs-breadcrumb-content">
+                <div class="rs-breadcrumb-top-content mb-[10px]">
+                    <a href="#" class="text-lg text-white font-normal leading-[100%]">Dashboard / </a>
+                    <a href="#" class="text-lg text-white font-normal leading-[100%]">Manage Address</a>
+                </div>
+                <h1 class="rs-breadcrumb-title text-4xl text-white font-semibold leading-[140%]">
+                    Manage Addresses
+                </h1>
+            </div>
+        </section>
+
+        <!-- manage addresses area -->
+        <section class="rs-manage-addresses-section pt-[60px]">
+            <div class="rs-manage-addresses-area max-w-2lg mx-auto">
+                <button
+                    class="rs-add-new-address-btn bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[290px] rounded-xl">
+                    <i class="fa-solid fa-plus mr-[8px]"></i>
+                    Add New Address
+                </button>
+                <div class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px]">
+                    <div class="rs-manage-addresses-content">
+                        <div class="rs-manage-addresses-icon w-[56px] h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/home-icon.svg" alt="" class="m-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section  -->
+
+
+
+    <script src="./js/sidebar.js"></script>
+</body>
+
+</html>
