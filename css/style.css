@@ -80,6 +80,7 @@ html {
 /* Base font setup */
 body {
   font-family: 'Inter', sans-serif;
+  background: rgba(249, 250, 251, 0.93);
 }
 
 
@@ -222,7 +223,6 @@ body {
   padding: 14px 20px;
   width: fit-content;
   height: fit-content;
-  background: white;
   color: var(--color-mint-600);
   text-transform: capitalize;
   display: flex;
@@ -415,4 +415,23 @@ body {
 .modal_container.active .modal_content {
   transform: scale(1);
   opacity: 1;
+}
+
+
+
+
+/* icon labels */
+.icon_labels {
+  border-radius: 12px;
+  width: 68px;
+  height: 68px;
+  background: var(--color-mint-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_labels img {
+  width: 24px;
+  height: 24px;
 }
