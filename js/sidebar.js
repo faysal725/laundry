@@ -1,6 +1,5 @@
-function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const mainContent = document.getElementById('main-content');
-      sidebar.classList.toggle('open');
-      mainContent.classList.toggle('ml-64');
-    }
+document.querySelectorAll(".select-dropdown li").forEach(li => {
+  li.onclick = () =>
+    document.querySelector(".select-dropdown > b").textContent =
+    li.querySelector("b").textContent;
+});

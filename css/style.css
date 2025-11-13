@@ -435,3 +435,20 @@ body {
   width: 24px;
   height: 24px;
 }
+
+/* select dropdown css */
+.select-dropdown:hover .select-dropdown-option {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.select-dropdown-option {
+  transform-origin: 0 0;
+  transform: scale(1, 0);
+}
+
+.select-dropdown-option li:hover {
+  background: var(--color-aqua-50);
+  border-radius: 8px;
+}
