@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/manage-address.css">
     <link rel="stylesheet" href="../css/order-details.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/favicon.png">
 
 
@@ -183,12 +184,12 @@
             <div class="rs-breadcrumb-content">
                 <h1
                     class="rs-breadcrumb-title mb-[5px] sm:mb-[10px] text-[26px] md:text-[30px]  md:text-4xl text-white font-semibold leading-[140%]">
-                    Order Details
+                    Checkout
                 </h1>
                 <div class="rs-breadcrumb-top-content">
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Dashboard / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">My Orders / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Order #2847</a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Home / </a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Cart / </a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Checkout</a>
                 </div>
             </div>
         </section>
@@ -196,142 +197,50 @@
         <!-- Order Details area -->
         <section class="rs-order-details-section pt-[60px] pb-[80px] px-4 xl:px-0 bg-neutral-50">
             <div class="rs-order-details-area max-w-2lg mx-auto flex flex-col lg:flex-row gap-[23.5px]">
-
                 <!-- Left Column -->
-                <div class="rs-order-details-left-area w-full lg:w-2/3 bg-white p-4 md:p-6 rounded-3xl">
-                    <div class="rs-order-details-content mb-[24px]">
-                        <div class="rs-order-details-content-top flex justify-between items-center mb-4">
-                            <h4 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%]">
-                                Order #ORD-2847
-                            </h4>
-                            <button
-                                class="flex text-center gap-1 text-xs text-neutral-700 font-medium w-[88px] h-[40px] justify-center items-center border-[1.5px] border-neutral-200 rounded-xl">
-                                <img class="w-3 h-3" src="../assets/icons/download-icon.svg" alt="">
-                                Invoice
-                            </button>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  w-[40px] h-[40px] flex items-center justify-center bg-mint-50 rounded-full relative">
-                                <img class="w-[18px] h-[18px]" src="../assets/icons/check-green.svg" alt="">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-700 font-medium leading-[100%] mb-[10px]">
-                                    Order Placed
-                                </h5>
-                                <p class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%] italic">Your
-                                    order has
-                                    been confirmed</p>
-                                <span class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Oct 24,
-                                    2025 - 9:30
-                                    AM</span>
+                <div class="rs-checkout-left-area w-full lg:w-2/3">
+                    <div class="rs-delivery-address-area bg-white p-6 rounded-3xl mb-6">
+                        <div class="rs-delivery-address-content">
+                            <h3
+                                class="rs-delivery-address-title text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
+                                Delivery Address
+                            </h3>
+                            <div
+                                class="rs-delivery-address-box active border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] flex gap-[7.5px] items-center mb-[15px]">
+                                <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
+                                <div class="rs-delivery-info">
+                                    <h5 class="text-sm md:text-sm text-neutral-700 font-semibold leading-[100%]">Home
+                                    </h5>
+                                    <span class="text-xs text-neutral-600 font-normal leading-[140%]">123 Main Street,
+                                        Apt 44, NY 1023</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  w-[40px] h-[40px] flex items-center justify-center bg-mint-50 rounded-full relative">
-                                <img class="w-[18px] h-[18px]" src="../assets/icons/check-green.svg" alt="">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-700 font-medium leading-[100%] mb-[10px]">
-                                    Pickup
-                                    Scheduled</h5>
-                                <p class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%] italic">Driver
-                                    assigned
-                                    and on the way</p>
-                                <span class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Oct 24,
-                                    2025 - 10:00
-                                    AM</span>
+                            <div
+                                class="rs-delivery-address-box border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] flex gap-[7.5px] items-center mb-6">
+                                <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
+                                <div class="rs-delivery-info">
+                                    <h5 class="text-sm md:text-sm text-neutral-700 font-semibold leading-[100%]">Office
+                                    </h5>
+                                    <span class="text-xs text-neutral-600 font-normal leading-[140%]">62 Business Ave,
+                                        Suite 201 New York, NY 1002</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  w-[40px] h-[40px] flex items-center justify-center bg-mint-50 rounded-full relative">
-                                <img class="w-[18px] h-[18px]" src="../assets/icons/check-green.svg" alt="">
+                            <button type="button"
+                                class="rs-delivery-info-btn text-sm text-neutral-500 font-semibold flex gap-[10px] justify-center items-center border-[1px] border-neutral-200 rounded-xl h-[48px] w-full">
+                                <i class="fa-solid fa-plus"></i>
+                                Add New Address
                             </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-700 font-medium leading-[100%] mb-[10px]">
-                                    Items
-                                    Collected</h5>
-                                <p class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%] italic">Your
-                                    items have
-                                    been picked up</p>
-                                <span class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Oct 24,
-                                    2025 - 10:30
-                                    AM</span>
-                            </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  w-[40px] h-[40px] flex items-center justify-center bg-mint-50 rounded-full relative">
-                                <img class="w-[18px] h-[18px]" src="../assets/icons/time-icon.svg" alt="">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-700 font-medium leading-[100%] mb-[10px]">In
-                                    Processing
-                                </h5>
-                                <p class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%] italic">Your
-                                    items are
-                                    being cleaned</p>
-                                <span class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">In
-                                    Progress</span>
-                            </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  rs-order-info-icon-2 w-[40px] h-[40px] flex items-center justify-center bg-neutral-100 rounded-full relative">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-400 font-medium leading-[100%] mb-[10px]">
-                                    Quality Check
-                                </h5>
-                                <p class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%] italic">Final
-                                    inspection
-                                    before delivery</p>
-                                <span
-                                    class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%]">Pending</span>
-                            </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px] mb-[20px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  rs-order-info-icon-2 w-[40px] h-[40px] flex items-center justify-center bg-neutral-100 rounded-full relative">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-400 font-medium leading-[100%] mb-[10px]">Out
-                                    for
-                                    Delivery</h5>
-                                <p class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%] italic">On the
-                                    way to your
-                                    location</p>
-                                <span
-                                    class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%]">Pending</span>
-                            </div>
-                        </div>
-                        <div class="rs-order-info-item flex gap-[16px]">
-                            <button
-                                class="rs-order-info-icon flex-[0_0_auto]  rs-order-info-icon-2 w-[40px] h-[40px] flex items-center justify-center bg-neutral-100 rounded-full relative">
-                            </button>
-                            <div class="rs-order-info-right">
-                                <h5 class="text-xs md:text-sm text-neutral-400 font-medium leading-[100%] mb-[10px]">
-                                    Delivered</h5>
-                                <p class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%] italic">Order
-                                    completed
-                                    successfully</p>
-                                <span class="text-xs md:text-sm text-neutral-400 font-normal leading-[140%]">Expected:
-                                    Oct 26, 2025
-                                    - 2:00 PM</span>
-                            </div>
                         </div>
                     </div>
-                    <div class="rs-order-items-area">
+                    <div class="rs-order-items-area bg-white p-4 md:p-6 rounded-3xl mb-6">
                         <div class="rs-order-items-content">
                             <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
                                 Order Items
                             </h5>
                             <div
-                                class="rs-order-items-box flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
+                                class="rs-order-items-box rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
                                 <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex flex-[0_0_auto] items-center justify-center">
+                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
                                     <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
                                         src="../assets/icons/shart-icon.svg" alt="">
                                 </div>
@@ -339,19 +248,25 @@
                                     <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Business
                                         Suit - Dry
                                         Cleaning</h5>
-                                    <span
-                                        class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                        2</span>
+                                    <div class="flex items-center gap-[35px]">
+                                        <span
+                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
+                                            2
+                                        </span>
+                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
+                                            $15.00 each
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="rs-order-items-price ml-auto ">
+                                <div class="rs-order-items-price rs-order-items-price-2 ml-auto ">
                                     <span
                                         class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$30.00</span>
                                 </div>
                             </div>
                             <div
-                                class="rs-order-items-box flex  items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
+                                class="rs-order-items-box rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
                                 <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex flex-[0_0_auto] items-center justify-center">
+                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
                                     <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
                                         src="../assets/icons/shart-icon.svg" alt="">
                                 </div>
@@ -359,19 +274,25 @@
                                     <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Dress
                                         Shirts -
                                         Laundry & Press</h5>
-                                    <span
-                                        class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                        5</span>
+                                    <div class="flex items-center gap-[35px]">
+                                        <span
+                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
+                                            5
+                                        </span>
+                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
+                                            $8.00 each
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="rs-order-items-price ml-auto ">
+                                <div class="rs-order-items-price ml-auto rs-order-items-price-2 ">
                                     <span
                                         class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$40.00</span>
                                 </div>
                             </div>
                             <div
-                                class="rs-order-items-box flex  items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px]">
+                                class="rs-order-items-box rs-order-items-box-2 rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px]">
                                 <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex flex-[0_0_auto] items-center justify-center">
+                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
                                     <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
                                         src="../assets/icons/shart-icon.svg" alt="">
                                 </div>
@@ -379,119 +300,143 @@
                                     <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Trousers
                                         - Steam
                                         Ironing</h5>
-                                    <span
-                                        class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                        3</span>
+                                    <div class="flex items-center gap-[35px]">
+                                        <span
+                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
+                                            3
+                                        </span>
+                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
+                                            $6.00 each
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="rs-order-items-price ml-auto ">
+                                <div class="rs-order-items-price rs-order-items-price-2 ml-auto">
                                     <span
                                         class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$18.00</span>
                                 </div>
                             </div>
+                            <div class="rs-promo-area mb-[24px]">
+                                <h5
+                                    class="text-[13px] text-mint-700 font-normal leading-[120%] flex gap-[5px] items-center mb-[10px]">
+                                    <img src="../assets/icons/tag.svg" alt="">
+                                    Promo Code
+                                </h5>
+                                <div class="flex gap-[10px]">
+                                    <input
+                                        class="promo-input border-[1.50px] border-neutral-100 leading-[41px] rounded-xl h-[40px] w-full px-[16px]"
+                                        type="text" placeholder="Enter promo code">
+                                    <button
+                                        class="text-xs text-neutral-500 font-medium leading-[140%] w-[80px] h-[40px] border-[1.50px] border-neutral-100 rounded-xl ">Apply</button>
+                                </div>
+                            </div>
+                            <div class="rs-payment-info-item flex justify-between mb-[10px]">
+                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Subtotal</span>
+                                <span
+                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$88.00</span>
+                            </div>
+                            <div class="rs-payment-info-item flex justify-between mb-[10px]">
+                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Delivery Fee</span>
+                                <span
+                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">Free</span>
+                            </div>
+                            <div
+                                class="rs-payment-info-item flex justify-between pb-[16px] mb-[16px] border-b border-b-neutral-200">
+                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Tax & Vat (+8%)</span>
+                                <span
+                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$7.04</span>
+                            </div>
+                            <div class="rs-order-details-comon-title flex justify-between">
+                                <h5 class="text-base md:text-lg text-neutral-700 font-semibold leading-[140%]">Total
+                                </h5>
+                                <h5 class="text-base md:text-lg text-mint-700 font-semibold leading-[140%]">$95.04
+                                </h5>
+                            </div>
                         </div>
                     </div>
-                    <div class="rs-pickup-details-area flex  sm:flex-nowrap gap-[24px]">
-                        <div
-                            class="rs-pickup-details-box border-[1px] border-neutral-200 rounded-xl py-[15px] px-[24px] w-full sm:w-[50%]">
-                            <div class="rs-pickup-details-title">
-                                <h5 class="text-sm text-neutral-700 font-medium leading-[140%] mb-[24px]">Pickup Details
-                                </h5>
-                                <a href="javascript:void(0)"
-                                    class="leading-[140%] mb-[10px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
-                                    <img class="self-start mt-[4px]" src="../assets/icons/location.svg" alt="">
-                                    123 Main Street, Apt 4B <br> New York, NY 10001
-                                </a>
-                                <a href="javascript:void(0)"
-                                    class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
-                                    <img src="../assets/icons/celender.svg" alt="">
-                                    Oct 24, 2025 - 10:00 AM
-                                </a>
+                    <div class="rs-payment-method-area bg-white p-6 rounded-3xl">
+                        <div class="rs-delivery-address-content">
+                            <h3
+                                class="rs-delivery-address-title text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
+                                Select Payment Method
+                            </h3>
+                            <div
+                                class="rs-payment-logo mb-[15px] flex gap-[16px] flex-wrap justify-center xl:justify-start">
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-01.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-02.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-03.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-04.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-05.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-06.svg" alt="">
+                                </button>
+                                <button
+                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
+                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-07.svg" alt="">
+                                </button>
                             </div>
-                        </div>
-                        <div
-                            class="rs-pickup-details-box border-[1px] border-neutral-200 rounded-xl py-[15px] px-[24px]  w-full sm:w-[50%]">
-                            <div class="rs-pickup-details-title">
-                                <h5 class="text-sm text-neutral-700 font-medium leading-[140%] mb-[24px]">Pickup Details
-                                </h5>
-                                <a href="javascript:void(0)"
-                                    class="leading-[140%] mb-[10px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
-                                    <img class="self-start mt-[4px]" src="../assets/icons/location.svg" alt="">
-                                    123 Main Street, Apt 4B <br> New York, NY 10001
-                                </a>
-                                <a href="javascript:void(0)"
-                                    class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
-                                    <img src="../assets/icons/celender.svg" alt="">
-                                    Oct 26, 2025 - 2:00 PM
-                                </a>
+                            <div
+                                class="rs-delivery-address-box active border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] md:py-[21px] flex gap-[7.5px] items-center mb-[15px]">
+                                <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
+                                <div class="rs-delivery-info">
+                                    <h5 class="text-sm md:text-sm text-neutral-700 font-semibold leading-[100%]">Cash On
+                                        Delivery
+                                    </h5>
+                                </div>
                             </div>
+                            <button type="submit"
+                                class="rs-rate-submit-btn place-order-btn text-base bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center w-full font-semibold rounded-xl flex items-center justify-center gap-[4px] mb-[15px]">
+                                <img src="../assets/icons/shield-check.svg" alt="">
+                                Place Order — $95.04
+                            </button>
+                            <p class="font-normal text-[13px] leading-[140%] text-center text-neutral-400">By placing
+                                this order, you agree to our Terms & Conditions</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column -->
-                <div class="rs-order-details-rightarea w-full lg:w-1/3">
-                    <div class="rs-store-details-box bg-white px-[16px] py-[24px] rounded-3xl mb-[24px]">
-                        <div class="rs-order-details-comon-title">
-                            <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[16px]">
-                                Store Details
-                            </h5>
-                            <h6 class="text-sm text-neutral-700 font-semibold leading-[140%] mb-[5px]">Fresh & Fold
-                                Laundry
-                            </h6>
-                            <div class="flex gap-[3px] pb-[16px] border-b border-b-neutral-200 mb-[16px]">
-                                <img src="../assets/icons/star-small.svg" alt="">
-                                <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.8</span>
-                                <span class="text-sm text-neutral-700 font-normal leading-[140%]">(512 reviews)</span>
-                            </div>
-                            <div class="rs-details-btn">
-                                <a href="tel:+1(555)123-4567"
-                                    class="leading-[100%] text-xs font-medium flex gap-[6px] text-neutral-700 flex items-center h-[40px] px-[16px] border-[1.50px] border-neutral-200 rounded-xl mb-[10px]">
-                                    <img class="w-[12px] h-[12px]" src="../assets/icons/call.svg" alt="" srcset="">
-                                    +1 (555) 123-4567
-                                </a>
-                                <a href="#"
-                                    class="leading-[100%] text-xs font-medium flex gap-[6px] text-neutral-700 flex items-center h-[40px] px-[16px] border-[1.50px] border-neutral-200 rounded-xl">
-                                    <img class="w-[12px] h-[12px]" src="../assets/icons/comment.svg" alt="" srcset="">
-                                    Chat With Store
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rs-driver-details-box bg-white px-[16px] py-[24px] rounded-3xl mb-[24px]">
-                        <div class="rs-order-details-comon-title">
-                            <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[16px]">
-                                Driver Details
-                            </h5>
-                            <h6 class="text-sm text-neutral-700 font-semibold leading-[140%] mb-[5px]">John Smith
-                            </h6>
-                            <div class="flex gap-[3px] pb-[16px] border-b border-b-neutral-200 mb-[16px]">
-                                <span class="text-sm text-neutral-700 font-normal leading-[140%]">Toyota Prius - ABC
-                                    1234
-                                </span>
-                            </div>
-                            <div class="rs-details-btn">
-                                <a href="tel:+1(555)123-4567"
-                                    class="leading-[100%] text-xs font-medium flex gap-[6px] text-neutral-700 flex items-center h-[40px] px-[16px] border-[1.50px] border-neutral-200 rounded-xl">
-                                    <img class="w-[12px] h-[12px]" src="../assets/icons/call.svg" alt="" srcset="">
-                                    +1 (555) 123-4567
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="rs-checkout-right-area w-full lg:w-1/3">
                     <div class="rs-payment-details-box bg-white px-[16px] py-[24px] rounded-3xl mb-[24px]">
                         <div class="rs-order-details-comon-title">
-                            <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[16px]">
-                                Payment
-                                Summery
+                            <h5 class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%] mb-[16px]">
+                                Order Summery
                             </h5>
                         </div>
+                        <span
+                            class="text-sm font-medium leading-[140%] text-neutral-500 flex items-center gap-[8px] mb-[15px]">
+                            <img src="../assets/icons/box-green.svg" alt="">
+                            Items
+                            <b class="text-base font-normal leading-[140%] text-neutral-500 ml-auto">3</b>
+                        </span>
+                        <span
+                            class="text-sm font-medium leading-[140%] text-neutral-500 flex items-start gap-[8px] mb-[15px]">
+                            <img class="mt-[5px] w-[16px] h-[16px]" src="../assets/icons/location-green.svg" alt="">
+                            Delivering to <br> Home
+                        </span>
+                        <span
+                            class="text-sm font-medium leading-[140%] text-neutral-500 flex items-start gap-[8px] pb-[16px] mb-[16px] border-b border-b-neutral-200">
+                            <img class="mt-[5px]" src="../assets/icons/credit-card-green.svg" alt="">
+                            Payment Method <br>Cash on Delivery
+                        </span>
                         <div class="rs-payment-info-item flex justify-between mb-[10px]">
                             <span class="text-sm font-medium leading-[140%] text-neutral-500">Subtotal</span>
                             <span class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$88.00</span>
-                        </div>
-                        <div class="rs-payment-info-item flex justify-between mb-[10px]">
-                            <span class="text-sm font-medium leading-[140%] text-neutral-500">Discount</span>
-                            <span class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$0.00</span>
                         </div>
                         <div class="rs-payment-info-item flex justify-between mb-[10px]">
                             <span class="text-sm font-medium leading-[140%] text-neutral-500">Delivery Fee</span>
@@ -502,42 +447,15 @@
                             <span class="text-sm font-medium leading-[140%] text-neutral-500">Tax & Vat (+8%)</span>
                             <span class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$7.04</span>
                         </div>
-                        <div class="rs-order-details-comon-title flex justify-between mb-4">
+                        <div class="rs-order-details-comon-title flex justify-between">
                             <h5 class="text-base md:text-lg text-neutral-700 font-semibold leading-[140%]">Total
                             </h5>
                             <h5 class="text-base md:text-lg text-mint-700 font-semibold leading-[140%]">$95.04
                             </h5>
                         </div>
-                        <div class="rs-payment-text">
-                            <span class="text-[13px] font-normal leading-[140%] text-neutral-400">
-                                Cash On Delivery
-                            </span>
-                        </div>
-                    </div>
-                    <div class="rs-rate-details-box bg-white px-[16px] py-[24px] rounded-3xl mb-[24px]">
-                        <div class="rs-order-details-comon-title">
-                            <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[16px]">
-                                Rate Your
-                                Experience
-                            </h5>
-                        </div>
-                        <div class="rs-rate-star mb-[16px] flex justify-center gap-[3px]">
-                            <img src="../assets/icons/star-big-grey.svg" alt="" class="star cursor-pointer">
-                            <img src="../assets/icons/star-big-grey.svg" alt="" class="star cursor-pointer">
-                            <img src="../assets/icons/star-big-grey.svg" alt="" class="star cursor-pointer">
-                            <img src="../assets/icons/star-big-grey.svg" alt="" class="star cursor-pointer">
-                            <img src="../assets/icons/star-big-grey.svg" alt="" class="star cursor-pointer">
-                        </div>
-                        <div class="rs-rate-message">
-                            <textarea class="w-full h-[78px] p-[12px] bg-neutral-50 mb-[16px]" name="message"
-                                placeholder="Share your experience with Laundry"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="rs-rate-submit-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[40px] text-center leading-[40px] w-[100%] rounded-xl">
-                            Submit Review
-                        </button>
                     </div>
                 </div>
+            </div>
         </section>
 
 
