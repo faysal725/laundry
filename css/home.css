@@ -1,3 +1,18 @@
+.headline {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  /* 24px → 32px */
+  line-height: 140%;
+  color: var(--color-neutral-900);
+}
+
+.headline > span {
+  color: var(--color-mint-600, #32D3A0);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+
 /* sections */
 .section_container {
   display: flex;
