@@ -452,3 +452,12 @@ body {
   background: var(--color-aqua-50);
   border-radius: 8px;
 }
+
+
+
+
+/* form styles */
+.required:after {
+  content: "*";
+  color: red;
+}
