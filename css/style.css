@@ -461,3 +461,49 @@ body {
   content: "*";
   color: red;
 }
+
+
+
+/* counter */
+.counter_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 110px; 
+  height: 32px; 
+  padding: 4px;
+  background-color: var(--color-neutral-100);
+  border-radius: 6px;
+  font-size: 14px; 
+  font-weight: 500; 
+  text-align: center; 
+  color: var(--color-neutral-700)
+}
+
+.counter_container > .decrease{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; 
+  font-weight: 500; 
+}
+
+
+.counter_container > .current_count{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.counter_container > .increase{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; 
+  font-weight: 500; 
+}

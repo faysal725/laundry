@@ -198,9 +198,102 @@
                 </p>
 
                 <!-- card 1 -->
-                 <div class="p-3">
-                    sadfsdf
-                 </div>
+                <!-- <div class="p-3 rounded-xl border border-gray-200 flex justify-between items-start gap-4">
+                    <div class="w-[84px] h-full">
+                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 h-full flex flex-col justify-between items-start ">
+                        <p class="text-sm font-medium text-left text-neutral-900">
+                            Premium Wash Fold
+                        </p>
+                        <p class="text-xs font-medium text-left text-gray-500">
+                            By CleanPro Laundry
+                        </p>
+                    </div>
+                    <div>
+                        sdfsdf
+                    </div>
+                </div> -->
+
+                <!-- card 1 -->
+                <div class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 p-3">
+                    <div class="w-[84px] h-[84px] rounded overflow-hidden">
+                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
+
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div class="space-y-[6px]">
+                            <p class="text-sm font-medium text-neutral-900">
+                                Premium Wash & Fold
+                            </p>
+                            <p class="text-xs font-medium text-left text-gray-500">
+                                By CleanPro Laundry
+                            </p>
+                        </div>
+                        <div class="counter_container" id="card-1">
+                            <button class="decrease" onclick="counterController('card-1', 'decrease')">
+                                -
+                            </button>
+                            <div class="current_count">
+                                0
+                            </div>
+                            <button class="increase" onclick="counterController('card-1', 'increase')">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between items-end">
+                        <button class="h-5 w-5">
+                            <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                        </button>
+                        <p class="text-sm font-medium text-left text-gray-500">Total</p>
+                        <p
+                            class="text-base font-semibold text-right text-gray-900">
+                            $25.98
+                        </p>
+                    </div>
+                </div>
+
+
+                
+                <!-- card 2 -->
+                <div class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 p-3">
+                    <div class="w-[84px] h-[84px] rounded overflow-hidden">
+                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
+
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div class="space-y-[6px]">
+                            <p class="text-sm font-medium text-neutral-900">
+                                Premium Wash & Fold
+                            </p>
+                            <p class="text-xs font-medium text-left text-gray-500">
+                                By CleanPro Laundry
+                            </p>
+                        </div>
+                        <div class="counter_container" id="card-2">
+                            <button class="decrease" onclick="counterController('card-2', 'decrease')">
+                                -
+                            </button>
+                            <div class="current_count">
+                                0
+                            </div>
+                            <button class="increase" onclick="counterController('card-2', 'increase')">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between items-end">
+                        <button class="h-5 w-5">
+                            <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                        </button>
+                        <p class="text-sm font-medium text-left text-gray-500">Total</p>
+                        <p
+                            class="text-base font-semibold text-right text-gray-900">
+                            $25.98
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="col-span-12 md:col-span-4 p-6 rounded-3xl bg-white">
@@ -383,6 +476,7 @@
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="../js/counterHandler.js"></script>
 </body>
 
 </html>
