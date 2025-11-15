@@ -73,12 +73,21 @@
     color: black;
 }
 
+.thumb-premium-2 {
+    position: inherit;
+    width: 124px;
+}
+
 .thumb-fast {
     background: var(--color-danger-600);
 }
 
 .thumb-discount {
     background: var(--color-danger-600);
+}
+
+.thumb-discount-2 {
+    position: inherit;
 }
 
 .rs-services-box {

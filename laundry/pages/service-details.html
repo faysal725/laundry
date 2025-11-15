@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- accordion cdn  -->
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script src="../tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/service.css">
+    <link rel="stylesheet" href="../css/service-details.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/favicon.png">
+
+
+</head>
+
+<body class="bg-neutral-50">
+
+
+
+    <!-- manage-address-modal -->
+    <section id="role" class="modal_container">
+
+        <!-- backdrop -->
+        <div onclick="toggleModal('role')" class="modal_backdrop"></div>
+
+        <!-- modal content -->
+        <div class="modal_content">
+            <form action="#" class="rs-manage-addresses-form">
+                <div class="flex justify-between items-center mb-[30px]">
+                    <h3 class="text-neutral-700 text-lg font-semibold">Add New Address</h3>
+                    <button type="button" onclick="toggleModal('role')"
+                        class="transition-transform duration-300 hover:rotate-90">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">Label</label>
+                    <input type="text" placeholder="Example : Home, Office ..."
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">Street Address</label>
+                    <input type="text" placeholder="123 Lovely Road, Apt 6B"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="flex gap-3 mb-4">
+                    <div class="w-[50%]">
+                        <label class="text-neutral-700 text-base font-medium">City</label>
+                        <input type="text" placeholder="New York"
+                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                    </div>
+                    <div class="w-[50%]">
+                        <label class="text-neutral-700 text-base font-medium">State</label>
+                        <input type="text" placeholder="NY"
+                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="text-neutral-700 text-base font-medium">ZIP Code</label>
+                    <input type="text" placeholder="10003"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <div class="mb-[30px]">
+                    <label class="text-neutral-700 text-base font-medium">Phone Number</label>
+                    <input type="text" placeholder="+1 (555) 545-5421"
+                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
+                </div>
+                <button
+                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center leading-[48px] w-[100%] rounded-xl">
+                    Save Address
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- navbar -->
+    <nav class="bg-white sticky top-0 py-4 md:py-6 z-40 shadow-md">
+        <section class="max-w-2lg mx-auto px-4 xl:px-0 flex items-center justify-between">
+            <a href="#" class="w-auto h-6 md:w-auto md:h-8 inline-block">
+                <img src="../assets/logo/logo-green.png" alt="" class="h-full w-full">
+
+            </a>
+
+
+            <div class=" items-center justify-center gap-6 hidden lg:flex">
+                <a class="menu_link menu_link_active" href="#">Home</a>
+                <a class="menu_link" href="#Services">Services</a>
+                <a class="menu_link" href="#Services">Nearest Store</a>
+                <a class="menu_link" href="#FAQ">FAQ</a>
+                <a class="menu_link" href="#Contact">Contact</a>
+            </div>
+
+
+
+            <div class="hidden lg:flex justify-center items-center gap-4">
+                <button class="btn_solid">
+                    <p>Sign In</p>
+
+                    <img src="../assets/icons/arrow-left.svg" alt="">
+                </button>
+
+                <button class="btn_outline">
+                    <p>Sign Up</p>
+                </button>
+            </div>
+            <!-- sidebar opening button  -->
+            <button
+                class="h-10 w-10 border border-primary2-600 rounded p-1 flex lg:hidden flex-col justify-around items-center  "
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-7 text-primary2-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="text-primary2-600" />
+                </svg>
+
+            </button>
+        </section>
+    </nav>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar fixed top-0 left-0 w-full h-full bg-gradient-to-tl from-mint-500 from-10% via-mint-500 via-30% to-aqua-500 to-90% text-white  z-50"
+        id="sidebar">
+        <div class="h-full w-full flex justify-center items-center flex-col relative">
+
+            <button
+                class="absolute top-6 right-6 border h-10 w-10 border-white rounded-lg flex justify-center items-center"
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <ul class="space-y-4 flex flex-col items-center">
+                <li onclick="toggleSidebar()">
+                    <a href="#" class="text-lg hover:text-blue-400 cursor-pointer">Home</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#pricing" class="text-lg hover:text-blue-400 cursor-pointer">Services</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#features" class="text-lg hover:text-blue-400 cursor-pointer">Nearest Store</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#services" class="text-lg hover:text-blue-400 cursor-pointer">FAQ</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#support" class="text-lg hover:text-blue-400 cursor-pointer">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Service details area -->
+        <section class="rs-service-details-area max-w-2lg  mx-auto mt-[60px] mb-6">
+            <div class="rs-service-details-top">
+                <div class="rs-service-details-top-link mb-[30px]">
+                    <a class="text-lg font-normal leading-[100%] text-neutral-500" href="#">Home / </a>
+                    <a class="text-lg font-normal leading-[100%] text-neutral-500" href="#">Services / </a>
+                    <a class="text-lg font-normal leading-[100%] text-neutral-500" href="#">Dry Cleaning / </a>
+                    <a class="text-lg font-normal leading-[100%] text-neutral-500 active" href="#">Premium Dry
+                        Cleaning</a>
+                </div>
+                <div class="col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 md:col-span-7">
+                            <div class="rs-service-details-thumb">
+                                <img class="rounded-3xl" src="../assets/images/service-details/service-details.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-12 md:col-span-5">
+                            <div class="rs-service-details-top-right">
+                                <div
+                                    class="thumb-popular thumb-premium thumb-premium-2 w-[124px] leading-[28px] mb-[22px]">
+                                    Popular Choice
+                                </div>
+                                <h3 class="text-2xl font-bold leading-[120%] text-neutral-900 mb-[7px]">Premium Dry
+                                    Cleaning</h3>
+                                <h4 class="text-lg font-medium leading-[100%] text-neutral-500 mb-[15px]">
+                                    By FreshFold Laundry
+                                </h4>
+                                <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[15px]">
+                                    Our premium dry cleaning service combines advanced fabric care technology with
+                                    expert attention to detail. From delicate silks to formal suits, every garment is
+                                    treated with precision to restore freshness, maintain texture, and extend its life —
+                                    all while ensuring a flawless finish every time.
+                                </p>
+                                <div class="flex justify-start items-center gap-[2px] mb-[15px]">
+                                    <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                    <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                    <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                    <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                    <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                    <span
+                                        class="text-sm font-medium text-left text-neutral-800 mr-[2px] ml-[2px]">4.9</span>
+                                    <span class="text-sm text-left text-neutral-500">(624 reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-2 mb-[20px]">
+                                    <h5 class="text-2xl md:text-lg text-mint-700 font-semibold leading-[140%]">$12.99
+                                    </h5>
+                                    <span
+                                        class="text-xl text-neutral-400 font-normal leading-[140%] line-through">$15.99</span>
+                                    <div class="thumb-popular thumb-discount thumb-discount-2 ml-[7px]">
+                                        20% OFF
+                                    </div>
+                                </div>
+                                <p class="flex gap-[5px] text-base font-normal leading-[100%] text-neutral-500 mb-[14px]"><img src="../assets/icons/clock.svg" alt="">Same-day delivery available</p>
+                                <p class="flex gap-[5px] text-base font-normal leading-[100%] text-neutral-500 mb-[14px]"><img src="../assets/icons/location-green.svg" alt="">Available in your area</p>
+                                <p class="flex gap-[5px] text-base font-normal leading-[100%] text-neutral-500 mb-[14px]"><img src="../assets/icons/clock.svg" alt="">Same-day delivery available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- get started -->
+        <section class="bg-mint-600 bottom-0">
+            <div
+                class="max-w-2lg mx-auto py-[60px] px-4 xl-1:px-0 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-6 lg:gap-0">
+                <div class="flex-1">
+                    <p class="text-[32px] font-semibold text-center lg:text-left text-white ">
+                        Ready to Get Started?
+                    </p>
+                    <p class="text-lg text-center lg:text-left text-neutral-50">
+                        Book your first order and experience hassle-free laundry service
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <button class="btn_solid_white_lg">
+                        <p>Book Now</p>
+
+                        <img src="../assets/icons/arrow-left-green.svg" alt="">
+                    </button>
+
+
+
+                    <button class="btn_outline_white_lg">
+                        <p>Become a Partner</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section  -->
+    <footer class=" bg-no-repeat bg-cover" style="background-image: url('../assets/images/footer/footer-bg.png');">
+
+        <!-- top footer  -->
+        <div class="relative overflow-hidden">
+            <div class="max-w-2lg mx-auto pt-[60px] relative z-10 px-4 xl-1:px-0">
+
+
+                <!-- links section -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-5 lg:gap-[65px] relative z-10">
+                    <!-- logo section -->
+                    <div class="space-y-[30px]">
+                        <img src="../assets/logo/logo-white.png" alt=""
+                            class=" w-auto h-14 md:w-auto md:h-[51.58px] object-contain">
+                        <p class="text-base text-left text-gray-300 font-normal ">
+                            Elevate Your Business with Innovative<br />Web, App, and Software Solutions. Partner for
+                            Excellence
+                            in Tech.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-lg font-medium text-left text-neutral-50">Quick Links</p>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Home</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Our Services</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">How It Works</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Partner Vendors</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Pricing</p>
+                        </a>
+                    </div>
+
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-lg font-medium text-left text-neutral-50">Support</p>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Help Center</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Terms & Conditions</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Privacy Policy</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Contact Us</p>
+                        </a>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex flex-col gap-6">
+                            <p class="self-stretch justify-center text-white text-lg font-semibold  leading-relaxed">
+                                Contact Us</p>
+                            <div class="self-stretch inline-flex justify-start items-start gap-2 cursor-pointer">
+
+                                <img src="../assets/icons/phone.svg" alt="" class="w-4 h-4 mt-1.5">
+                                <p class="flex-1 text-base text-left text-neutral-300">
+                                    +8801937203743</p>
+                            </div>
+                            <div class="self-stretch inline-flex justify-start items-start gap-2 cursor-pointer">
+
+                                <img src="../assets/icons/map-pin.svg" alt="" class="w-4 h-4 mt-1.5">
+                                <p class="flex-1 text-base text-left text-neutral-300">
+                                    123 LaundryStreet,Clean
+                                    City, CC 12345</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="mt-[30px] space-y-6">
+                            <p class="text-base font-medium text-left text-gray-50">
+                                Follow Us
+                            </p>
+
+
+                            <div class="flex justify-start items-center gap-[10px]">
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="../assets/icons/facebook.svg" alt="">
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="../assets/icons/twitter.svg" alt="">
+
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="../assets/icons/youtube.svg" alt="">
+
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="../assets/icons/pinterest.svg" alt="">
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="relative z-0 pb-[30px] pt-[50px]">
+                    <img src="../assets/images/footer/laundry.svg" alt="">
+                </div>
+
+
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between py-6 border-t border-white/10 relative z-10">
+                    <p class="text-xs sm:text-sm text-white/40 font-normal">Professional laundry services you can
+                        trust.
+                    </p>
+                    <p class="text-xs sm:text-sm text-white/40 font-normal">ⓒ2025 Laundry. All Rights Reserved.</p>
+                </div>
+
+
+
+
+                <!-- glows -->
+                <div class="w-[400px] h-[400px] absolute -top-[70%] left-[10%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+                <div
+                    class="w-[400px] h-[400px] absolute -bottom-[50%] left-[30%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="../js/order-details.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/select-dropdown.js"></script>
+</body>
+
+</html>
