@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- accordion cdn  -->
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/favicon.png">
+
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="bg-white sticky top-0 py-4 md:py-6 z-40">
+        <section class="max-w-2lg mx-auto px-4 xl-1:px-0 flex items-center justify-between">
+            <a href="#" class="w-auto h-6 md:w-auto md:h-8 inline-block">
+                <img src="./assets/logo/logo-green.png" alt="" class="h-full w-full">
+
+            </a>
+
+            <div class=" items-center justify-center gap-6 hidden lg:flex">
+                <a class="menu_link menu_link_active" href="#">Home</a>
+                <a class="menu_link" href="#Services">Services</a>
+                <a class="menu_link" href="#Services">Nearest Store</a>
+                <a class="menu_link" href="#FAQ">FAQ</a>
+                <a class="menu_link" href="#Contact">Contact</a>
+            </div>
+
+
+
+            <div class="hidden lg:flex justify-cente items-center gap-4">
+                <button class="btn_solid">
+                    <p>Sign In</p>
+
+                    <img src="./assets/icons/arrow-left.svg" alt="">
+                </button>
+
+                <button class="btn_outline">
+                    <p>Sign Up</p>
+                </button>
+            </div>
+
+
+            <!-- sidebar opening button  -->
+            <button
+                class="h-10 w-10 border border-primary2-600 rounded p-1 flex lg:hidden flex-col justify-around items-center  "
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-7 text-primary2-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="text-primary2-600" />
+                </svg>
+
+            </button>
+        </section>
+    </nav>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar fixed top-0 left-0 w-full h-full bg-gradient-to-tl from-mint-500 from-10% via-mint-500 via-30% to-aqua-500 to-90% text-white  z-50"
+        id="sidebar">
+        <div class="h-full w-full flex justify-center items-center flex-col relative">
+
+            <button
+                class="absolute top-6 right-6 border h-10 w-10 border-white rounded-lg flex justify-center items-center"
+                onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <ul class="space-y-4 flex flex-col items-center">
+                <li onclick="toggleSidebar()">
+                    <a href="#" class="text-lg hover:text-blue-400 cursor-pointer">Home</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#pricing" class="text-lg hover:text-blue-400 cursor-pointer">Services</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#features" class="text-lg hover:text-blue-400 cursor-pointer">Nearest Store</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#services" class="text-lg hover:text-blue-400 cursor-pointer">FAQ</a>
+                </li>
+                <li onclick="toggleSidebar()">
+                    <a href="#support" class="text-lg hover:text-blue-400 cursor-pointer">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <main class="min-h-screen  ">
+        <!-- herosection -->
+        <section>
+            <div class="grid grid-cols-1 lg:grid-cols-2 max-w-2lg mx-auto  gap-[50px] lg:gap-[100px]  px-4 xl-1:px-0">
+                <div class="flex flex-col justify-center order-2 md:order-1">
+
+                    <div class="space-y-3 md:space-y-5">
+
+                        <div class="flex justify-center lg:justify-start">
+                            <div
+                                class="flex justify-center items-center gap-1 w-fit bg-mint-50 px-2 p-2 border-[1.5px] border-mint-200 rounded-[25px]">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <p class="text-[10px] sm:text-xs font-medium text-left text-mint-700">
+                                    Trusted by 50,000+ Happy Customers
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="text-2xl md:text-5xl font-bold text-center lg:text-left text-gray-900">Professional
+                            Laundry <br> And <span class="text-mint-600 font-playfair italic">Dry cleaning at your
+                                doorstep.</span></p>
+                        <p class="text-lg md:text-2xl text-center lg:text-left text-neutral-500">Experience hassle-free
+                            laundry service with free
+                            pickup and delivery. Book in seconds, track
+                            in real-time, and enjoy fresh, clean clothes.
+
+                        </p>
+                    </div>
+                    <div class="space-y-6 mt-4 md:mt-9">
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
+                            <button class="btn_solid">
+                                <p>Book Now</p>
+
+                                <img src="./assets/icons/arrow-left.svg" alt="">
+                            </button>
+
+                            <button class="btn_outline">
+                                <p>Find Stores Near You</p>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col md:flex-row justify-center lg:justify-start items-start md:items-center gap-2 md:gap-5">
+                            <div class="flex justify-start items-center gap-2">
+                                <img src="./assets/icons/calendar.svg" alt="" class="w-4 h-4">
+                                <p class="text-sm md:text-base text-left text-neutral-500">Same-day service</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-2">
+                                <img src="./assets/icons/pickup.svg" alt="" class="w-4 h-4">
+                                <p class="text-sm md:text-base text-left text-neutral-500">Free pickup</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-2">
+                                <img src="./assets/icons/map-pin.svg" alt="" class="w-4 h-4">
+                                <p class="text-sm md:text-base text-left text-neutral-500">500+ vendors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end order-1 md:order-2">
+                    <img src="./assets/images/herosection/heroimg.png" alt="" class="">
+
+                    <img src="./assets/images/herosection/1.png" alt=""
+                        class="hidden 2xl:block absolute left-0 bottom-0 -translate-y-10">
+                    <img src="./assets/images/herosection/2.png" alt=""
+                        class="hidden 2xl:block absolute right-0 top-0 2xl:translate-y-52 translate-x-14">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- permium services -->
+        <section class="section_container max-w-2lg mx-auto px-4 xl-1:px-0">
+            <header class="heading_section">
+                <p>
+                    Our Premium <span>Services</span>
+                </p>
+                <p>
+                    Professional care for all your laundry needs with competitive pricing
+                </p>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl-1:grid-cols-4 gap-6">
+
+
+                <!-- card 1 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600 hover:shadow-xl hover:shadow-mint-100  bg-white shadow-sm">
+                    <div>
+                        <div class="icon_labels">
+                            <img src="./assets/icons/premiumDry.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-[15px] my-[15px] ">
+                        <p class="text-lg font-semibold text-gray-900">
+                            Premium Dry Cleaning
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Professional dry cleaning for delicate fabrics and formal wear
+                        </p>
+
+                        <ul class="list-disc list-inside space-y-[10px]">
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Suits & Dresses</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Silk & Wool</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Stain removal</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Stain removal</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Stain removal</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Stain removal</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Stain removal</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between border-t pt-5 border-gray-100 mt-auto">
+                        <div class="w-full">
+                            <p class="text-[10px] font-medium text-left text-gray-700">
+                                Starts From
+                            </p>
+                            <p class="text-base font-semibold text-left text-mint-600">
+                                $5/ltem
+                            </p>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-gray-100 group hover:bg-gradient-to-t from-mint-200 to-mint-700">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                Book Service
+                            </p>
+
+                            <img src="./assets/icons/arrow-left-green.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:hidden block transition-all duration-300">
+
+                            <img src="./assets/icons/arrow-left.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:block hidden transition-all duration-300">
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- card 2 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600 hover:shadow-xl hover:shadow-mint-100  bg-white shadow-sm">
+                    <div>
+                        <div class="icon_labels">
+                            <img src="./assets/icons/shirt.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-[15px] my-[15px]">
+                        <p class="text-lg font-semibold text-gray-900">
+                            Wash & Fold
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Everyday laundry service with premium detergents & fabric care.
+                        </p>
+
+                        <ul class="list-disc list-inside space-y-[10px]">
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Same Day Service</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Eco-Friendly</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Hypoallergenic</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between border-t pt-5 border-gray-100 mt-auto">
+                        <div class="w-full">
+                            <p class="text-[10px] font-medium text-left text-gray-700">
+                                Starts From
+                            </p>
+                            <p class="text-base font-semibold text-left text-mint-600">
+                                $2/ltem
+                            </p>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-gray-100 group hover:bg-gradient-to-t from-mint-200 to-mint-700">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                Book Service
+                            </p>
+
+                            <img src="./assets/icons/arrow-left-green.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:hidden block transition-all duration-300">
+
+                            <img src="./assets/icons/arrow-left.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:block hidden transition-all duration-300">
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- card 3 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600 hover:shadow-xl hover:shadow-mint-100  bg-white shadow-sm">
+                    <div>
+                        <div class="icon_labels">
+                            <img src="./assets/icons/steam.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-[15px] my-[15px]">
+                        <p class="text-lg font-semibold text-gray-900">
+                            Steam Ironing
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Crisp, wrinkle-free clothes with professional steam pressing.
+                        </p>
+
+                        <ul class="list-disc list-inside space-y-[10px]">
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Shirts & Pants</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Quick Turnaround</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Expert Finish</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between border-t pt-5 border-gray-100 mt-auto">
+                        <div class="w-full">
+                            <p class="text-[10px] font-medium text-left text-gray-700">
+                                Starts From
+                            </p>
+                            <p class="text-base font-semibold text-left text-mint-600">
+                                $3/ltem
+                            </p>
+                        </div>
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-gray-100 group hover:bg-gradient-to-t from-mint-200 to-mint-700">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                Book Service
+                            </p>
+
+                            <img src="./assets/icons/arrow-left-green.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:hidden block transition-all duration-300">
+
+                            <img src="./assets/icons/arrow-left.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:block hidden transition-all duration-300">
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- card 4 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600 hover:shadow-xl hover:shadow-mint-100  bg-white shadow-sm">
+                    <div>
+                        <div class="icon_labels">
+                            <img src="./assets/icons/coat.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-[15px] my-[15px]">
+                        <p class="text-lg font-semibold text-gray-900">
+                            Specialty Services
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Custom cleaning for household items and special garments.
+                        </p>
+
+                        <ul class="list-disc list-inside space-y-[10px]">
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Bedding & Curtains</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Shoe Cleaning</li>
+                            <li class="text-xs text-left text-gray-500 marker:text-mint-500">Leather Care</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between border-t pt-5 border-gray-100 mt-auto">
+                        <div class="w-full">
+                            <p class="text-[10px] font-medium text-left text-gray-700">
+                                Starts From
+                            </p>
+                            <p class="text-base font-semibold text-left text-mint-600">
+                                $5/ltem
+                            </p>
+                        </div>
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-gray-100 group hover:bg-gradient-to-t from-mint-200 to-mint-700">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                Book Service
+                            </p>
+
+                            <img src="./assets/icons/arrow-left-green.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:hidden block transition-all duration-300">
+
+                            <img src="./assets/icons/arrow-left.svg" alt=""
+                                class="w-[10px] h-[10px] group-hover:block hidden transition-all duration-300">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- premium laundry services -->
+        <section
+            class="section_container max-w-2lg mx-auto px-4 xl-1:px-0 py-10  xl-1:rounded-3xl bg-gradient-to-tr from-mint-900 to-black relative overflow-hidden">
+            <!-- backdrop -->
+            <div class="absolute top-0 right-0 w-full h-full bg-no-repeat bg-cover bg-center opacity-50 z-0"
+                style="background-image: url('./assets/images/common/bg.png');"></div>
+            <header class="relative z-10 space-y-[10px]">
+                <p class="text-2xl md:text-[32px] text-center text-white">
+                    Ready to <span class="text-mint-600 font-playfair italic">Experience Premium Laundry </span>
+                    Services?
+                </p>
+                <p class=" text-sm md:text-base text-center text-neutral-50">
+                    Join thousands of satisfied customers who trust us with their clothes every day.
+                </p>
+            </header>
+            <div class="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button class="btn_solid">
+                    <p>Get Started Now</p>
+
+                    <img src="./assets/icons/arrow-left.svg" alt="">
+                </button>
+
+                <button class="btn_outline">
+                    <p>Learn More</p>
+                </button>
+            </div>
+        </section>
+
+        <!-- how it works -->
+        <section class="max-w-2lg mx-auto px-4 xl-1:px-0 grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-[66px] mb-10">
+            <div class="space-y-5 xl:space-y-10 order-2 md:order-1">
+                <div class="space-y-1 md:space-y-[10px]">
+                    <p class="text-center md:text-start text-lg xl:text-2xl text-neutral-500">How It Works</p>
+                    <p class="text-center  md:text-start text-2xl xl:text-[32px] font-semibold  text-neutral-900">
+                        Laundry Done in 4 Simple Steps <br class="hidden lg:block">
+                        It’s Fast, Easy & Convenient</p>
+                </div>
+
+
+                <!-- cards -->
+                <div class="space-y-4">
+
+                    <!-- card 1 -->
+                    <div class="w-full p-4 space-y-4 rounded-2xl shadow-lg shadow-mint-100 bg-white">
+                        <button class="h-9 w-14 relative gap-2.5  rounded-[56px] bg-mint-600">
+                            <p class="text-lg font-semibold text-center text-white">
+                                01
+                            </p>
+                        </button>
+
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">Schedule Pickup</p>
+                            <p class="text-sm text-left text-neutral-500">
+                                Choose your preferred time slot and location for doorstep pickup
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- card 2 -->
+                    <div class="w-full p-4 space-y-4 rounded-2xl shadow-lg shadow-mint-100 bg-white">
+                        <button class="h-9 w-14 relative gap-2.5  rounded-[56px] bg-mint-600">
+                            <p class="text-lg font-semibold text-center text-white">
+                                02
+                            </p>
+                        </button>
+
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">We Collect</p>
+                            <p class="text-sm text-left text-neutral-500">
+                                Our professional team arrives at your doorstep to collect your items
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="w-full p-4 space-y-4 rounded-2xl shadow-lg shadow-mint-100 bg-white">
+                        <button class="h-9 w-14 relative gap-2.5  rounded-[56px] bg-mint-600">
+                            <p class="text-lg font-semibold text-center text-white">
+                                03
+                            </p>
+                        </button>
+
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">Clean And Care</p>
+                            <p class="text-sm text-left text-neutral-500">
+                                Expert cleaning using premium products and advanced techniques
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="w-full p-4 space-y-4 rounded-2xl shadow-lg shadow-mint-100 bg-white">
+                        <button class="h-9 w-14 relative gap-2.5  rounded-[56px] bg-mint-600">
+                            <p class="text-lg font-semibold text-center text-white">
+                                04
+                            </p>
+                        </button>
+
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">Fast Delivery</p>
+                            <p class="text-sm text-left text-neutral-500">
+                                Get your fresh, clean clothes delivered back in 24-48 hours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-end order-1 md:order-2">
+                <img src="./assets/images/how-it-works/bg.png" alt=""
+                    class="min-h-[90%] w-full object-cover rounded-3xl">
+            </div>
+        </section>
+
+        <!-- top rated stores -->
+        <section class="section_container max-w-2lg mx-auto px-4 xl-1:px-0">
+            <header class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <div class="space-y-4">
+                    <div class="flex justify-center md:justify-start">
+                        <div
+                            class="flex justify-center items-center gap-1 w-fit bg-mint-50 px-2 p-2 border-[1.5px] border-mint-200 rounded-[25px]">
+                            <img src="./assets/icons/star.svg" alt="">
+                            <p class="text-[10px] sm:text-xs font-medium text-left text-mint-700">
+                                Trusted by 50,000+ Happy Customers
+                            </p>
+                        </div>
+                    </div>
+                    <div class="heading_section_2">
+                        <p>
+                            Top Rated <span>Stores</span>
+                        </p>
+                        <p>
+                            Choose from our verified partner stores near you
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    class="px-4 py-3 md:px-5 md:py-3.5 rounded-xl flex justify-center items-center gap-3 border-[1.5px] border-gray-200">
+                    <p class="text-xs md:text-base font-semibold text-center text-gray-500">View All Stores</p>
+                    <img class="h-3 w-3" src="./assets/icons/arrow-left-gray.svg" alt="">
+                </button>
+            </header>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl-1:grid-cols-4 gap-6">
+
+
+                <!-- store card 1 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600  bg-white">
+                    <div class="flex justify-start gap-4">
+                        <div class="w-12 h-12 flex justify-center items-center border border-gray-100 rounded-lg p-1">
+                            <img class="object-contain w-full h-full" src="./assets/images/stores/store-1.png" alt="">
+                        </div>
+
+
+                        <div class="space-y-1">
+                            <p class="text-base font-semibold text-left text-neutral-900">
+                                CleanPro Express
+                            </p>
+
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/star-gold.svg" alt="" class="">
+                                <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
+                                <span class="text-sm text-left text-neutral-500">(624)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" my-[15px] flex items-center gap-1">
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Luxury Service</p>
+                        </span>
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Leather Care</p>
+                        </span>
+                    </div>
+                    <div class="flex flex-col border-t border-gray-100 mt-auto">
+
+
+                        <div class="py-[15px] flex justify-between items-center">
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/map-pin-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">Eastend • 2.5 km</p>
+
+                            </div>
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/clock-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">02 hours</p>
+
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-mint-600 group hover:bg-mint-600">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                View Details
+                            </p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- store card 2 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600  bg-white">
+                    <div class="flex justify-start gap-4">
+                        <div class="w-12 h-12 flex justify-center items-center border border-gray-100 rounded-lg p-1">
+                            <img class="object-contain w-full h-full" src="./assets/images/stores/store-1.png" alt="">
+                        </div>
+
+
+                        <div class="space-y-1">
+                            <p class="text-base font-semibold text-left text-neutral-900">
+                                CleanPro Express
+                            </p>
+
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/star-gold.svg" alt="" class="">
+                                <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
+                                <span class="text-sm text-left text-neutral-500">(624)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" my-[15px] flex items-center gap-1">
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Luxury Service</p>
+                        </span>
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Leather Care</p>
+                        </span>
+                    </div>
+                    <div class="flex flex-col border-t border-gray-100 mt-auto">
+
+
+                        <div class="py-[15px] flex justify-between items-center">
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/map-pin-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">Eastend • 2.5 km</p>
+
+                            </div>
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/clock-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">02 hours</p>
+
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-mint-600 group hover:bg-mint-600">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                View Details
+                            </p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- store card 3 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600  bg-white">
+                    <div class="flex justify-start gap-4">
+                        <div class="w-12 h-12 flex justify-center items-center border border-gray-100 rounded-lg p-1">
+                            <img class="object-contain w-full h-full" src="./assets/images/stores/store-1.png" alt="">
+                        </div>
+
+
+                        <div class="space-y-1">
+                            <p class="text-base font-semibold text-left text-neutral-900">
+                                CleanPro Express
+                            </p>
+
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/star-gold.svg" alt="" class="">
+                                <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
+                                <span class="text-sm text-left text-neutral-500">(624)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" my-[15px] flex items-center gap-1">
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Luxury Service</p>
+                        </span>
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Leather Care</p>
+                        </span>
+                    </div>
+                    <div class="flex flex-col border-t border-gray-100 mt-auto">
+
+
+                        <div class="py-[15px] flex justify-between items-center">
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/map-pin-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">Eastend • 2.5 km</p>
+
+                            </div>
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/clock-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">02 hours</p>
+
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-mint-600 group hover:bg-mint-600">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                View Details
+                            </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- store card 4 -->
+                <div
+                    class="flex flex-col p-4 rounded-3xl transition-all duration-200 outline outline-transparent outline-1 hover:outline-offset-2 hover:outline-mint-600  bg-white">
+                    <div class="flex justify-start gap-4">
+                        <div class="w-12 h-12 flex justify-center items-center border border-gray-100 rounded-lg p-1">
+                            <img class="object-contain w-full h-full" src="./assets/images/stores/store-1.png" alt="">
+                        </div>
+
+
+                        <div class="space-y-1">
+                            <p class="text-base font-semibold text-left text-neutral-900">
+                                CleanPro Express
+                            </p>
+
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/star-gold.svg" alt="" class="">
+                                <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
+                                <span class="text-sm text-left text-neutral-500">(624)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" my-[15px] flex items-center gap-1">
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Luxury Service</p>
+                        </span>
+                        <span class="block w-fit relative overflow-hidden px-2 py-1.5 rounded bg-neutral-50">
+                            <p class="text-xs text-center text-gray-500">Leather Care</p>
+                        </span>
+                    </div>
+                    <div class="flex flex-col border-t border-gray-100 mt-auto">
+
+
+                        <div class="py-[15px] flex justify-between items-center">
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/map-pin-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">Eastend • 2.5 km</p>
+
+                            </div>
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="./assets/icons/clock-gray.svg" alt="" class="h-3 w-3">
+                                <p class="text-sm text-left text-gray-500">02 hours</p>
+
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full flex justify-center items-center gap-2 px-3 py-2 rounded-lg transition-all duration-150 border-[1.5px] border-mint-600 group hover:bg-mint-600">
+                            <p
+                                class="transition-all duration-150 text-xs font-semibold text-center text-mint-600 group-hover:text-white">
+                                View Details
+                            </p>
+                        </button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <button class="btn_solid">
+                    <p>Browse All Vendors</p>
+
+                    <img src="./assets/icons/arrow-left.svg" alt="">
+                </button>
+            </div>
+        </section>
+
+        <!-- Build on trust -->
+        <section class="section_container max-w-2lg mx-auto px-4 xl-1:px-0">
+            <header class="heading_section">
+                <p>
+                    Build on Trust and <span>Excellence</span>
+                </p>
+                <p>
+                    Our commitment to quality and customer satisfaction has made us the preferred choice.
+                </p>
+            </header>
+            <div class="grid grid-cols-2 md:grid-cols-3 xl-1:grid-cols-4 gap-6">
+
+
+                <!-- card 1 -->
+                <div class="flex items-center flex-col justify-start">
+                    <div
+                        class="bg-gradient-to-tr from-mint-600 to-mint-700 p-4 sm:p-5 rounded-2xl shadow-lg shadow-mint-200">
+                        <img class="h-5 w-5 sm:h-8 sm:w-8" src="./assets/icons/varified.svg" alt="">
+                    </div>
+
+                    <p class="text-sm sm:text-base font-semibold text-center text-neutral-800 mb-[10px] mt-[24px]">
+                        Verified Stores Only
+                    </p>
+                    <p class="text-xs sm:text-sm text-center text-neutral-500">
+                        All stores are background-checked and rated by real customers.
+                    </p>
+                </div>
+
+
+
+                <!-- card 2 -->
+                <div class="flex items-center flex-col justify-start">
+                    <div
+                        class="bg-gradient-to-tr from-mint-600 to-mint-700 p-4 sm:p-5 rounded-2xl shadow-lg shadow-mint-200">
+                        <img class="h-5 w-5 sm:h-8 sm:w-8" src="./assets/icons/sparkles.svg" alt="">
+                    </div>
+
+                    <p class="text-sm sm:text-base font-semibold text-center text-neutral-800 mb-[10px] mt-[24px]">
+                        Compare & Choose
+                    </p>
+                    <p class="text-xs sm:text-sm text-center text-neutral-500">
+                        Compare stores, prices, and services to find your perfect match.
+                    </p>
+                </div>
+
+                <!-- card 3 -->
+                <div class="flex items-center flex-col justify-start">
+                    <div
+                        class="bg-gradient-to-tr from-mint-600 to-mint-700 p-4 sm:p-5 rounded-2xl shadow-lg shadow-mint-200">
+                        <img class="h-5 w-5 sm:h-8 sm:w-8" src="./assets/icons/tags.svg" alt="">
+                    </div>
+
+                    <p class="text-sm sm:text-base font-semibold text-center text-neutral-800 mb-[10px] mt-[24px]">
+                        Best Price Guarantee
+                    </p>
+                    <p class="text-xs sm:text-sm text-center text-neutral-500">
+                        Store competition ensures the best pricing and quality.
+                    </p>
+                </div>
+
+
+                <!-- card 4 -->
+                <div class="flex items-center flex-col justify-start">
+                    <div
+                        class="bg-gradient-to-tr from-mint-600 to-mint-700 p-4 sm:p-5 rounded-2xl shadow-lg shadow-mint-200">
+                        <img class="h-5 w-5 sm:h-8 sm:w-8" src="./assets/icons/review.svg" alt="">
+                    </div>
+
+                    <p class="text-sm sm:text-base font-semibold text-center text-neutral-800 mb-[10px] mt-[24px]">
+                        Transparent Reviews
+                    </p>
+                    <p class="text-xs sm:text-sm text-center text-neutral-500">
+                        Read verified reviews to choose with confidence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- promise of perfection -->
+        <section
+            class="section_container max-w-2lg mx-auto px-4 xl-1:px-0   grid grid-cols-1 md:grid-cols-2 relative overflow-hidden">
+            <div class="relative z-10 flex justify-center md:justify-end items-center order-2 md:order-1">
+                <img src="./assets/images/perfection/bg2.png" alt="">
+            </div>
+            <div
+                class="flex flex-col justify-center items-center md:items-start relative z-10 md:mt-14 order-1 md:order-2 pt-4 md:pt-0">
+                <div class="space-y-[10px]">
+                    <p class="text-2xl lg:text-[32px] text-start font-semibold text-white">
+                        Your Laundry, Our Promise <br class="hidden md:block">of <span
+                            class="text-mint-600 font-playfair italic">Perfection</span>
+                    </p>
+                    <p class="text-base lg:text-xl text-left text-neutral-50">
+                        We’re dedicated to quality, hygiene, And <br class="hidden md:block">
+                        On-time delivery — always.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-start items-center gap-4 mt-4 md:mt-10">
+                    <button class="btn_solid">
+                        <p>Book Your Order</p>
+
+                        <img src="./assets/icons/arrow-left.svg" alt="">
+                    </button>
+
+                    <button class="btn_outline">
+                        <p>Learn More</p>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="absolute bottom-0 right-0 w-full h-full md:h-[80%] z-0 bg-mint-900 md:rounded-3xl bg-no-repeat bg-cover bg-center"
+                style="background-image: url('./assets/images/common/bg.png');">
+
+            </div>
+        </section>
+
+
+        <section class="bg-cover bg-no-repeat relative py-[50px] md:py-[100px]"
+            style="background-image: url('./assets/images/stores-network/bg.png');">
+
+            <div class="absolute top-0 right-0 w-full h-full z-0 bg-[#32d3a0]/5"></div>
+
+            <section class=" max-w-2lg mx-auto px-4 xl-1:px-0 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-[70px]">
+                <div class="flex flex-col justify-center">
+                    <div>
+                        <p class="headline text-left">Join <span>Our Stores</span> Network</p>
+                        <p class="text-base lg:text-lg font-medium text-left text-neutral-700">
+                            Partner with Laundry and connect with customers who need your services. No setup fees,
+                            flexible
+                            pricing, and instant access to our growing customer base.
+                        </p>
+                    </div>
+
+                    <ul class="pt-6 pb-10 space-y-4">
+                        <li class="flex justify-start items-center gap-[10px]">
+                            <img src="./assets/icons/check-solid.svg" alt="" class="h-[18px] w-[18px]">
+                            <p class="text-base text-left text-gray-600">
+                                Commission-based pricing (no hidden fees)
+                            </p>
+                        </li>
+                        <li class="flex justify-start items-center gap-[10px]">
+                            <img src="./assets/icons/check-solid.svg" alt="" class="h-[18px] w-[18px]">
+                            <p class="text-base text-left text-gray-600">
+                                Get paid weekly via direct deposit
+                            </p>
+                        </li>
+                        <li class="flex justify-start items-center gap-[10px]">
+                            <img src="./assets/icons/check-solid.svg" alt="" class="h-[18px] w-[18px]">
+                            <p class="text-base text-left text-gray-600">
+                                Free marketing and customer acquisition
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-col md:flex-row justify-start items-center gap-[15px]">
+                        <button class="btn_solid">
+                            <p>Start Your Application</p>
+
+                            <img src="./assets/icons/arrow-left.svg" alt="">
+                        </button>
+                        <button class="btn_outline !bg-white">
+                            <p>Learn More</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="hidden lg:grid grid-cols-2 gap-7">
+
+                    <div class="grid grid-cols-1 gap-7">
+                        <!-- card 1 -->
+                        <div
+                            class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                            <div>
+                                <div class="icon_labels group-hover:bg-mint-300">
+                                    <img src="./assets/icons/grow.svg" alt=""
+                                        class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                                </div>
+                            </div>
+                            <div class="space-y-[10px]">
+                                <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                    Grow Your Business
+                                </p>
+                                <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                    Reach thousands of customers actively searching for laundry services in your area.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div
+                            class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                            <div>
+                                <div class="icon_labels group-hover:bg-mint-300">
+                                    <img src="./assets/icons/mobile.svg" alt=""
+                                        class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                                </div>
+                            </div>
+                            <div class="space-y-[10px]">
+                                <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                    Mobile-Friendly Tools
+                                </p>
+                                <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                    Accept orders, update status, and communicate with customers on-the-go.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="grid grid-cols-1 gap-7 mt-5">
+                        <!-- card 2 -->
+                        <div
+                            class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                            <div>
+                                <div class="icon_labels group-hover:bg-mint-300">
+                                    <img src="./assets/icons/people.svg" alt=""
+                                        class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                                </div>
+                            </div>
+                            <div class="space-y-[10px]">
+                                <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                    Manage Orders Easily
+                                </p>
+                                <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                    Simple dashboard to track orders, manage pricing, and handle customer requests.
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <!-- card 4 -->
+                        <div
+                            class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                            <div>
+                                <div class="icon_labels group-hover:bg-mint-300">
+                                    <img src="./assets/icons/headset.svg" alt=""
+                                        class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                                </div>
+                            </div>
+                            <div class="space-y-[10px]">
+                                <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                    Dedicated Support
+                                </p>
+                                <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                    24/7 store support team to help you succeed and resolve any issues quickly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:hidden grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7">
+                    <!-- card 1 -->
+                    <div
+                        class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                        <div>
+                            <div class="icon_labels group-hover:bg-mint-300">
+                                <img src="./assets/icons/grow.svg" alt=""
+                                    class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                            </div>
+                        </div>
+                        <div class="space-y-[10px]">
+                            <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                Grow Your Business
+                            </p>
+                            <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                Reach thousands of customers actively searching for laundry services in your area.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div
+                        class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                        <div>
+                            <div class="icon_labels group-hover:bg-mint-300">
+                                <img src="./assets/icons/people.svg" alt=""
+                                    class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                            </div>
+                        </div>
+                        <div class="space-y-[10px]">
+                            <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                Manage Orders Easily
+                            </p>
+                            <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                Simple dashboard to track orders, manage pricing, and handle customer requests.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div
+                        class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                        <div>
+                            <div class="icon_labels group-hover:bg-mint-300">
+                                <img src="./assets/icons/mobile.svg" alt=""
+                                    class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                            </div>
+                        </div>
+                        <div class="space-y-[10px]">
+                            <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                Mobile-Friendly Tools
+                            </p>
+                            <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                Accept orders, update status, and communicate with customers on-the-go.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div
+                        class="flex flex-col p-4 rounded-3xl transition-all duration-200 group  shadow-sm gap-[15px] h-fit bg-white hover:bg-mint-700">
+                        <div>
+                            <div class="icon_labels group-hover:bg-mint-300">
+                                <img src="./assets/icons/headset.svg" alt=""
+                                    class="transition-all duration-200 group-hover:brightness-0 group-hover:invert">
+                            </div>
+                        </div>
+                        <div class="space-y-[10px]">
+                            <p class="text-base font-semibold text-left text-neutral-900 group-hover:text-white">
+                                Dedicated Support
+                            </p>
+                            <p class="text-sm text-left text-neutral-500 group-hover:text-white">
+                                24/7 store support team to help you succeed and resolve any issues quickly.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section_container max-w-2lg mx-auto px-4 xl-1:px-0 relative z-10">
+                <header class="heading_section">
+                    <p>
+                        Take <span>Laundry</span> With You
+                    </p>
+                    <p>
+                        Download our mobile app for exclusive features and a seamless laundry experience on the go.
+                    </p>
+                </header>
+                <div class="rounded-[44px] grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 overflow-hidden"
+                    style="background: linear-gradient(to right, #32d3a0 0%, #32d3a0 6.25%, #33d3a0 12.5%, #36d3a0 18.75%, #3bd49f 25%, #43d59e 31.25%, #4cd69c 37.5%, #58d79a 43.75%, #65d997 50%, #73dc93 56.25%, #82df8e 62.5%, #92e387 68.75%, #a2e77f 75%, #b3ec74 81.25%, #c5f265 87.5%, #d7f84f 93.75%, #e9ff26 100%);">
+                    <div class=" p-5 ">
+                        <div class="h-full w-full p-3 md:p-6 rounded-3xl flex flex-col gap-6 justify-between bg-white">
+                            <div class="flex justify-start items-center gap-2 md:gap-4">
+                                <div
+                                    class="w-[56px] h-[56px] flex justify-center items-center border border-gray-100 bg-mint-600 rounded-lg p-2">
+                                    <img class="object-contain w-full h-full" src="./assets/logo/logo-white-sm.png"
+                                        alt="">
+                                </div>
+
+
+                                <div class="space-y-0.5">
+                                    <p class="text-sm sm:text-lg font-semibold text-left text-neutral-900">
+                                        Your Laundry, Just a Tap Away
+                                    </p>
+                                    <p class="text-[10px] sm:text-sm text-left text-gray-500">
+                                        Everything you need in your pocket
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div
+                                class="flex-1 pb-6 space-y-4 border-t-0 border-r-0 border-b border-l-0 border-gray-100">
+
+                                <!-- card 1 -->
+                                <div class="flex justify-start items-center gap-[10px]">
+                                    <div class="bg-mint-50 h-10 w-10 rounded-full flex justify-center items-center">
+                                        <img src="./assets/icons/easy-booking.svg" alt="">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-sm sm:text-[15px] font-medium text-left text-neutral-600">
+                                            Easy Booking
+                                        </p>
+                                        <p class="text-[10px] sm:text-sm text-left text-neutral-400">
+                                            Schedule pickup and delivery with just a few taps
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <!-- card 2 -->
+                                <div class="flex justify-start items-center gap-[10px]">
+                                    <div class="bg-mint-50 h-10 w-10 rounded-full flex justify-center items-center">
+                                        <img src="./assets/icons/clock.svg" alt="">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-sm sm:text-[15px] font-medium text-left text-neutral-600">
+                                            Real-Time Tracking
+                                        </p>
+                                        <p class="text-[10px] sm:text-sm text-left text-neutral-400">
+                                            Track your order status from pickup to delivery
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- card 3 -->
+                                <div class="flex justify-start items-center gap-[10px]">
+                                    <div class="bg-mint-50 h-10 w-10 rounded-full flex justify-center items-center">
+                                        <img src="./assets/icons/trophy.svg" alt="">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-sm sm:text-[15px] font-medium text-left text-neutral-600">
+                                            Loyalty Rewards
+                                        </p>
+                                        <p class="text-[10px] sm:text-sm text-left text-neutral-400">
+                                            Earn points and get exclusive discounts
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <!-- card 4 -->
+                                <div class="flex justify-start items-center gap-[10px]">
+                                    <div class="bg-mint-50 h-10 w-10 rounded-full flex justify-center items-center">
+                                        <img src="./assets/icons/shield-check-green.svg" alt="">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-sm sm:text-[15px] font-medium text-left text-neutral-600">
+                                            Secure Payments
+                                        </p>
+                                        <p class="text-[10px] sm:text-sm text-left text-neutral-400">
+                                            Safe and convenient payment options
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div
+                                class="flex flex-col-reverse sm:flex-row justify-start items-center gap-2 sm:gap-[30px]">
+                                <div class="space-y-4">
+                                    <p class="text-base font-semibold text-left text-neutral-900">Get Mobile App on <br>
+                                        App Store & Google Play</p>
+                                    <div class="flex justify-start items-center gap-[10px]">
+                                        <div class="flex justify-start items-center ">
+                                            <img src="./assets/images/stores-network/user-1.png" alt=""
+                                                class="w-9 h-9 overflow-hidden rounded-[25px] ">
+                                            <img src="./assets/images/stores-network/user-1.png" alt=""
+                                                class="w-9 h-9 overflow-hidden rounded-[25px] -ml-2">
+                                            <img src="./assets/images/stores-network/user-1.png" alt=""
+                                                class="w-9 h-9 overflow-hidden rounded-[25px] -ml-2">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="text-xs font-medium text-left text-neutral-800">4.9 <span
+                                                    class="text-neutral-500">(10k+ reviews)</span></p>
+                                            <div class="flex justify-start items-center gap-[2px]">
+                                                <img src="./assets/icons/star-gold.svg" alt="">
+                                                <img src="./assets/icons/star-gold.svg" alt="">
+                                                <img src="./assets/icons/star-gold.svg" alt="">
+                                                <img src="./assets/icons/star-gold.svg" alt="">
+                                                <img src="./assets/icons/star-gold.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./assets/images/stores-network/qr.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-[10px]">
+                                <button
+                                    class="bg-gradient-to-bl from-mint-600 via-mint-600 to-mint-200 hover:from-mint-700 hover:via-mint-500 hover:to-mint-300 transition-all duration-150  flex justify-center items-center h-10 sm:h-12 w-full rounded-xl px-2 gap-1.5">
+                                    <img src="./assets/icons/download-icon-white.svg" alt=""
+                                        class="h-3 w-3 sm:h-4 sm:w-4">
+
+                                    <p class="text-xs sm:text-sm font-semibold text-center text-white">
+                                        Download for iOS
+                                    </p>
+                                </button>
+                                <button
+                                    class="bg-gradient-to-bl from-mint-600 via-mint-600 to-mint-200 hover:from-mint-700 hover:via-mint-500 hover:to-mint-300 transition-all duration-150 flex justify-center items-center h-10 sm:h-12 w-full rounded-xl px-2 gap-1.5">
+                                    <img src="./assets/icons/download-icon-white.svg" alt=""
+                                        class="h-3 w-3 sm:h-4 sm:w-4">
+
+                                    <p class="text-xs sm:text-sm font-semibold text-center text-white">
+                                        Download for Android
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-end justify-center">
+                        <img src="./assets/images/stores-network/mobile.png" alt="" class="bg-contain ">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- get started -->
+        <section class="bg-mint-600 ">
+            <div
+                class="max-w-2lg mx-auto py-[60px] px-4 xl-1:px-0 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-6 lg:gap-0">
+                <div class="flex-1">
+                    <p class="text-[32px] font-semibold text-center lg:text-left text-white ">
+                        Ready to Get Started?
+                    </p>
+                    <p class="text-lg text-center lg:text-left text-neutral-50">
+                        Book your first order and experience hassle-free laundry service
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <button class="btn_solid_white_lg">
+                        <p>Book Now</p>
+
+                        <img src="./assets/icons/arrow-left-green.svg" alt="">
+                    </button>
+
+
+
+                    <button class="btn_outline_white_lg">
+                        <p>Become a Partner</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+    <!-- footer section  -->
+    <footer class=" bg-no-repeat bg-cover" style="background-image: url('./assets/images/footer/footer-bg.png');">
+
+        <!-- top footer  -->
+        <div class="relative overflow-hidden">
+            <div class="max-w-2lg mx-auto pt-[60px] relative z-10 px-4 xl-1:px-0">
+
+
+                <!-- links section -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-5 lg:gap-[65px] relative z-10">
+                    <!-- logo section -->
+                    <div class="space-y-[30px]">
+                        <img src="./assets/logo/logo-white.png" alt=""
+                            class=" w-auto h-14 md:w-auto md:h-[51.58px] object-contain">
+                        <p class="text-base text-left text-gray-300 font-normal ">
+                            Elevate Your Business with Innovative<br />Web, App, and Software Solutions. Partner for
+                            Excellence
+                            in Tech.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-lg font-medium text-left text-neutral-50">Quick Links</p>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Home</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Our Services</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">How It Works</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Partner Vendors</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Pricing</p>
+                        </a>
+                    </div>
+
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-lg font-medium text-left text-neutral-50">Support</p>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Help Center</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Terms & Conditions</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Privacy Policy</p>
+                        </a>
+                        <a href="#" class="flex justify-start items-center gap-1">
+                            <p class="text-base text-left text-neutral-400">Contact Us</p>
+                        </a>
+                    </div>
+
+
+
+                    <div>
+                        <div class="flex flex-col gap-6">
+                            <p class="self-stretch justify-center text-white text-lg font-semibold  leading-relaxed">
+                                Contact Us</p>
+                            <div class="self-stretch inline-flex justify-start items-start gap-2 cursor-pointer">
+
+                                <img src="./assets/icons/phone.svg" alt="" class="w-4 h-4 mt-1.5">
+                                <p class="flex-1 text-base text-left text-neutral-300">
+                                    +8801937203743</p>
+                            </div>
+                            <div class="self-stretch inline-flex justify-start items-start gap-2 cursor-pointer">
+
+                                <img src="./assets/icons/map-pin.svg" alt="" class="w-4 h-4 mt-1.5">
+                                <p class="flex-1 text-base text-left text-neutral-300">
+                                    123 LaundryStreet,Clean
+                                    City, CC 12345</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="mt-[30px] space-y-6">
+                            <p class="text-base font-medium text-left text-gray-50">
+                                Follow Us
+                            </p>
+
+
+                            <div class="flex justify-start items-center gap-[10px]">
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/facebook.svg" alt="">
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/twitter.svg" alt="">
+
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/youtube.svg" alt="">
+
+                                </button>
+                                <button
+                                    class="h-12 w-12 relative rounded-xl border border-white/[0.06] flex items-center justify-center transition-all duration-200 hover:bg-mint-600">
+                                    <img src="./assets/icons/pinterest.svg" alt="">
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="relative z-0 pb-[30px] pt-[50px]">
+                    <img src="./assets/images/footer/laundry.svg" alt="">
+                </div>
+
+
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between py-6 border-t border-white/10 relative z-10">
+                    <p class="text-xs sm:text-sm text-white/40 font-normal">Professional laundry services you can trust.
+                    </p>
+                    <p class="text-xs sm:text-sm text-white/40 font-normal">ⓒ2025 Laundry. All Rights Reserved.</p>
+                </div>
+
+
+
+
+                <!-- glows -->
+                <div class="w-[400px] h-[400px] absolute -top-[70%] left-[10%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+                <div
+                    class="w-[400px] h-[400px] absolute -bottom-[50%] left-[30%] bg-mint-600 rounded-full blur-[150px]">
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="./js/accordion.js"></script>
+    <script src="./js/sidebar.js"></script>
+</body>
+
+</html>

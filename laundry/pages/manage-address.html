@@ -181,128 +181,162 @@
             <div class="rs-breadcrumb-content">
                 <h1
                     class="rs-breadcrumb-title mb-[5px] sm:mb-[10px] text-[26px] md:text-[30px]  md:text-4xl text-white font-semibold leading-[140%]">
-                    Shopping Cart
+                    Order Details
                 </h1>
                 <div class="rs-breadcrumb-top-content">
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Home / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Cart</a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Dashboard / </a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">My Orders / </a>
+                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Order #2847</a>
                 </div>
             </div>
         </section>
 
         <!-- manage addresses area -->
-        <section class="max-w-2lg mx-auto pt-[60px] pb-[80px] px-4 xl:px-0 grid grid-cols-12 gap-6">
-            <div class="col-span-12 md:col-span-8 p-6 space-y-[15px] rounded-3xl bg-white">
-                <p class="text-base font-semibold text-left text-gray-700">
-                    3 items in your cart
-                </p>
-
-                <!-- card 1 -->
-                <!-- <div class="p-3 rounded-xl border border-gray-200 flex justify-between items-start gap-4">
-                    <div class="w-[84px] h-full">
-                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex-1 h-full flex flex-col justify-between items-start ">
-                        <p class="text-sm font-medium text-left text-neutral-900">
-                            Premium Wash Fold
-                        </p>
-                        <p class="text-xs font-medium text-left text-gray-500">
-                            By CleanPro Laundry
-                        </p>
-                    </div>
-                    <div>
-                        sdfsdf
-                    </div>
-                </div> -->
-
-                <!-- card 1 -->
-                <div class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 p-3">
-                    <div class="w-[84px] h-[84px] rounded overflow-hidden">
-                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
-
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div class="space-y-[6px]">
-                            <p class="text-sm font-medium text-neutral-900">
-                                Premium Wash & Fold
-                            </p>
-                            <p class="text-xs font-medium text-left text-gray-500">
-                                By CleanPro Laundry
-                            </p>
+        <section class="rs-manage-addresses-section pt-[60px] pb-[80px] px-4 xl:px-0">
+            <div class="rs-manage-addresses-area max-w-2lg mx-auto">
+                <button onclick="toggleModal('role')"
+                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[190px] sm:w-[290px] rounded-xl">
+                    <i class="fa-solid fa-plus mr-[8px]"></i>
+                    Add New Address
+                </button>
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/home-icon.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
                         </div>
-                        <div class="counter_container" id="card-1">
-                            <button class="decrease" onclick="counterController('card-1', 'decrease')">
-                                -
-                            </button>
-                            <div class="current_count">
-                                0
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Home</a>
+                                <span
+                                    class="text-mint-600 rounded-[25px] border-[1.5px] border-mint-200 flex gap-[4px] justify-center bg-mint-50 h-[24px] w-[78px] leading-[24px] text-xs font-normal">
+                                    <img class="h-[10px] w-[10px] mt-auto mb-auto" src="../assets/icons/star.svg"
+                                        alt="">
+                                    Default
+                                </span>
                             </div>
-                            <button class="increase" onclick="counterController('card-1', 'increase')">
-                                +
-                            </button>
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                123 Main Street, Apt 4B New York, NY 10001
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between items-end">
-                        <button class="h-5 w-5">
-                            <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                        </button>
-                        <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                        <p class="text-base font-semibold text-right text-gray-900">
-                            $25.98
-                        </p>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-edit-btn">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-
-
-                <!-- card 2 -->
-                <div class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 p-3">
-                    <div class="w-[84px] h-[84px] rounded overflow-hidden">
-                        <img src="../assets/images/shopping-cart/card-1.png" alt="" class="w-full h-full object-cover">
-
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div class="space-y-[6px]">
-                            <p class="text-sm font-medium text-neutral-900">
-                                Premium Wash & Fold
-                            </p>
-                            <p class="text-xs font-medium text-left text-gray-500">
-                                By CleanPro Laundry
-                            </p>
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/location-green.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
                         </div>
-                        <div class="counter_container" id="card-2">
-                            <button class="decrease" onclick="counterController('card-2', 'decrease')">
-                                -
-                            </button>
-                            <div class="current_count">
-                                0
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Parent's House</a>
                             </div>
-                            <button class="increase" onclick="counterController('card-2', 'increase')">
-                                +
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                789 Family Lane Brooklyn, NY 11201
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                Set as Default
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
+                                    alt="">
+                                Delete
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between items-end">
-                        <button class="h-5 w-5">
-                            <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                        </button>
-                        <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                        <p class="text-base font-semibold text-right text-gray-900">
-                            $25.98
-                        </p>
+                </div>
+                <div
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    <div
+                        class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
+                        <div
+                            class="rs-manage-addresses-icon flex-none w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex bg-mint-50 rounded-lg">
+                            <img src="../assets/icons/city-icon.svg" alt=""
+                                class="m-auto w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]">
+                        </div>
+                        <div class="rs-manage-addresses-info">
+                            <div class="rs-manage-addresses-info-top flex text-center gap-[12px] mb-[12px]">
+                                <a href="javascript:void(0)"
+                                    class="text-neutral-900 text-base leading-[140%] font-medium">Office</a>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="leading-[140%] mb-[6px] text-[12px] sm:text-sm font-normal flex gap-[6px] text-neutral-700">
+                                <img src="../assets/icons/location.svg" alt="">
+                                Riverview Golden Street, Apt 8B New York, NY 10064
+                            </a>
+                            <a href="tel:+1(555)123-4567"
+                                class="leading-[140%] text-sm mb-[24px] font-normal flex gap-[6px] text-neutral-500">
+                                <img src="../assets/icons/call.svg" alt="" srcset="">
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-manage-addresses-box-bottom-area">
+                        <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                Set as Default
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
+                                    alt="">
+                                Edit
+                            </button>
+                            <button
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
+                                    alt="">
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
-            <div class="col-span-12 md:col-span-4 ">
-                <div class="p-6 rounded-3xl sticky top-24 bg-white w-full">
-                    card
-
-
-                </div>
-            </div>
-
         </section>
 
 
@@ -477,7 +511,6 @@
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/modal.js"></script>
-    <script src="../js/counterHandler.js"></script>
 </body>
 
 </html>
