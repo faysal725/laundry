@@ -3,7 +3,8 @@ function counterController(id, action) {
 
     // Find the <div class="current_count">
     const counterEl = container.querySelector(".current_count");
-
+    console.log(counterEl);
+    
     // Get current value, convert to number
     let currentValue = parseInt(counterEl.textContent);
 
