@@ -150,7 +150,7 @@
     <main>
 
         <!-- manage addresses area -->
-        <section class="max-w-2lg mx-auto pt-[60px] pb-[80px] px-4 xl:px-0 space-y-10">
+        <section class="max-w-2lg mx-auto pt-[60px] pb-[80px] px-4 xl:px-0 space-y-5 md:space-y-10">
 
             <div class="w-full">
                 <p class="text-2xl md:text-4xl font-semibold text-left text-gray-700">
@@ -248,97 +248,80 @@
 
                     </div>
                 </div>
-                <div class=" col-span-12 lg:col-span-8">
+                <div class=" col-span-12 lg:col-span-8 flex flex-col gap-6">
 
-                    <div class="p-6 rounded-3xl flex flex-col justify-start w-full bg-white">
-                        <p class="text-base font-semibold text-left text-gray-700">
-                            Favorite Stores
-                        </p>
-
-                        <div>
-
-                            <!-- card 1 -->
-                            <div class="py-[15px] flex justify-between items-center gap-4 border-b border-neutral-200">
-                                <div class="icon_labels">
-                                    <img src="../assets/icons/heart-green-solid.svg" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-sm font-semibold text-left text-neutral-700">
-                                        Fresh And Shine Laundry
-                                    </p>
-                                    <div class="flex justify-start my-1 gap-2">
-                                        <p class="text-sm text-left text-neutral-500">15 Orders</p>
-                                        <p
-                                            class="text-sm text-left text-neutral-500 flex justify-start items-center gap-1">
-                                            <img src="../assets/icons/star-gold.svg" alt="" class="inline"> 5.0 rating
-                                        </p>
-                                    </div>
+                    <form action="#" class="rounded-3xl p-6 bg-white shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-neutral-700 text-lg font-semibold"> Account Setting</h3>
+                        </div>
 
 
-                                    <button type="submit"
-                                        class="block md:hidden w-full h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                        Again</button>
-                                </div>
-                                <button type="submit"
-                                    class="hidden md:block w-40 h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                    Again</button>
+                        <div class="space-y-4 mt-6 mb-[30px]">
+                            <div>
+                                <label for="name" class="text-sm md:text-base font-medium text-left text-neutral-700">Full
+                                    Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe"
+                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
                             </div>
-
-
-                            <!-- card 2 -->
-                            <div class="py-[15px] flex justify-between items-center gap-4 border-b border-neutral-200">
-                                <div class="icon_labels">
-                                    <img src="../assets/icons/heart-green-solid.svg" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-sm font-semibold text-left text-neutral-700">
-                                        Fresh And Shine Laundry
-                                    </p>
-                                    <div class="flex justify-start my-1 gap-2">
-                                        <p class="text-sm text-left text-neutral-500">15 Orders</p>
-                                        <p
-                                            class="text-sm text-left text-neutral-500 flex justify-start items-center gap-1">
-                                            <img src="../assets/icons/star-gold.svg" alt="" class="inline"> 5.0 rating
-                                        </p>
-                                    </div>
-
-
-
-                                    <button type="submit"
-                                        class="block md:hidden w-full h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                        Again</button>
-                                </div>
-                                <button type="submit"
-                                    class="hidden md:block w-40 h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                    Again</button>
+                            <div>
+                                <label for="email" class="text-sm md:text-base font-medium text-left text-neutral-700">Email
+                                    Address</label>
+                                <input type="text" id="email" name="email" placeholder="john.doe@email.com"
+                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
                             </div>
+                            <div>
+                                <label for="phone" class="text-sm md:text-base font-medium text-left text-neutral-700">Phone
+                                    Number</label>
+                                <input type="phone" id="phone" name="phone" placeholder="Your phone number"
+                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
+                            </div>
+                        </div>
 
-                            <!-- card 3 -->
-                            <div class="py-[15px] flex justify-between items-center gap-4 border-b border-neutral-200">
-                                <div class="icon_labels">
-                                    <img src="../assets/icons/heart-green-solid.svg" alt="">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-sm font-semibold text-left text-neutral-700">
-                                        Fresh And Shine Laundry
+
+                        <button type="submit"
+                            class="flex justify-center items-center w-full h-12 overflow-hidden px-5 py-3.5 rounded-xl bg-mint-600">
+                            <p class="text-sm font-semibold text-center text-white">
+                                Save Changes
+                            </p>
+                        </button>
+                    </form>
+
+
+
+                    <!-- notification -->
+                    <div class="rounded-3xl p-6 bg-white shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-neutral-700 text-lg font-semibold">Notifications</h3>
+                        </div>
+
+                        <div class="mt-6">
+                            <div class="flex justify-start items-center py-4 border-b border-neutral-200">
+                                <label for="notification" class="flex-1">
+                                    <p class="text-sm font-semibold text-left text-neutral-700">Order Updates</p>
+                                    <p class="text-sm text-left text-neutral-500">Get notified about your order status
                                     </p>
-                                    <div class="flex justify-start my-1 gap-2">
-                                        <p class="text-sm text-left text-neutral-500">15 Orders</p>
-                                        <p
-                                            class="text-sm text-left text-neutral-500 flex justify-start items-center gap-1">
-                                            <img src="../assets/icons/star-gold.svg" alt="" class="inline"> 5.0 rating
-                                        </p>
-                                    </div>
-
-
-
-                                    <button type="submit"
-                                        class="block md:hidden w-full h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                        Again</button>
-                                </div>
-                                <button type="submit"
-                                    class="hidden md:block w-40 h-10 relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-4 py-2 capitalize transition-all duration-150 hover:bg-mint-600 hover:text-white">book
-                                    Again</button>
+                                </label>
+                                <label for="notification">
+                                    <input type="checkbox" name="notification" id="notification" class="peer sr-only">
+                                    <img src="../assets/icons/unchecked-green.svg" alt=""
+                                        class="w-6 h-6 peer-checked:hidden">
+                                    <img src="../assets/icons/checked.svg" alt=""
+                                        class="w-6 h-6 hidden peer-checked:block">
+                                </label>
+                            </div>
+                            <div class="flex justify-start items-center py-4">
+                                <label for="promotion" class="flex-1">
+                                    <p class="text-sm font-semibold text-left text-neutral-700">Promotions</p>
+                                    <p class="text-sm text-left text-neutral-500">Receive special offers and discounts
+                                    </p>
+                                </label>
+                                <label for="promotion">
+                                    <input type="checkbox" name="promotion" id="promotion" class="peer sr-only">
+                                    <img src="../assets/icons/unchecked-green.svg" alt=""
+                                        class="w-6 h-6 peer-checked:hidden">
+                                    <img src="../assets/icons/checked.svg" alt=""
+                                        class="w-6 h-6 hidden peer-checked:block">
+                                </label>
                             </div>
                         </div>
                     </div>
