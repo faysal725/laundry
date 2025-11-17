@@ -82,7 +82,7 @@
 
 @media (max-width: 360px) {
     .rs-order-items-price {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 }
 @media (max-width: 410px) {
