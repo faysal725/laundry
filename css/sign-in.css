@@ -54,6 +54,7 @@
     color: transparent;
 }
 
+.outher-login span::after,
 .outher-login span::before {
     position: absolute;
     content: '';
@@ -64,13 +65,28 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
 .outher-login span::after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 35%;
-    background: var(--color-neutral-200);
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: auto;
+}
+
+@media (max-width: 1000px) {
+
+    .outher-login span::before,
+    .outher-login span::after {
+        display: none;
+    }
+}
+
+/* register */
+.register-btn a.active {
+    border: 1.50px solid var(--color-mint-200);
+    border-radius: 12px;
+    background: var(--color-mint-50);
+    color: var(--color-mint-600);
+}
+
+.register-btn a.active img {
+    filter: invert(60%) sepia(42%) saturate(600%) hue-rotate(112deg) brightness(95%) contrast(90%);
 }
