@@ -205,8 +205,10 @@
                                 class="rs-delivery-address-title text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
                                 Delivery Address
                             </h3>
-                            <div
-                                class="rs-delivery-address-box active border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] flex gap-[7.5px] items-center mb-[15px]">
+
+                            <input type="radio" name="address" id="home" class="sr-only">
+                            <label for="home"
+                                class="rs-delivery-address-box peer-checked:active border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] flex gap-[7.5px] items-center mb-[15px]">
                                 <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
                                 <div class="rs-delivery-info">
                                     <h5 class="text-sm md:text-sm text-neutral-700 font-semibold leading-[100%]">Home
@@ -214,8 +216,11 @@
                                     <span class="text-xs text-neutral-600 font-normal leading-[140%]">123 Main Street,
                                         Apt 44, NY 1023</span>
                                 </div>
-                            </div>
-                            <div
+                            </label>
+
+
+                            <input type="radio" name="address" id="office" class="sr-only">
+                            <label for="office"
                                 class="rs-delivery-address-box border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] flex gap-[7.5px] items-center mb-6">
                                 <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
                                 <div class="rs-delivery-info">
@@ -224,188 +229,157 @@
                                     <span class="text-xs text-neutral-600 font-normal leading-[140%]">62 Business Ave,
                                         Suite 201 New York, NY 1002</span>
                                 </div>
-                            </div>
+                            </label>
                             <button type="button"
+                            onclick="toggleModal('role')"
                                 class="rs-delivery-info-btn text-sm text-neutral-500 font-semibold flex gap-[10px] justify-center items-center border-[1px] border-neutral-200 rounded-xl h-[48px] w-full">
                                 <i class="fa-solid fa-plus"></i>
                                 Add New Address
                             </button>
                         </div>
                     </div>
-                    <div class="rs-order-items-area bg-white p-4 md:p-6 rounded-3xl mb-6">
-                        <div class="rs-order-items-content">
-                            <h5 class="text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
-                                Order Items
-                            </h5>
-                            <div
-                                class="rs-order-items-box rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
-                                <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
-                                    <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
-                                        src="../assets/icons/shart-icon.svg" alt="">
-                                </div>
-                                <div class="rs-order-items-box-right-content">
-                                    <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Business
-                                        Suit - Dry
-                                        Cleaning</h5>
-                                    <div class="flex items-center gap-[35px]">
-                                        <span
-                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                            2
-                                        </span>
-                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
-                                            $15.00 each
-                                        </li>
-                                    </div>
-                                </div>
-                                <div class="rs-order-items-price rs-order-items-price-2 ml-auto ">
-                                    <span
-                                        class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$30.00</span>
-                                </div>
+                    <div class="rs-order-items-area bg-white p-4 md:p-6 rounded-3xl mb-6 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-base font-semibold text-left text-neutral-700">
+                                    Order Items
+                                </p>
+                                <p class="text-sm text-left text-gray-500">4 of 23 items selected</p>
                             </div>
-                            <div
-                                class="rs-order-items-box rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px] mb-[15px]">
-                                <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
-                                    <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
-                                        src="../assets/icons/shart-icon.svg" alt="">
-                                </div>
-                                <div class="rs-order-items-box-right-content">
-                                    <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Dress
-                                        Shirts -
-                                        Laundry & Press</h5>
-                                    <div class="flex items-center gap-[35px]">
-                                        <span
-                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                            5
-                                        </span>
-                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
-                                            $8.00 each
-                                        </li>
-                                    </div>
-                                </div>
-                                <div class="rs-order-items-price ml-auto rs-order-items-price-2 ">
-                                    <span
-                                        class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$40.00</span>
-                                </div>
-                            </div>
-                            <div
-                                class="rs-order-items-box rs-order-items-box-2 rs-order-items-box-2 flex items-center gap-[16px] border-[1px] border-neutral-200 rounded-xl px-[12px] py-[11px]">
-                                <div
-                                    class="rs-order-items-icon w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] bg-mint-50 rounded-[4px] flex items-center justify-center">
-                                    <img class="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px]"
-                                        src="../assets/icons/shart-icon.svg" alt="">
-                                </div>
-                                <div class="rs-order-items-box-right-content">
-                                    <h5 class="text-xs md:text-sm text-neutral-900 font-medium leading-[140%]">Trousers
-                                        - Steam
-                                        Ironing</h5>
-                                    <div class="flex items-center gap-[35px]">
-                                        <span
-                                            class="text-xs md:text-sm text-neutral-500 font-normal leading-[140%]">Quantity:
-                                            3
-                                        </span>
-                                        <li class="text-xs md:text-sm text-mint-600 font-normal leading-[140%]">
-                                            $6.00 each
-                                        </li>
-                                    </div>
-                                </div>
-                                <div class="rs-order-items-price rs-order-items-price-2 ml-auto">
-                                    <span
-                                        class="text-sm md:text-base text-neutral-900 font-semibold leading-[140%]">$18.00</span>
-                                </div>
-                            </div>
-                            <div class="rs-promo-area mb-[24px]">
-                                <h5
-                                    class="text-[13px] text-mint-700 font-normal leading-[120%] flex gap-[5px] items-center mb-[10px]">
-                                    <img src="../assets/icons/tag.svg" alt="">
-                                    Promo Code
-                                </h5>
-                                <div class="flex gap-[10px]">
-                                    <input
-                                        class="promo-input border-[1.50px] border-neutral-100 leading-[41px] rounded-xl h-[40px] w-full px-[16px]"
-                                        type="text" placeholder="Enter promo code">
-                                    <button
-                                        class="text-xs text-neutral-500 font-medium leading-[140%] w-[80px] h-[40px] border-[1.50px] border-neutral-100 rounded-xl ">Apply</button>
-                                </div>
-                            </div>
-                            <div class="rs-payment-info-item flex justify-between mb-[10px]">
-                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Subtotal</span>
-                                <span
-                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$88.00</span>
-                            </div>
-                            <div class="rs-payment-info-item flex justify-between mb-[10px]">
-                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Delivery Fee</span>
-                                <span
-                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">Free</span>
-                            </div>
-                            <div
-                                class="rs-payment-info-item flex justify-between pb-[16px] mb-[16px] border-b border-b-neutral-200">
-                                <span class="text-sm font-medium leading-[140%] text-neutral-500">Tax & Vat (+8%)</span>
-                                <span
-                                    class="text-sm md:text-base font-normal leading-[140%] text-neutral-700">$7.04</span>
-                            </div>
-                            <div class="rs-order-details-comon-title flex justify-between">
-                                <h5 class="text-base md:text-lg text-neutral-700 font-semibold leading-[140%]">Total
-                                </h5>
-                                <h5 class="text-base md:text-lg text-mint-700 font-semibold leading-[140%]">$95.04
-                                </h5>
-                            </div>
+                            <p class="text-base font-medium text-right text-gray-500">
+                                3 Stores
+                            </p>
                         </div>
-                    </div>
-                    <div class="rs-payment-method-area bg-white p-6 rounded-3xl">
-                        <div class="rs-delivery-address-content">
-                            <h3
-                                class="rs-delivery-address-title text-sm md:text-base text-neutral-700 font-semibold leading-[140%] mb-[15px]">
-                                Select Payment Method
-                            </h3>
-                            <div
-                                class="rs-payment-logo mb-[15px] flex gap-[16px] flex-wrap justify-center xl:justify-start">
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-01.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-02.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-03.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-04.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-05.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-06.svg" alt="">
-                                </button>
-                                <button
-                                    class="w-[162px] h-[88px] flex items-center justify-center border-[1px] border-neutral-200 rounded-xl">
-                                    <img class="h-fit" src="../assets/images/payment-logo/payment-logo-07.svg" alt="">
-                                </button>
-                            </div>
-                            <div
-                                class="rs-delivery-address-box active border-[1px] border-neutral-200 rounded-xl px-[16px] py-[11px] md:py-[21px] flex gap-[7.5px] items-center mb-[15px]">
-                                <i class="w-[24px] h-[24px] block border-[1px] border-neutral-300 rounded-[100%]"></i>
-                                <div class="rs-delivery-info">
-                                    <h5 class="text-sm md:text-sm text-neutral-700 font-semibold leading-[100%]">Cash On
-                                        Delivery
-                                    </h5>
+
+
+                        <!-- cards -->
+                        <div class="p-3 bg-white flex flex-col gap-4 rounded-xl border border-gray-200">
+
+                            <!-- section container -->
+                            <div for="card-1-container">
+                                <div
+                                    class="flex items-stretch justify-between gap-[10px] md:gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
+                                    <label for="card-1-container" class="flex items-center">
+                                        <input type="checkbox" name="card-1-container" id="card-1-container"
+                                            class="peer sr-only">
+                                        <img src="../assets/icons/unchecked.svg" alt=""
+                                            class="w-5 h-5 peer-checked:hidden relative z-10">
+                                        <img src="../assets/icons/checked.svg" alt=""
+                                            class="w-5 h-5 hidden peer-checked:block relative z-10">
+                                    </label>
+
+                                    <label for="card-1-container"
+                                        class="w-9 h-9 md:w-12 md:h-12 rounded overflow-hidden border border-neutral-100">
+                                        <img src="../assets/images/stores/store-1.png" alt=""
+                                            class="w-full h-full object-cover">
+
+                                    </label>
+                                    <label for="card-1-container" class="flex-1 flex flex-col justify-between">
+                                        <div class="space-y-1">
+                                            <p class="text-xs md:text-base font-semibold text-left text-neutral-900">
+                                                CleanPro Express
+                                            </p>
+
+                                            <div class="flex justify-start items-center gap-1">
+                                                <img src="../assets/icons/star-gold.svg" alt="" class="">
+                                                <span class="text-xs md:text-sm font-medium text-left text-neutral-800">4.9</span>
+                                                <span class="text-xs md:text-sm text-left text-neutral-500">(624)</span>
+                                                <span
+                                                    class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-fit md:w-[60px] h-5 gap-3 p-2 rounded-[25px] bg-[#e8fbf4]">
+                                                    <p
+                                                        class="text-[10px] md:text-xs text-left text-mint-600">
+                                                        3
+                                                        items</p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label for="card-1-container" class="flex flex-col justify-between items-end">
+                                        <p class="text-xs md:text-sm text-right text-gray-500">Store Subtotal</p>
+                                        <p class="text-[13px] md:text-base font-semibold text-right text-mint-600">$51.96</p>
+
+                                    </label>
                                 </div>
                             </div>
-                            <button type="submit"
-                                class="rs-rate-submit-btn place-order-btn text-base bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center w-full font-semibold rounded-xl flex items-center justify-center gap-[4px] mb-[15px]">
-                                <img src="../assets/icons/shield-check.svg" alt="">
-                                Place Order — $95.04
-                            </button>
-                            <p class="font-normal text-[13px] leading-[140%] text-center text-neutral-400">By placing
-                                this order, you agree to our Terms & Conditions</p>
+
+                            <!-- card 1 -->
+                            <div
+                                class="flex items-stretch justify-between gap-[10px] md:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                                <label for="card-1" class="flex items-center">
+                                    <input type="checkbox" name="card-1" id="card-1" class="peer sr-only">
+                                    <img src="../assets/icons/unchecked.svg" alt=""
+                                        class="w-5 h-5 peer-checked:hidden relative z-10">
+                                    <img src="../assets/icons/checked.svg" alt=""
+                                        class="w-5 h-5 hidden peer-checked:block relative z-10">
+
+                                    <div
+                                        class="absolute top-0 right-0 w-full h-full  peer-checked:border-mint-600 peer-checked:bg-mint-50 z-0">
+
+                                    </div>
+                                </label>
+
+                                <label for="card-1" class="w-[56px] h-[56px] rounded overflow-hidden relative z-10">
+                                    <img src="../assets/images/shopping-cart/card-1.png" alt=""
+                                        class="w-full h-full object-cover">
+
+                                </label>
+                                <label for="card-1" class="flex-1 flex flex-col justify-center relative z-10">
+                                    <div class="space-y-[6px]">
+                                        <p class="text-sm font-medium text-neutral-900">
+                                            Premium Wash & Fold
+                                        </p>
+                                        <div class="flex justify-start items-center">
+                                            <p class="text-sm text-left text-neutral-500">Quantity: 2</p>
+
+                                            <p class="text-sm text-left text-mint-600 flex justify-start items-center gap-2 ml-3"> <span class="inline-block w-1.5 h-1.5 bg-mint-600  rounded-full"></span> $15.00 each</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="card-1" class="flex flex-col justify-center items-end gap-[6px] relative z-10">
+                                    <p class="text-sm font-semibold text-right text-mint-600">$30.00</p>
+                                    <p class="text-sm text-right text-neutral-500">Total</p>
+                                </label>
+                            </div>
+
+                            <!-- card 2 -->
+                            <div
+                                class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                                <label for="card-2" class="flex items-center">
+                                    <input type="checkbox" name="card-2" id="card-2" class="peer sr-only">
+                                    <img src="../assets/icons/unchecked.svg" alt=""
+                                        class="w-5 h-5 peer-checked:hidden relative z-10">
+                                    <img src="../assets/icons/checked.svg" alt=""
+                                        class="w-5 h-5 hidden peer-checked:block relative z-10">
+
+                                    <div
+                                        class="absolute top-0 right-0 w-full h-full  peer-checked:border-mint-600 peer-checked:bg-mint-50 z-0">
+
+                                    </div>
+                                </label>
+
+                                <label for="card-2" class="w-[56px] h-[56px] rounded overflow-hidden relative z-10">
+                                    <img src="../assets/images/shopping-cart/card-1.png" alt=""
+                                        class="w-full h-full object-cover">
+
+                                </label>
+                                <label for="card-2" class="flex-1 flex flex-col justify-center relative z-10">
+                                    <div class="space-y-[6px]">
+                                        <p class="text-sm font-medium text-neutral-900">
+                                            Premium Wash & Fold
+                                        </p>
+                                        <div class="flex justify-start items-center">
+                                            <p class="text-sm text-left text-neutral-500">Quantity: 2</p>
+
+                                            <p class="text-sm text-left text-mint-600 flex justify-start items-center gap-2 ml-3"> <span class="inline-block w-1.5 h-1.5 bg-mint-600  rounded-full"></span> $15.00 each</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="card-2" class="flex flex-col justify-center items-end gap-[6px] relative z-10">
+                                    <p class="text-sm font-semibold text-right text-mint-600">$30.00</p>
+                                    <p class="text-sm text-right text-neutral-500">Total</p>
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -523,11 +497,14 @@
                                 <div class="flex justify-start items-center gap-4 relative px-4 py-2">
                                     <label for="card" class="h-5 w-5">
                                         <input type="radio" class="sr-only peer" name="payment" id="card">
-                                        <img type="label" for="card" name="payment" src="../assets/icons/radio-unchecked.svg" alt=""
+                                        <img type="label" for="card" name="payment"
+                                            src="../assets/icons/radio-unchecked.svg" alt=""
                                             class="block peer-checked:hidden  relative z-10">
-                                        <img type="label" for="card" name="payment" src="../assets/icons/radio-checked.svg" alt=""
+                                        <img type="label" for="card" name="payment"
+                                            src="../assets/icons/radio-checked.svg" alt=""
                                             class="hidden peer-checked:block  relative z-10">
-                                        <div class="absolute top-0 right-0 w-full h-full bg-transparent peer-checked:bg-mint-50 z-0 transition-all duration-200 border-[1.5px] border-gray-200  rounded-lg">
+                                        <div
+                                            class="absolute top-0 right-0 w-full h-full bg-transparent peer-checked:bg-mint-50 z-0 transition-all duration-200 border-[1.5px] border-gray-200  rounded-lg">
 
                                         </div>
                                     </label>
@@ -540,15 +517,19 @@
                                 <div class="p-2 flex justify-start items-center gap-4 relative px-4 py-2">
                                     <label for="cod" class="h-5 w-5">
                                         <input type="radio" class="sr-only peer" name="payment" id="cod">
-                                        <img type="label" for="cod" name="payment" src="../assets/icons/radio-unchecked.svg" alt=""
+                                        <img type="label" for="cod" name="payment"
+                                            src="../assets/icons/radio-unchecked.svg" alt=""
                                             class="block peer-checked:hidden relative z-10">
-                                        <img type="label" for="cod" name="payment" src="../assets/icons/radio-checked.svg" alt=""
+                                        <img type="label" for="cod" name="payment"
+                                            src="../assets/icons/radio-checked.svg" alt=""
                                             class="hidden peer-checked:block relative z-10">
-                                        <div class="absolute top-0 right-0 w-full h-full bg-transparent peer-checked:bg-mint-50 z-0 transition-all duration-200 border-[1.5px] border-gray-200  rounded-lg">
+                                        <div
+                                            class="absolute top-0 right-0 w-full h-full bg-transparent peer-checked:bg-mint-50 z-0 transition-all duration-200 border-[1.5px] border-gray-200  rounded-lg">
 
                                         </div>
                                     </label>
-                                    <label for="cod" class="text-sm font-medium text-left text-gray-500  relative z-10">Cash On
+                                    <label for="cod"
+                                        class="text-sm font-medium text-left text-gray-500  relative z-10">Cash On
                                         Delivery</label>
                                 </div>
                             </div>

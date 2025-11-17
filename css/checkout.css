@@ -8,16 +8,27 @@
     position: relative;
 }
 
-.rs-delivery-address-box.active {
+/* .rs-delivery-address-box.active {
     border: 1.50px solid var(--color-mint-400);
     background: var(--color-mint-50);
 }
 
 .rs-delivery-address-box.active i {
     border: 1.50px solid var(--color-mint-400);
+} */
+
+input[name="address"]:checked+label.rs-delivery-address-box {
+    background: #f0fdf4;
+    border-color: var(--color-mint-400);
 }
 
-.rs-delivery-address-box.active i::before {
+
+input[name="address"]:checked+label.rs-delivery-address-box i {
+    border: 1.50px solid var(--color-mint-400);
+}
+
+
+input[name="address"]:checked+label.rs-delivery-address-box i::before {
     position: absolute;
     content: '';
     width: 12px;
@@ -28,6 +39,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* .rs-delivery-address-box.active i::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--color-mint-600);
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
 
 .rs-order-items-box-2::after {
     display: none;
