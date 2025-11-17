@@ -249,82 +249,94 @@
                     </div>
                 </div>
 
-                
+
                 <div class=" col-span-12 lg:col-span-8 flex flex-col gap-6">
 
-                    <form action="#" class="rounded-3xl p-6 bg-white shadow-sm">
+
+                    <!-- widgets -->
+                    <div class="flex justify-between items-center gap-6 flex-nowrap overflow-x-auto scrollbar-hide">
+                        <!-- widget 1 -->
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                            <div class="flex flex-col justify-between">
+                                <p class="text-base text-gray-700">Total Orders</p>
+                                <p class="text-[28px] font-bold text-gray-700">36
+                                </p>
+
+                            </div>
+                            <div class="h-16 w-16 bg-mint-50 flex items-center justify-center rounded-full">
+                                <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
+                            </div>
+                        </div>
+                        <!-- widget 2 -->
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                            <div class="flex flex-col justify-between">
+                                <p class="text-base text-gray-700">In Progress</p>
+                                <p class="text-[28px] font-bold text-gray-700">02
+                                </p>
+
+                            </div>
+                            <div class="h-16 w-16 bg-aqua-50 flex items-center justify-center rounded-full">
+                                <img src="../assets/icons/clock-blue.svg" alt="" class="w-6 h-6">
+                            </div>
+                        </div>
+                        <!-- widget 3 -->
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                            <div class="flex flex-col justify-between">
+                                <p class="text-base text-gray-700">Completed</p>
+                                <p class="text-[28px] font-bold text-gray-700">18
+                                </p>
+
+                            </div>
+                            <div class="h-16 w-16 bg-mint-50 flex items-center justify-center rounded-full">
+                                <img src="../assets/icons/check-green.svg" alt="" class="w-6 h-6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders-->
+                    <div class="rounded-3xl p-6 bg-white shadow-sm flex flex-col gap-[15px]">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-neutral-700 text-lg font-semibold"> Account Setting</h3>
-                        </div>
-
-
-                        <div class="space-y-4 mt-6 mb-[30px]">
-                            <div>
-                                <label for="name" class="text-sm md:text-base font-medium text-left text-neutral-700">Full
-                                    Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe"
-                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
-                            </div>
-                            <div>
-                                <label for="email" class="text-sm md:text-base font-medium text-left text-neutral-700">Email
-                                    Address</label>
-                                <input type="text" id="email" name="email" placeholder="john.doe@email.com"
-                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
-                            </div>
-                            <div>
-                                <label for="phone" class="text-sm md:text-base font-medium text-left text-neutral-700">Phone
-                                    Number</label>
-                                <input type="phone" id="phone" name="phone" placeholder="Your phone number"
-                                    class="w-full h-[40px] mt-2.5 border border-neutral-100 p-3 rounded-xl text-sm focus:outline-mint-100 ">
-                            </div>
-                        </div>
-
-
-                        <button type="submit"
-                            class="flex justify-center items-center w-full h-12 overflow-hidden px-5 py-3.5 rounded-xl bg-mint-600">
-                            <p class="text-sm font-semibold text-center text-white">
-                                Save Changes
+                            <p class="text-base font-semibold text-left text-neutral-700">
+                                Recent Orders
                             </p>
-                        </button>
-                    </form>
+                            <a href="#">
+                                <p class="text-sm font-medium text-left text-neutral-700">View All</p>
+                            </a>
+
+                        </div>
+
+                        <div class="p-3 flex justify-between items-start rounded-xl gap-4 border border-neutral-200">
+                            <div class="w-14 h-14 bg-mint-50 flex justify-center items-center rounded">
+                                <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
+                            </div>
+                            <div class="flex-1 h-full space-y-1">
+                                <p class="text-sm font-medium  text-neutral-900">
+                                    #ORD-2847
+                                </p>
+                                <p class="text-sm  text-neutral-500">CleanPro Express</p>
+                                <p class="text-xs font-medium  text-neutral-700">Dry Cleaning <span class="text-xs text-left text-neutral-500">5 Items</span> </p>
+                            </div>
+                            <div>
+                                sdfsdf
+                            </div>
+                        </div>
+                    </div>
 
 
-
-                    <!-- notification -->
+                    <!-- saved address -->
                     <div class="rounded-3xl p-6 bg-white shadow-sm">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-neutral-700 text-lg font-semibold">Notifications</h3>
+                            <p class="text-base font-semibold text-left text-neutral-700">
+                                Saved Addresses
+                            </p>
+                            <a href="#">
+                                <p class="text-sm font-medium text-left text-neutral-700">View All</p>
+                            </a>
+
                         </div>
 
-                        <div class="mt-6">
-                            <div class="flex justify-start items-center py-4 border-b border-neutral-200">
-                                <label for="notification" class="flex-1">
-                                    <p class="text-sm font-semibold text-left text-neutral-700">Order Updates</p>
-                                    <p class="text-sm text-left text-neutral-500">Get notified about your order status
-                                    </p>
-                                </label>
-                                <label for="notification">
-                                    <input type="checkbox" name="notification" id="notification" class="peer sr-only">
-                                    <img src="../assets/icons/unchecked-green.svg" alt=""
-                                        class="w-6 h-6 peer-checked:hidden">
-                                    <img src="../assets/icons/checked.svg" alt=""
-                                        class="w-6 h-6 hidden peer-checked:block">
-                                </label>
-                            </div>
-                            <div class="flex justify-start items-center py-4">
-                                <label for="promotion" class="flex-1">
-                                    <p class="text-sm font-semibold text-left text-neutral-700">Promotions</p>
-                                    <p class="text-sm text-left text-neutral-500">Receive special offers and discounts
-                                    </p>
-                                </label>
-                                <label for="promotion">
-                                    <input type="checkbox" name="promotion" id="promotion" class="peer sr-only">
-                                    <img src="../assets/icons/unchecked-green.svg" alt=""
-                                        class="w-6 h-6 peer-checked:hidden">
-                                    <img src="../assets/icons/checked.svg" alt=""
-                                        class="w-6 h-6 hidden peer-checked:block">
-                                </label>
-                            </div>
+                        <div>
+                            asdfasdf
                         </div>
                     </div>
 
