@@ -193,17 +193,17 @@
         <!-- manage addresses area -->
         <section class="max-w-2lg mx-auto pt-[60px] pb-[80px] px-4 xl:px-0 grid grid-cols-12 gap-6">
 
-            <p class="text-base font-semibold text-left text-gray-700 col-span-12">
+            <p class=" text-sm sm:text-base font-semibold text-left text-gray-700 col-span-12">
                 3 items in your cart
             </p>
             <div class="col-span-12 md:col-span-8 space-y-[15px] ">
 
-                <div class="rounded-3xl p-6 bg-white flex flex-col gap-6">
+                <div class="rounded-3xl p-4 sm:p-6 bg-white flex flex-col gap-6">
 
                     <!-- section container -->
                     <div for="card-1-container">
                         <div
-                            class="flex items-stretch justify-between gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
+                            class="flex items-stretch justify-between gap-[10px] sm:gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
                             <label for="card-1-container" class="flex items-center">
                                 <input type="checkbox" name="card-1-container" id="card-1-container"
                                     class="peer sr-only">
@@ -214,32 +214,32 @@
                             </label>
 
                             <label for="card-1-container"
-                                class="w-12 h-12 rounded overflow-hidden border border-neutral-100">
+                                class="w-9 h-9 sm:w-12 sm:h-12 rounded overflow-hidden border border-neutral-100">
                                 <img src="../assets/images/stores/store-1.png" alt=""
                                     class="w-full h-full object-cover">
 
                             </label>
                             <label for="card-1-container" class="flex-1 flex flex-col justify-between">
                                 <div class="space-y-1">
-                                    <p class="text-base font-semibold text-left text-neutral-900">
+                                    <p class="text-[13px] sm:text-base font-semibold text-left text-neutral-900">
                                         CleanPro Express
                                     </p>
 
                                     <div class="flex justify-start items-center gap-1">
                                         <img src="../assets/icons/star-gold.svg" alt="" class="">
-                                        <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
-                                        <span class="text-sm text-left text-neutral-500">(624)</span>
+                                        <span class="text-xs sm:text-sm font-medium text-neutral-800">4.9</span>
+                                        <span class="text-xs sm:text-sm text-neutral-500">(624)</span>
                                         <span
                                             class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[60px] h-5 gap-3 p-2 rounded-[25px] bg-[#e8fbf4]">
-                                            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-[#32d3a0]">3
+                                            <p class="flex-grow-0 flex-shrink-0 text-xs text-[#32d3a0]">3
                                                 items</p>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                             <label for="card-1-container" class="flex flex-col justify-between items-end">
-                                <p class="text-sm text-right text-gray-500">Store Total</p>
-                                <p class="text-base font-semibold text-right text-mint-600">$51.96</p>
+                                <p class="text-xs sm:text-sm text-right text-gray-500">Store Total</p>
+                                <p class="text-[13px] sm:text-base font-semibold text-right text-mint-600">$51.96</p>
 
                             </label>
                         </div>
@@ -247,7 +247,7 @@
 
                     <!-- card 1 -->
                     <div
-                        class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                        class="flex items-stretch justify-between gap-[10px] sm:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                         <label for="card-1" class="flex items-center">
                             <input type="checkbox" name="card-1" id="card-1" class="peer sr-only">
                             <img src="../assets/icons/unchecked.svg" alt=""
@@ -261,46 +261,58 @@
                             </div>
                         </label>
 
-                        <label for="card-1" class="w-[84px] h-[84px] rounded overflow-hidden relative z-10">
+                        <label for="card-1"
+                            class="w-10 h-10 sm:w-[84px] sm:h-[84px] rounded overflow-hidden relative z-10">
                             <img src="../assets/images/shopping-cart/card-1.png" alt=""
                                 class="w-full h-full object-cover">
 
                         </label>
                         <label for="card-1" class="flex-1 flex flex-col justify-between relative z-10">
-                            <div class="space-y-[6px]">
-                                <p class="text-sm font-medium text-neutral-900">
-                                    Premium Wash & Fold
-                                </p>
-                                <p class="text-xs font-medium text-left text-gray-500">
-                                    By CleanPro Laundry
-                                </p>
-                            </div>
-                            <div class="counter_container" id="card-1-counter">
-                                <button class="decrease" onclick="counterController('card-1-counter', 'decrease')">
-                                    -
-                                </button>
-                                <div class="current_count">
-                                    0
+                            <div class="flex justify-between">
+                                <div class="space-y-[6px]">
+                                    <p class="text-xs sm:text-sm font-medium text-neutral-900">
+                                        Premium Wash & Fold
+                                    </p>
+                                    <p class="text-[11px] sm:text-xs font-medium text-left text-gray-500">
+                                        By CleanPro Laundry
+                                    </p>
                                 </div>
-                                <button class="increase" onclick="counterController('card-1-counter', 'increase')">
-                                    +
-                                </button>
+
+                                <label for="card-1" class="flex flex-col justify-between items-end relative z-10">
+                                    <button class="h-5 w-5">
+                                        <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                                    </button>
+                                </label>
                             </div>
-                        </label>
-                        <label for="card-1" class="flex flex-col justify-between items-end relative z-10">
-                            <button class="h-5 w-5">
-                                <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                            </button>
-                            <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                            <p class="text-base font-semibold text-right text-gray-900">
-                                $25.98
-                            </p>
+
+
+                            <div class="flex justify-between items-center">
+                                <div class="counter_container" id="card-1-counter">
+                                    <button class="decrease" onclick="counterController('card-1-counter', 'decrease')">
+                                        -
+                                    </button>
+                                    <div class="current_count">
+                                        0
+                                    </div>
+                                    <button class="increase" onclick="counterController('card-1-counter', 'increase')">
+                                        +
+                                    </button>
+                                </div>
+
+
+                                <div>
+                                    <p class="text-sm font-medium text-right text-gray-500">Total</p>
+                                    <p class="text-base font-semibold text-right text-gray-900">
+                                        $25.98
+                                    </p>
+                                </div>
+                            </div>
                         </label>
                     </div>
 
                     <!-- card 2 -->
                     <div
-                        class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                        class="flex items-stretch justify-between gap-[10px] sm:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                         <label for="card-2" class="flex items-center">
                             <input type="checkbox" name="card-2" id="card-2" class="peer sr-only">
                             <img src="../assets/icons/unchecked.svg" alt=""
@@ -314,40 +326,52 @@
                             </div>
                         </label>
 
-                        <label for="card-2" class="w-[84px] h-[84px] rounded overflow-hidden relative z-10">
+                        <label for="card-2"
+                            class="w-10 h-10 sm:w-[84px] sm:h-[84px] rounded overflow-hidden relative z-10">
                             <img src="../assets/images/shopping-cart/card-1.png" alt=""
                                 class="w-full h-full object-cover">
 
                         </label>
                         <label for="card-2" class="flex-1 flex flex-col justify-between relative z-10">
-                            <div class="space-y-[6px]">
-                                <p class="text-sm font-medium text-neutral-900">
-                                    Premium Wash & Fold
-                                </p>
-                                <p class="text-xs font-medium text-left text-gray-500">
-                                    By CleanPro Laundry
-                                </p>
-                            </div>
-                            <div class="counter_container" id="card-2-counter">
-                                <button class="decrease" onclick="counterController('card-2-counter', 'decrease')">
-                                    -
-                                </button>
-                                <div class="current_count">
-                                    0
+                            <div class="flex justify-between">
+                                <div class="space-y-[6px]">
+                                    <p class="text-xs sm:text-sm font-medium text-neutral-900">
+                                        Premium Wash & Fold
+                                    </p>
+                                    <p class="text-[11px] sm:text-xs font-medium text-left text-gray-500">
+                                        By CleanPro Laundry
+                                    </p>
                                 </div>
-                                <button class="increase" onclick="counterController('card-2-counter', 'increase')">
-                                    +
-                                </button>
+
+                                <label for="card-1" class="flex flex-col justify-between items-end relative z-10">
+                                    <button class="h-5 w-5">
+                                        <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                                    </button>
+                                </label>
                             </div>
-                        </label>
-                        <label for="card-2" class="flex flex-col justify-between items-end relative z-10">
-                            <button class="h-5 w-5">
-                                <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                            </button>
-                            <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                            <p class="text-base font-semibold text-right text-gray-900">
-                                $25.98
-                            </p>
+
+
+                            <div class="flex justify-between items-center">
+                                <div class="counter_container" id="card-1-counter">
+                                    <button class="decrease" onclick="counterController('card-1-counter', 'decrease')">
+                                        -
+                                    </button>
+                                    <div class="current_count">
+                                        0
+                                    </div>
+                                    <button class="increase" onclick="counterController('card-1-counter', 'increase')">
+                                        +
+                                    </button>
+                                </div>
+
+
+                                <div>
+                                    <p class="text-sm font-medium text-right text-gray-500">Total</p>
+                                    <p class="text-base font-semibold text-right text-gray-900">
+                                        $25.98
+                                    </p>
+                                </div>
+                            </div>
                         </label>
                     </div>
 
@@ -355,12 +379,12 @@
 
 
 
-                <div class="rounded-3xl p-6 bg-white flex flex-col gap-6">
+                <div class="rounded-3xl p-4 sm:p-6 bg-white flex flex-col gap-6">
 
                     <!-- section container -->
                     <div for="card-2-container">
                         <div
-                            class="flex items-stretch justify-between gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
+                            class="flex items-stretch justify-between gap-[10px] sm:gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
                             <label for="card-2-container" class="flex items-center">
                                 <input type="checkbox" name="card-2-container" id="card-2-container"
                                     class="peer sr-only">
@@ -371,35 +395,40 @@
                             </label>
 
                             <label for="card-2-container"
-                                class="w-12 h-12 rounded overflow-hidden border border-neutral-100">
+                                class="w-9 h-9 sm:w-12 sm:h-12 rounded overflow-hidden border border-neutral-100">
                                 <img src="../assets/images/stores/store-1.png" alt=""
                                     class="w-full h-full object-cover">
 
                             </label>
                             <label for="card-2-container" class="flex-1 flex flex-col justify-between">
                                 <div class="space-y-1">
-                                    <p class="text-base font-semibold text-left text-neutral-900">
+                                    <p class="text-[13px] sm:text-base font-semibold text-left text-neutral-900">
                                         CleanPro Express
                                     </p>
 
                                     <div class="flex justify-start items-center gap-1">
                                         <img src="../assets/icons/star-gold.svg" alt="" class="">
-                                        <span class="text-sm font-medium text-left text-neutral-800">4.9</span>
-                                        <span class="text-sm text-left text-neutral-500">(624)</span>
+                                        <span class="text-xs sm:text-sm font-medium text-neutral-800">4.9</span>
+                                        <span class="text-xs sm:text-sm text-neutral-500">(624)</span>
                                         <span
                                             class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[60px] h-5 gap-3 p-2 rounded-[25px] bg-[#e8fbf4]">
-                                            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-[#32d3a0]">3
+                                            <p class="flex-grow-0 flex-shrink-0 text-xs text-[#32d3a0]">3
                                                 items</p>
                                         </span>
                                     </div>
                                 </div>
+                            </label>
+                            <label for="card-2-container" class="flex flex-col justify-between items-end">
+                                <p class="text-xs sm:text-sm text-right text-gray-500">Store Total</p>
+                                <p class="text-[13px] sm:text-base font-semibold text-right text-mint-600">$51.96</p>
+
                             </label>
                         </div>
                     </div>
 
                     <!-- card 3 -->
                     <div
-                        class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                        class="flex items-stretch justify-between gap-[10px] sm:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                         <label for="card-3" class="flex items-center">
                             <input type="checkbox" name="card-3" id="card-3" class="peer sr-only">
                             <img src="../assets/icons/unchecked.svg" alt=""
@@ -413,46 +442,58 @@
                             </div>
                         </label>
 
-                        <label for="card-3" class="w-[84px] h-[84px] rounded overflow-hidden relative z-10">
+                        <label for="card-3"
+                            class="w-10 h-10 sm:w-[84px] sm:h-[84px] rounded overflow-hidden relative z-10">
                             <img src="../assets/images/shopping-cart/card-1.png" alt=""
                                 class="w-full h-full object-cover">
 
                         </label>
                         <label for="card-3" class="flex-1 flex flex-col justify-between relative z-10">
-                            <div class="space-y-[6px]">
-                                <p class="text-sm font-medium text-neutral-900">
-                                    Premium Wash & Fold
-                                </p>
-                                <p class="text-xs font-medium text-left text-gray-500">
-                                    By CleanPro Laundry
-                                </p>
-                            </div>
-                            <div class="counter_container" id="card-3-counter">
-                                <button class="decrease" onclick="counterController('card-3-counter', 'decrease')">
-                                    -
-                                </button>
-                                <div class="current_count">
-                                    0
+                            <div class="flex justify-between">
+                                <div class="space-y-[6px]">
+                                    <p class="text-xs sm:text-sm font-medium text-neutral-900">
+                                        Premium Wash & Fold
+                                    </p>
+                                    <p class="text-[11px] sm:text-xs font-medium text-left text-gray-500">
+                                        By CleanPro Laundry
+                                    </p>
                                 </div>
-                                <button class="increase" onclick="counterController('card-3-counter', 'increase')">
-                                    +
-                                </button>
+
+                                <label for="card-3" class="flex flex-col justify-between items-end relative z-10">
+                                    <button class="h-5 w-5">
+                                        <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                                    </button>
+                                </label>
                             </div>
-                        </label>
-                        <label for="card-3" class="flex flex-col justify-between items-end relative z-10">
-                            <button class="h-5 w-5">
-                                <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                            </button>
-                            <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                            <p class="text-base font-semibold text-right text-gray-900">
-                                $25.98
-                            </p>
+
+
+                            <div class="flex justify-between items-center">
+                                <div class="counter_container" id="card-3-counter">
+                                    <button class="decrease" onclick="counterController('card-3-counter', 'decrease')">
+                                        -
+                                    </button>
+                                    <div class="current_count">
+                                        0
+                                    </div>
+                                    <button class="increase" onclick="counterController('card-3-counter', 'increase')">
+                                        +
+                                    </button>
+                                </div>
+
+
+                                <div>
+                                    <p class="text-sm font-medium text-right text-gray-500">Total</p>
+                                    <p class="text-base font-semibold text-right text-gray-900">
+                                        $25.98
+                                    </p>
+                                </div>
+                            </div>
                         </label>
                     </div>
 
-                    <!-- card 2 -->
+                    <!-- card 4 -->
                     <div
-                        class="flex items-stretch justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                        class="flex items-stretch justify-between gap-[10px] sm:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                         <label for="card-4" class="flex items-center">
                             <input type="checkbox" name="card-4" id="card-4" class="peer sr-only">
                             <img src="../assets/icons/unchecked.svg" alt=""
@@ -466,40 +507,52 @@
                             </div>
                         </label>
 
-                        <label for="card-4" class="w-[84px] h-[84px] rounded overflow-hidden relative z-10">
+                        <label for="card-4"
+                            class="w-10 h-10 sm:w-[84px] sm:h-[84px] rounded overflow-hidden relative z-10">
                             <img src="../assets/images/shopping-cart/card-1.png" alt=""
                                 class="w-full h-full object-cover">
 
                         </label>
                         <label for="card-4" class="flex-1 flex flex-col justify-between relative z-10">
-                            <div class="space-y-[6px]">
-                                <p class="text-sm font-medium text-neutral-900">
-                                    Premium Wash & Fold
-                                </p>
-                                <p class="text-xs font-medium text-left text-gray-500">
-                                    By CleanPro Laundry
-                                </p>
-                            </div>
-                            <div class="counter_container" id="card-4-counter">
-                                <button class="decrease" onclick="counterController('card-4-counter', 'decrease')">
-                                    -
-                                </button>
-                                <div class="current_count">
-                                    0
+                            <div class="flex justify-between">
+                                <div class="space-y-[6px]">
+                                    <p class="text-xs sm:text-sm font-medium text-neutral-900">
+                                        Premium Wash & Fold
+                                    </p>
+                                    <p class="text-[11px] sm:text-xs font-medium text-left text-gray-500">
+                                        By CleanPro Laundry
+                                    </p>
                                 </div>
-                                <button class="increase" onclick="counterController('card-4-counter', 'increase')">
-                                    +
-                                </button>
+
+                                <label for="card-4" class="flex flex-col justify-between items-end relative z-10">
+                                    <button class="h-5 w-5">
+                                        <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
+                                    </button>
+                                </label>
                             </div>
-                        </label>
-                        <label for="card-4" class="flex flex-col justify-between items-end relative z-10">
-                            <button class="h-5 w-5">
-                                <img src="../assets/icons/trash-red.svg" alt="" class="h-full w-full">
-                            </button>
-                            <p class="text-sm font-medium text-left text-gray-500">Total</p>
-                            <p class="text-base font-semibold text-right text-gray-900">
-                                $25.98
-                            </p>
+
+
+                            <div class="flex justify-between items-center">
+                                <div class="counter_container" id="card-4-counter">
+                                    <button class="decrease" onclick="counterController('card-4-counter', 'decrease')">
+                                        -
+                                    </button>
+                                    <div class="current_count">
+                                        0
+                                    </div>
+                                    <button class="increase" onclick="counterController('card-4-counter', 'increase')">
+                                        +
+                                    </button>
+                                </div>
+
+
+                                <div>
+                                    <p class="text-sm font-medium text-right text-gray-500">Total</p>
+                                    <p class="text-base font-semibold text-right text-gray-900">
+                                        $25.98
+                                    </p>
+                                </div>
+                            </div>
                         </label>
                     </div>
 
