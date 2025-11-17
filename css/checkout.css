@@ -40,6 +40,13 @@ input[name="address"]:checked+label.rs-delivery-address-box i::before {
     transform: translate(-50%, -50%);
 }
 
+@media (max-width: 767px) {
+    input[name="address"]:checked+label.rs-delivery-address-box i::before {
+        width: 9px;
+        height: 9px;
+    }
+}
+
 /* .rs-delivery-address-box.active i::before {
     position: absolute;
     content: '';
