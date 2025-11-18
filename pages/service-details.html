@@ -273,31 +273,47 @@
             <div class="rs-service-details-tab-area pb-[60px] border-b border-b-neutral-200">
                 <div
                     class="rs-service-details-tab mb-[30px] flex items-center justify-between h-12 border-b border-b-neutral-200">
-                    <a class="active" href="#">Description</a>
-                    <a href="#">Details</a>
-                    <a href="#">Reviews(624)</a>
+                    <div data-tab-trigger onclick="openTab('description', this)" class="active">Description</div>
+                    <div data-tab-trigger onclick="openTab('details', this)">Details</div>
+                    <div data-tab-trigger onclick="openTab('reviews', this)">Reviews(624)</div>
                 </div>
-                <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[25px]">
-                    Our Premium Wash & Fold service is designed for busy individuals who want professional care for
-                    their everyday laundry. We use eco- <br>friendly, hypoallergenic detergents and fabric softeners to
-                    ensure your clothes are not only clean but also soft and fresh.
-                </p>
-                <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[16px]">
-                    Each load is carefully sorted by color and fabric type, washed at the optimal temperature, and dried
-                    to perfection. Our expert team <br> then meticulously folds each item, ensuring you receive your
-                    laundry
-                    ready to put away.
-                </p>
-                <div class="rs-description-info">
-                    <h3 class="text-2xl font-semibold leading-[140%] text-neutral-900 mb-[18px]">What's Included:</h3>
-                    <ul class="rs-description-list">
-                        <li>Professional washing with premium detergents</li>
-                        <li>Fabric softener treatment</li>
-                        <li>Precise drying at optimal temperature</li>
-                        <li>Expert folding and packaging</li>
-                        <li>Free pickup and delivery</li>
-                        <li>Stain treatment at no extra cost</li>
-                    </ul>
+                <!-- description area -->
+                <div id="description" class="tab-panel">
+                    <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[25px]">
+                        Our Premium Wash & Fold service is designed for busy individuals who want professional care for
+                        their everyday laundry. We use eco- <br>friendly, hypoallergenic detergents and fabric softeners
+                        to
+                        ensure your clothes are not only clean but also soft and fresh.
+                    </p>
+                    <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[16px]">
+                        Each load is carefully sorted by color and fabric type, washed at the optimal temperature, and
+                        dried
+                        to perfection. Our expert team <br> then meticulously folds each item, ensuring you receive your
+                        laundry
+                        ready to put away.
+                    </p>
+                    <div class="rs-description-info">
+                        <h3 class="text-2xl font-semibold leading-[140%] text-neutral-900 mb-[18px]">What's Included:
+                        </h3>
+                        <ul class="rs-description-list">
+                            <li>Professional washing with premium detergents</li>
+                            <li>Fabric softener treatment</li>
+                            <li>Precise drying at optimal temperature</li>
+                            <li>Expert folding and packaging</li>
+                            <li>Free pickup and delivery</li>
+                            <li>Stain treatment at no extra cost</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Details area -->
+                <div id="details" class="tab-panel hidden">
+                    Details
+                </div>
+
+                <!-- review area -->
+                <div id="reviews" class="tab-panel hidden">
+                    review
                 </div>
             </div>
 
@@ -618,6 +634,7 @@
     <script src="../js/modal.js"></script>
     <script src="../js/select-dropdown.js"></script>
     <script src="../js/counterHandler.js"></script>
+    <script src="../js/tabHandler.js"></script>
 </body>
 
 </html>
