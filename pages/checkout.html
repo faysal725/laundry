@@ -258,7 +258,7 @@
                             <!-- section container -->
                             <div for="card-1-container">
                                 <div
-                                    class="flex items-stretch justify-between gap-[10px] md:gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
+                                    class="checkout-card flex items-stretch justify-between gap-[10px] md:gap-4 border-b border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 pb-4 px-0 relative">
                                     <label for="card-1-container" class="flex items-center">
                                         <input type="checkbox" name="card-1-container" id="card-1-container"
                                             class="peer sr-only">
@@ -304,7 +304,7 @@
 
                             <!-- card 1 -->
                             <div
-                                class="flex items-center justify-between gap-[10px] md:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                                class="checkout-card flex items-center justify-between gap-[10px] md:gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                                 <label for="card-1" class="flex items-center">
                                     <input type="checkbox" name="card-1" id="card-1" class="peer sr-only">
                                     <img src="../assets/icons/unchecked.svg" alt=""
@@ -343,7 +343,7 @@
 
                             <!-- card 2 -->
                             <div
-                                class="flex items-center justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
+                                class="checkout-card flex items-center justify-between gap-4 rounded-xl border border-neutral-200 peer-checked:border-mint-600 peer-checked:bg-mint-50 p-3 relative overflow-hidden">
                                 <label for="card-2" class="flex items-center">
                                     <input type="checkbox" name="card-2" id="card-2" class="peer sr-only">
                                     <img src="../assets/icons/unchecked.svg" alt=""
@@ -441,7 +441,7 @@
                                 <img src="../assets/icons/tag.svg" alt="">
                                 <p class="text-[13px] text-left text-[#2bbe90]">Promo Code</p>
                             </div>
-                            <form class="flex flex-row justify-between gap-3">
+                            <form class="promo-code flex flex-row justify-between gap-3">
                                 <label for="promo_code" class="p-3 rounded-xl border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px]">
                                     <input type="text" name="promo_code" id="promo_code" placeholder="Enter promo code"
                                         class="outline-none text-xs text-neutral-400" required="">
@@ -509,10 +509,10 @@
                                         </div>
                                     </label>
                                     <label for="card"
-                                        class="text-[13px] md:text-sm font-medium text-left text-gray-500  relative z-10">Credit/Debit
-                                        Card</label>
+                                        class="text-[13px] md:text-sm font-medium text-left text-neutral-700 md:text-gray-500  relative z-10">Credit/Debit
+                                        Card
+                                    </label>
                                 </div>
-
 
                                 <div class="p-2 flex justify-start items-center gap-4 relative px-4 py-2">
                                     <label for="cod" class="h-5 w-5">
@@ -529,13 +529,11 @@
                                         </div>
                                     </label>
                                     <label for="cod"
-                                        class="text-[13px] md:text-sm font-medium text-left text-gray-500  relative z-10">Cash On
+                                        class="text-[13px] md:text-sm font-medium text-left text-neutral-700 md:text-gray-500  relative z-10">Cash On
                                         Delivery</label>
                                 </div>
                             </div>
-
                         </div>
-
                         <button
                             class="flex justify-center items-center h-10 md:h-12 relative overflow-hidden px-5 py-3.5 rounded-xl bg-mint-600 gap-[5px]">
                             <img class="w-[14px] h-[14px] md:w-6 md:h-6" src="../assets/icons/shield-check.svg" alt="">

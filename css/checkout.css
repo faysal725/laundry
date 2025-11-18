@@ -127,3 +127,15 @@ input[name="address"]:checked+label.rs-delivery-address-box i::before {
         height: 25px;
     }
 }
+
+@media (max-width: 380px) {
+    .checkout-card {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 340px) {
+    .promo-code {
+        flex-wrap: wrap;
+    }
+}

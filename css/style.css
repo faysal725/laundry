@@ -470,8 +470,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 110px; 
-  height: 32px; 
+  width: clamp(82px, 10vw, 110px);
+  height: clamp(28px, 4vw, 32px);
   padding: 4px;
   background-color: var(--color-neutral-100);
   border-radius: 6px;
