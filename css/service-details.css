@@ -2,7 +2,7 @@
     color: var(--color-mint-600);
 }
 
-.rs-service-details-tab a {
+.rs-service-details-tab div {
     font-weight: 500;
     font-size: 16px;
     line-height: 48px;
@@ -10,9 +10,10 @@
     width: 33.33%;
     text-align: center;
     height: 48px;
+    cursor: pointer;
 }
 
-.rs-service-details-tab a.active {
+.rs-service-details-tab div.active {
     border-radius: 12px 12px 0 0;
     background: var(--color-mint-50);
     color: var(--color-mint-600);

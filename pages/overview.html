@@ -256,7 +256,7 @@
                     <!-- widgets -->
                     <div class="flex justify-between items-center gap-6 flex-nowrap overflow-x-auto scrollbar-hide">
                         <!-- widget 1 -->
-                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 rounded-xl  bg-white">
                             <div class="flex flex-col justify-between">
                                 <p class="text-base text-gray-700">Total Orders</p>
                                 <p class="text-[28px] font-bold text-gray-700">36
@@ -267,8 +267,9 @@
                                 <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
                             </div>
                         </div>
+
                         <!-- widget 2 -->
-                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 rounded-xl  bg-white">
                             <div class="flex flex-col justify-between">
                                 <p class="text-base text-gray-700">In Progress</p>
                                 <p class="text-[28px] font-bold text-gray-700">02
@@ -279,8 +280,9 @@
                                 <img src="../assets/icons/clock-blue.svg" alt="" class="w-6 h-6">
                             </div>
                         </div>
+
                         <!-- widget 3 -->
-                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 bg-white">
+                        <div class="p-4 flex justify-between items-start gap-4 w-full min-w-52 rounded-xl  bg-white">
                             <div class="flex flex-col justify-between">
                                 <p class="text-base text-gray-700">Completed</p>
                                 <p class="text-[28px] font-bold text-gray-700">18
@@ -311,6 +313,25 @@
                                 <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
                             </div>
                             <div class="flex-1 h-full">
+                                <div class="flex justify-between items-center">
+                                    <div
+                                        class="w-12 h-12 bg-mint-50  justify-center items-center rounded flex  sm:hidden">
+                                        <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
+                                    </div>
+
+
+                                    <div class="block sm:hidden">
+                                        <div
+                                            class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#0099df]">
+                                            <p class="text-[8px] sm:text-[10px] text-left text-white">In Progress</p>
+                                        </div>
+                                        <p class="text-[10px] sm:text-xs font-medium text-right text-neutral-500">Oct
+                                            24, 2025</p>
+                                        <p class="text-xs sm:text-sm font-semibold text-right text-gray-900">$45.00</p>
+                                    </div>
+
+
+                                </div>
                                 <p class="text-sm font-medium  text-neutral-900">
                                     #ORD-2847
                                 </p>
@@ -318,7 +339,7 @@
                                 <p class="text-xs font-medium  text-neutral-700">Dry Cleaning <span
                                         class="text-xs text-left text-neutral-500">5 Items</span> </p>
                             </div>
-                            <div class="">
+                            <div class="hidden sm:block">
                                 <div
                                     class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#0099df]">
                                     <p class="text-[10px] text-left text-white">In Progress</p>
@@ -330,10 +351,29 @@
 
                         <!-- card 2 -->
                         <div class="p-3 flex justify-between items-start rounded-xl gap-4 border border-neutral-200">
-                            <div class="w-14 h-14 bg-mint-50 flex justify-center items-center rounded">
+                            <div class="w-14 h-14 bg-mint-50  justify-center items-center rounded hidden sm:flex">
                                 <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
                             </div>
                             <div class="flex-1 h-full">
+                                <div class="flex justify-between items-center">
+                                    <div
+                                        class="w-12 h-12 bg-mint-50  justify-center items-center rounded flex  sm:hidden">
+                                        <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
+                                    </div>
+
+
+                                    <div class="block sm:hidden">
+                                        <div
+                                            class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#34c759]">
+                                            <p class="text-[8px] sm:text-[10px] text-left text-white">Delivered</p>
+                                        </div>
+                                        <p class="text-[10px] sm:text-xs font-medium text-right text-neutral-500">Oct
+                                            24, 2025</p>
+                                        <p class="text-xs sm:text-sm font-semibold text-right text-gray-900">$45.00</p>
+                                    </div>
+
+
+                                </div>
                                 <p class="text-sm font-medium  text-neutral-900">
                                     #ORD-2847
                                 </p>
@@ -341,7 +381,8 @@
                                 <p class="text-xs font-medium  text-neutral-700">Dry Cleaning <span
                                         class="text-xs text-left text-neutral-500">5 Items</span> </p>
                             </div>
-                            <div class="">
+                            <div class="hidden sm:block">
+
                                 <div
                                     class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#34c759]">
                                     <p class="text-[10px] text-left text-white">Delivered</p>
@@ -351,13 +392,33 @@
                             </div>
                         </div>
 
-                        
+
                         <!-- card 3 -->
                         <div class="p-3 flex justify-between items-start rounded-xl gap-4 border border-neutral-200">
-                            <div class="w-14 h-14 bg-mint-50 flex justify-center items-center rounded">
+                            <div class="w-14 h-14 bg-mint-50  justify-center items-center rounded hidden sm:flex">
                                 <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
                             </div>
                             <div class="flex-1 h-full">
+                                <div class="flex justify-between items-center">
+                                    <div
+                                        class="w-12 h-12 bg-mint-50  justify-center items-center rounded flex  sm:hidden">
+                                        <img src="../assets/icons/calendar.svg" alt="" class="w-6 h-6">
+                                    </div>
+
+
+                                    <div class="block sm:hidden">
+                                        <div
+                                            class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#fbbc04]">
+                                            <p class="text-[8px] sm:text-[10px] text-left text-white">Out For Delivery
+                                            </p>
+                                        </div>
+                                        <p class="text-[10px] sm:text-xs font-medium text-right text-neutral-500">Oct
+                                            24, 2025</p>
+                                        <p class="text-xs sm:text-sm font-semibold text-right text-gray-900">$45.00</p>
+                                    </div>
+
+
+                                </div>
                                 <p class="text-sm font-medium  text-neutral-900">
                                     #ORD-2847
                                 </p>
@@ -365,7 +426,7 @@
                                 <p class="text-xs font-medium  text-neutral-700">Dry Cleaning <span
                                         class="text-xs text-left text-neutral-500">5 Items</span> </p>
                             </div>
-                            <div class="">
+                            <div class="hidden sm:block">
                                 <div
                                     class="flex justify-center items-center px-2.5 py-[5px] rounded-[20px] bg-[#fbbc04]">
                                     <p class="text-[10px] text-left text-white">Out For Delivery</p>
@@ -378,7 +439,7 @@
 
 
                     <!-- saved address -->
-                    <div class="rounded-3xl p-6 bg-white shadow-sm">
+                    <div class="rounded-3xl p-6 bg-white shadow-sm flex flex-col gap-[15px]">
                         <div class="flex justify-between items-center">
                             <p class="text-base font-semibold text-left text-neutral-700">
                                 Saved Addresses
@@ -389,8 +450,45 @@
 
                         </div>
 
-                        <div>
-                            asdfasdf
+                        <div class="p-3 sm:p-6 flex justify-start items-start gap-5 rounded-xl border border-gray-200">
+                            <div class="w-14 h-14 bg-mint-50 justify-center items-center rounded hidden sm:flex">
+                                <img src="../assets/icons/home.svg" alt="" class="w-6 h-6">
+                            </div>
+                            <div class="flex flex-col gap-1 items-start">
+
+                                <div class="flex justify-between items-start sm:hidden w-full">
+                                    <div class="w-12 h-12 bg-mint-50 justify-center items-center rounded flex ">
+                                        <img src="../assets/icons/home.svg" alt="" class="w-6 h-6">
+                                    </div>
+                                    
+                                    <span
+                                        class="inline-flex justify-start items-center gap-2 bg-mint-50 px-2 py-1 rounded-full">
+                                        <img src="../assets/icons/star.svg" alt="">
+                                        <p class="text-xs text-left text-[#32d3a0]">Default</p>
+
+                                    </span>
+                                </div>
+
+                                <div class="flex justify-start items-center gap-2 mb-3">
+                                    <p class="text-base font-medium text-left text-gray-900">Home</p>
+
+                                    <span
+                                        class="hidden sm:inline-flex justify-start items-center gap-2 bg-mint-50 px-2 py-1 rounded-full">
+                                        <img src="../assets/icons/star.svg" alt="">
+                                        <p class="text-xs text-left text-[#32d3a0]">Default</p>
+
+                                    </span>
+                                </div>
+
+                                <p class="text-sm text-left text-gray-700 flex justify-start items-center gap-1">
+                                    <img src="../assets/icons/map-pin-gray.svg" alt="" class="h-[14px] w-[14px]"> 123
+                                    Main Street, Apt 4B New York, NY 10001
+                                </p>
+                                <p class="text-sm text-left text-gray-500  flex justify-start items-center gap-1">
+                                    <img src="../assets/icons/phone-gray.svg" alt="" class="h-[14px] w-[14px]">
+                                    +1 (555) 123-4567
+                                </p>
+                            </div>
                         </div>
                     </div>
 

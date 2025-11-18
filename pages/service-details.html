@@ -188,8 +188,8 @@
                     <div class="grid grid-cols-12 gap-6">
                         <div class="col-span-12 md:col-span-7">
                             <div class="rs-service-details-thumb h-full">
-                                <img class="rounded-3xl h-full object-cover" src="../assets/images/service-details/service-details.jpg"
-                                    alt="">
+                                <img class="rounded-3xl h-full object-cover"
+                                    src="../assets/images/service-details/service-details.jpg" alt="">
                             </div>
                         </div>
 
@@ -244,10 +244,26 @@
                                     guaranteed
                                 </p>
 
-                                <button type="submit"
-                                    class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[48px] w-[306px] border-[1.50px] border-mint-600 rounded-xl">
-                                    Add To Cart
-                                </button>
+                                <div class="w-full flex  justify-between gap-4">
+                                    <div class="counter_container w-full sm:w-[140px] h-[48px]" id="card-1-counter">
+                                        <button class="decrease text-base font-medium text-center text-neutral-700"
+                                            onclick="counterController('card-1-counter', 'decrease')">
+                                            -
+                                        </button>
+                                        <div class="current_count ">
+                                            0
+                                        </div>
+                                        <button class="increase"
+                                            onclick="counterController('card-1-counter', 'increase')">
+                                            +
+                                        </button>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="flex items-center justify-center gap-[10px] text-xs text-mint-600 font-semibold leading-[133%] h-[48px] w-full sm:w-[306px] border-[1.50px] border-mint-600 rounded-xl">
+                                        Add To Cart
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -257,31 +273,47 @@
             <div class="rs-service-details-tab-area pb-[60px] border-b border-b-neutral-200">
                 <div
                     class="rs-service-details-tab mb-[30px] flex items-center justify-between h-12 border-b border-b-neutral-200">
-                    <a class="active" href="#">Description</a>
-                    <a href="#">Details</a>
-                    <a href="#">Reviews(624)</a>
+                    <div data-tab-trigger onclick="openTab('description', this)" class="active">Description</div>
+                    <div data-tab-trigger onclick="openTab('details', this)">Details</div>
+                    <div data-tab-trigger onclick="openTab('reviews', this)">Reviews(624)</div>
                 </div>
-                <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[25px]">
-                    Our Premium Wash & Fold service is designed for busy individuals who want professional care for
-                    their everyday laundry. We use eco- <br>friendly, hypoallergenic detergents and fabric softeners to
-                    ensure your clothes are not only clean but also soft and fresh.
-                </p>
-                <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[16px]">
-                    Each load is carefully sorted by color and fabric type, washed at the optimal temperature, and dried
-                    to perfection. Our expert team <br> then meticulously folds each item, ensuring you receive your
-                    laundry
-                    ready to put away.
-                </p>
-                <div class="rs-description-info">
-                    <h3 class="text-2xl font-semibold leading-[140%] text-neutral-900 mb-[18px]">What's Included:</h3>
-                    <ul class="rs-description-list">
-                        <li>Professional washing with premium detergents</li>
-                        <li>Fabric softener treatment</li>
-                        <li>Precise drying at optimal temperature</li>
-                        <li>Expert folding and packaging</li>
-                        <li>Free pickup and delivery</li>
-                        <li>Stain treatment at no extra cost</li>
-                    </ul>
+                <!-- description area -->
+                <div id="description" class="tab-panel">
+                    <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[25px]">
+                        Our Premium Wash & Fold service is designed for busy individuals who want professional care for
+                        their everyday laundry. We use eco- <br>friendly, hypoallergenic detergents and fabric softeners
+                        to
+                        ensure your clothes are not only clean but also soft and fresh.
+                    </p>
+                    <p class="text-base font-normal leading-[140%] text-neutral-500 mb-[16px]">
+                        Each load is carefully sorted by color and fabric type, washed at the optimal temperature, and
+                        dried
+                        to perfection. Our expert team <br> then meticulously folds each item, ensuring you receive your
+                        laundry
+                        ready to put away.
+                    </p>
+                    <div class="rs-description-info">
+                        <h3 class="text-2xl font-semibold leading-[140%] text-neutral-900 mb-[18px]">What's Included:
+                        </h3>
+                        <ul class="rs-description-list">
+                            <li>Professional washing with premium detergents</li>
+                            <li>Fabric softener treatment</li>
+                            <li>Precise drying at optimal temperature</li>
+                            <li>Expert folding and packaging</li>
+                            <li>Free pickup and delivery</li>
+                            <li>Stain treatment at no extra cost</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Details area -->
+                <div id="details" class="tab-panel hidden">
+                    Details
+                </div>
+
+                <!-- review area -->
+                <div id="reviews" class="tab-panel hidden">
+                    review
                 </div>
             </div>
 
@@ -290,7 +322,8 @@
                     <h5 class="text-base md:text-lg font-medium leading-[100%] text-neutral-500">
                         Relevant Services
                     </h5>
-                    <a href="#" class="text-sm md:text-base font-semibold leading-[125%] text-neutral-500 flex gap-2 items-center justify-center h-10 md:h-12 w-[180px] md:w-[214px] border-[1.50px] border-neutral-200 rounded-lg md:rounded-xl">
+                    <a href="#"
+                        class="text-sm md:text-base font-semibold leading-[125%] text-neutral-500 flex gap-2 items-center justify-center h-10 md:h-12 w-[180px] md:w-[214px] border-[1.50px] border-neutral-200 rounded-lg md:rounded-xl">
                         View All Services
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -328,7 +361,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
                         <div class="rs-services-thumb relative">
                             <img class="object-contain w-full" src="../assets/images/service/service-02.jpg" alt="">
@@ -356,7 +389,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
                         <div class="rs-services-thumb relative">
                             <img class="object-contain w-full" src="../assets/images/service/service-03.jpg" alt="">
@@ -387,7 +420,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
                         <div class="rs-services-thumb relative">
                             <img class="object-contain w-full" src="../assets/images/service/service-04.jpg" alt="">
@@ -600,6 +633,8 @@
     <script src="../js/sidebar.js"></script>
     <script src="../js/modal.js"></script>
     <script src="../js/select-dropdown.js"></script>
+    <script src="../js/counterHandler.js"></script>
+    <script src="../js/tabHandler.js"></script>
 </body>
 
 </html>
