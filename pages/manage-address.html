@@ -111,8 +111,8 @@
 
 
 
-            <div class="hidden lg:flex justify-center items-center gap-4">
-                <button class="btn_solid">
+            <div class="hidden lg:flex justify-center items-center gap-[10px]">
+                <!-- <button class="btn_solid">
                     <p>Sign In</p>
 
                     <img src="../assets/icons/arrow-left.svg" alt="">
@@ -120,6 +120,32 @@
 
                 <button class="btn_outline">
                     <p>Sign Up</p>
+                </button> -->
+
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
+                    <img src="../assets/icons/heart-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
+
+                    <span
+                        class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
+                        3
+                    </span>
+                </button>
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
+                    <img src="../assets/icons/basket-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
+
+                    <span
+                        class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
+                        3
+                    </span>
+                </button>
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group">
+                    <img src="../assets/icons/user-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
                 </button>
             </div>
 
@@ -175,32 +201,29 @@
 
 
     <main>
-        <!-- breadcrumb -->
-        <section
-            class="rs-breadcrumb-area bg-[#1A7058] h-[260px] w-full bg-[url('../assets/images/header/breadcrumb.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
-            <div class="rs-breadcrumb-content">
-                <h1
-                    class="rs-breadcrumb-title mb-[5px] sm:mb-[10px] text-[26px] md:text-[30px]  md:text-4xl text-white font-semibold leading-[140%]">
-                    Order Details
-                </h1>
-                <div class="rs-breadcrumb-top-content">
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Dashboard / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">My Orders / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Order #2847</a>
-                </div>
-            </div>
-        </section>
-
         <!-- manage addresses area -->
         <section class="rs-manage-addresses-section pt-[60px] pb-[80px] px-4 xl:px-0">
             <div class="rs-manage-addresses-area max-w-2lg mx-auto">
+                <div class="w-full">
+                    <button
+                        class="text-base font-semibold text-neutral-500 h-12 w-[230px] border border-neutral-200 rounded-xl flex items-center justify-center gap-2 mb-[10px]">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back To Dashboard
+                    </button>
+                    <p class="text-2xl md:text-4xl font-semibold text-left text-gray-700 mb-1">
+                        Manage Addresses
+                    </p>
+                    <p class="text-base md:text-xl text-left text-gray-500 mb-10">
+                        Add or edit delivery addresses for faster checkout
+                    </p>
+                </div>
                 <button onclick="toggleModal('role')"
                     class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[190px] sm:w-[290px] rounded-xl">
                     <i class="fa-solid fa-plus mr-[8px]"></i>
                     Add New Address
                 </button>
                 <div
-                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-4 md:p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                     <div
                         class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
                         <div
@@ -234,7 +257,7 @@
                     <div class="rs-manage-addresses-box-bottom-area">
                         <div class="rs-manage-addresses-edit-btn">
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-200 w-[88px] h-[40px] justify-center border hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                                 <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
                                     alt="">
                                 Edit
@@ -243,7 +266,7 @@
                     </div>
                 </div>
                 <div
-                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-4 md:p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                     <div
                         class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
                         <div
@@ -271,17 +294,17 @@
                     <div class="rs-manage-addresses-box-bottom-area">
                         <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[124px] h-[40px] justify-center border  hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                                 Set as Default
                             </button>
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[88px] h-[40px] justify-center border hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                                 <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
                                     alt="">
                                 Edit
                             </button>
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[88px] h-[40px] justify-center border hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
                                 <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
                                     alt="">
                                 Delete
@@ -290,7 +313,7 @@
                     </div>
                 </div>
                 <div
-                    class="rs-manage-addresses-box bg-[white] rounded-xl p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                    class="rs-manage-addresses-box bg-[white] rounded-xl p-4 md:p-[24px] mb-[24px] border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                     <div
                         class="rs-manage-addresses-content flex gap-[20px] border-b-[1.5px] border-neutral-200 mb-[20px]">
                         <div
@@ -318,17 +341,17 @@
                     <div class="rs-manage-addresses-box-bottom-area">
                         <div class="rs-manage-addresses-btn flex flex-wrap gap-[15px] md:flex-nowrap">
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[124px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[124px] h-[40px] justify-center border  hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                                 Set as Default
                             </button>
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-neutral-500 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[88px] h-[40px] justify-center border hover:border-[1.5px] hover:border-mint-600 transition-all duration-300">
                                 <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/edit-btn.svg"
                                     alt="">
                                 Edit
                             </button>
                             <button
-                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-50 w-[88px] h-[40px] justify-center border border-transparent hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
+                                class="leading-[40px] text-xs font-medium flex gap-[5px] text-danger-600 rounded-[12px] border-[1.50px] border-neutral-200 w-[30%] sm:w-[88px] h-[40px] justify-center border hover:border-[1.5px] hover:border-danger-600 transition-all duration-300">
                                 <img class="h-[12px] w-[12px] mt-auto mb-auto" src="../assets/icons/trash-red.svg"
                                     alt="">
                                 Delete

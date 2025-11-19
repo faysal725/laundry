@@ -22,3 +22,22 @@
 .rs-manage-addresses-form input:focus::placeholder {
     color: transparent;
 }
+
+@media (max-width: 385px) {
+    .rs-manage-addresses-btn {
+        justify-content: space-between !important;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 385px) {
+
+    .rs-manage-addresses-btn button:nth-child(1),
+    .rs-manage-addresses-btn button:nth-child(2) {
+        width: 46%;
+    }
+
+    .rs-manage-addresses-btn button:nth-child(3) {
+        width: 100%;
+    }
+}

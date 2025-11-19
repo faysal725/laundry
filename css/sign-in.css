@@ -17,7 +17,7 @@
     box-shadow: 0 4px 4px -4px rgba(199, 246, 229, 0.3), 0 16px 16px -8px rgba(199, 246, 229, 0.3);
 }
 
-.login-tab a.active {
+.tabs a.active {
     background:
         linear-gradient(4deg, rgba(232, 251, 244, 0.3) 0%, rgba(26, 112, 88, 0.3) 100%),
         var(--color-mint-600);
