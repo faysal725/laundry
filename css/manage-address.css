@@ -41,3 +41,8 @@
         width: 100%;
     }
 }
+@media (max-width: 270px) {
+    .rs-manage-addresses-btn button{
+        width: 100% !important;
+    }
+}
