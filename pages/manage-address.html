@@ -175,25 +175,22 @@
 
 
     <main>
-        <!-- breadcrumb -->
-        <section
-            class="rs-breadcrumb-area bg-[#1A7058] h-[260px] w-full bg-[url('../assets/images/header/breadcrumb.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
-            <div class="rs-breadcrumb-content">
-                <h1
-                    class="rs-breadcrumb-title mb-[5px] sm:mb-[10px] text-[26px] md:text-[30px]  md:text-4xl text-white font-semibold leading-[140%]">
-                    Order Details
-                </h1>
-                <div class="rs-breadcrumb-top-content">
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Dashboard / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">My Orders / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Order #2847</a>
-                </div>
-            </div>
-        </section>
-
         <!-- manage addresses area -->
         <section class="rs-manage-addresses-section pt-[60px] pb-[80px] px-4 xl:px-0">
             <div class="rs-manage-addresses-area max-w-2lg mx-auto">
+                <div class="w-full">
+                    <button
+                        class="text-base font-semibold text-neutral-500 h-12 w-[230px] border border-neutral-200 rounded-xl flex items-center justify-center gap-2 mb-[10px]">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back To Dashboard
+                    </button>
+                    <p class="text-2xl md:text-4xl font-semibold text-left text-gray-700 mb-1">
+                        Manage Addresses
+                    </p>
+                    <p class="text-base md:text-xl text-left text-gray-500 mb-10">
+                        Add or edit delivery addresses for faster checkout
+                    </p>
+                </div>
                 <button onclick="toggleModal('role')"
                     class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white mb-[30px] h-[48px] text-center leading-[48px] w-[190px] sm:w-[290px] rounded-xl">
                     <i class="fa-solid fa-plus mr-[8px]"></i>
