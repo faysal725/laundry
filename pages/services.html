@@ -39,63 +39,6 @@
 <body>
 
 
-
-    <!-- manage-address-modal -->
-    <section id="role" class="modal_container">
-
-        <!-- backdrop -->
-        <div onclick="toggleModal('role')" class="modal_backdrop"></div>
-
-        <!-- modal content -->
-        <div class="modal_content">
-            <form action="#" class="rs-manage-addresses-form">
-                <div class="flex justify-between items-center mb-[30px]">
-                    <h3 class="text-neutral-700 text-lg font-semibold">Add New Address</h3>
-                    <button type="button" onclick="toggleModal('role')"
-                        class="transition-transform duration-300 hover:rotate-90">
-                        <img src="../assets/icons/close.svg" alt="">
-                    </button>
-                </div>
-                <div class="mb-4">
-                    <label class="text-neutral-700 text-base font-medium">Label</label>
-                    <input type="text" placeholder="Example : Home, Office ..."
-                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                </div>
-                <div class="mb-4">
-                    <label class="text-neutral-700 text-base font-medium">Street Address</label>
-                    <input type="text" placeholder="123 Lovely Road, Apt 6B"
-                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                </div>
-                <div class="flex gap-3 mb-4">
-                    <div class="w-[50%]">
-                        <label class="text-neutral-700 text-base font-medium">City</label>
-                        <input type="text" placeholder="New York"
-                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                    </div>
-                    <div class="w-[50%]">
-                        <label class="text-neutral-700 text-base font-medium">State</label>
-                        <input type="text" placeholder="NY"
-                            class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label class="text-neutral-700 text-base font-medium">ZIP Code</label>
-                    <input type="text" placeholder="10003"
-                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                </div>
-                <div class="mb-[30px]">
-                    <label class="text-neutral-700 text-base font-medium">Phone Number</label>
-                    <input type="text" placeholder="+1 (555) 545-5421"
-                        class="w-full h-[40px] mt-2.5 border border-gray-300 rounded-[12px] px-[16px] py-[10px]" />
-                </div>
-                <button
-                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center leading-[48px] w-[100%] rounded-xl">
-                    Save Address
-                </button>
-            </form>
-        </div>
-    </section>
-
     <!-- navbar -->
     <nav class="bg-white sticky top-0 py-4 md:py-6 z-40 shadow-md">
         <section class="max-w-2lg mx-auto px-4 xl:px-0 flex items-center justify-between">
@@ -126,22 +69,30 @@
                     <p>Sign Up</p>
                 </button> -->
 
-                <button class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
-                    <img src="../assets/icons/heart-green.svg" alt="" class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
+                    <img src="../assets/icons/heart-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
 
-                    <span class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
+                    <span
+                        class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
                         3
                     </span>
                 </button>
-                <button class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
-                    <img src="../assets/icons/basket-green.svg" alt="" class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group relative">
+                    <img src="../assets/icons/basket-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
 
-                    <span class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
+                    <span
+                        class="absolute -top-1 -right-2 bg-mint-600 text-xs text-white w-5 h-5 rounded-full flex justify-center items-center">
                         3
                     </span>
                 </button>
-                <button class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group">
-                    <img src="../assets/icons/user-green.svg" alt="" class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
+                <button
+                    class="w-12 h-12 rounded-full flex justify-center items-center border border-mint-100 transition-all duration-150 hover:bg-mint-600 group">
+                    <img src="../assets/icons/user-green.svg" alt=""
+                        class="h-[18px] w-[18px] group-hover:filter group-hover:invert group-hover:brightness-0">
                 </button>
             </div>
 
@@ -198,7 +149,7 @@
     <!-- Overlay -->
     <div id="sidebar-overlay" class="fixed inset-0 bg-black opacity-[.5] z-40 hidden" onclick="closeFilterSidebar()">
     </div>
-    
+
     <!-- Filter Sidebar -->
     <div id="sidebar-filter"
         class="fixed top-0 right-0 w-full max-w-[320px] h-full bg-white text-neutral-900 z-50 transform translate-x-full transition-transform duration-300 shadow-lg">
@@ -240,234 +191,312 @@
 
 
     <main>
-        <!-- breadcrumb -->
-        <section
-            class="rs-breadcrumb-area bg-[#1A7058] h-[260px] w-full bg-[url('../assets/images/header/breadcrumb.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
-            <div class="rs-breadcrumb-content">
-                <h1
-                    class="rs-breadcrumb-title mb-[5px] sm:mb-[10px] text-[26px] md:text-[30px]  md:text-4xl text-white font-semibold leading-[140%]">
-                    All Services
-                </h1>
-                <div class="rs-breadcrumb-top-content">
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Home / </a>
-                    <a href="#" class="text-base md:text-lg text-white font-normal leading-[100%]">Services</a>
-                </div>
-            </div>
-        </section>
 
         <!-- Services area -->
-        <section class="rs-services-section pt-[60px] pb-[100px] px-4 xl:px-0 bg-neutral-50">
-            <div class="rs-services-area max-w-2lg  mx-auto grid grid-cols-1 md:grid-cols-12 gap-[24px]">
+        <section class="pt-[60px] pb-[100px] px-4 xl:px-0 bg-neutral-50">
+            <div class="max-w-2lg  mx-auto grid grid-cols-1 md:grid-cols-12 gap-[24px]">
 
                 <!-- Left Column -->
-                <div class="rs-services-left-area hidden lg:block col-span-12 md:col-span-4 lg:col-span-3">
-                    <div class="rs-services-filter-area bg-white py-6 px-4 rounded-xl">
-                        <h3
-                            class="rs-services-filter-title text-sm md:text-base text-neutral-900 font-semibold leading-[140%] mb-4">
-                            Filter by
-                        </h3>
-                        <form action="#" class="mb-4">
-                            <label class="text-xs font-medium leading-[120%] text-neutral-700">Search</label>
-                            <div class="relative flex items-center">
-                                <img class="absolute rs-filter-search-icon" src="../assets/icons/search-icon.svg"
-                                    alt="">
-                                <input
-                                    class="promo-input filter-input border-[1.50px] mt-[5px] border-neutral-100 leading-[41px] rounded-xl h-[40px] w-full px-[16px] pl-[42px]"
-                                    type="text" placeholder="Search services ...">
+
+                <div class="col-span-12 md:col-span-12 lg:col-span-8">
+                    <div class="p-3 md:p-6 rounded-3xl w-full  bg-white">
+                        <div class="pb-[15px] space-y-[15px] border-b border-neutral-200">
+                            <p class="text-base font-semibold text-start text-neutral-700">
+                                Wash & Fold Service
+                            </p>
+
+                            <div class="flex justify-start items-center flex-wrap gap-3">
+                                <button
+                                    class="transition-all duration-150 h-10 min-w-[110px] px-3 md:px-5 rounded-xl group hover:bg-gradient-to-bl hover:from-mint-600 hover:via-mint-600 hover:to-mint-200  border-[1.5px] border-gray-200 hover:border-transparent">
+                                    <p
+                                        class="text-[10px] md:text-xs font-medium text-center transition-all duration-150 text-gray-500 group-hover:text-white">
+                                        Dresses</p>
+                                </button>
+                                <button
+                                    class="transition-all duration-150 h-10 min-w-[110px] px-3 md:px-5 rounded-xl group hover:bg-gradient-to-bl hover:from-mint-600 hover:via-mint-600 hover:to-mint-200  border-[1.5px] border-gray-200 hover:border-transparent">
+                                    <p
+                                        class="text-[10px] md:text-xs font-medium text-center transition-all duration-150 text-gray-500 group-hover:text-white">
+                                        Blouses</p>
+                                </button>
+                                <button
+                                    class="transition-all duration-150 h-10 min-w-[110px] px-3 md:px-5 rounded-xl group hover:bg-gradient-to-bl hover:from-mint-600 hover:via-mint-600 hover:to-mint-200  border-[1.5px] border-gray-200 hover:border-transparent">
+                                    <p
+                                        class="text-[10px] md:text-xs font-medium text-center transition-all duration-150 text-gray-500 group-hover:text-white">
+                                        Formal Tops</p>
+                                </button>
+
+
                             </div>
-                        </form>
-                        <div class="rs-services-cta">
-                            <h4 class="text-xs font-medium leading-[120%] text-neutral-700 mb-[10px]">
-                                Category
-                            </h4>
-                            <ul>
-                                <li><a class="active" href="#">All Services</a></li>
-                                <li><a href="#">Wash and Fold</a></li>
-                                <li><a href="#">Dry Cleaning</a></li>
-                                <li><a href="#">Ironing</a></li>
-                                <li><a href="#">Shoe Cleaning</a></li>
-                                <li><a href="#">Alterations</a></li>
-                            </ul>
+                        </div>
+
+                        <div class="pt-4 flex flex-col gap-6">
+
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                                <p class="text-base font-semibold text-start text-neutral-700">
+                                    Select your item
+                                </p>
+
+                                <div>
+                                    <label for="search"
+                                        class="flex justify-start items-center gap-3 px-4 rounded-xl w-[235px] border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px]">
+                                        <img src="../assets/icons/search-icon.svg" alt="">
+                                        <input type="text" name="search" id="search" placeholder="Search services ..."
+                                            class="outline-none text-xs text-neutral-400" required="">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                                <!-- card 1 -->
+                                <div class="p-3 flex flex-col gap-7 rounded-xl border border-neutral-200 bg-white">
+                                    <div class="space-y-[10px]">
+                                        <p class="text-sm font-semibold text-left text-neutral-700">
+                                            Smock Dress
+                                        </p>
+
+
+                                        <div class="flex justify-start items-center relative">
+                                            <p class="text-lg font-bold text-start text-mint-600">$10</p>
+                                            <p class="text-xs font-medium text-start text-neutral-500">/items</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+
+                                        <div class="counter_container w-[110px] h-8" id="card-1-counter">
+                                            <button class="decrease text-base font-medium text-center text-neutral-700"
+                                                onclick="counterController('card-1-counter', 'decrease')">
+                                                -
+                                            </button>
+                                            <div class="current_count ">
+                                                0
+                                            </div>
+                                            <button class="increase"
+                                                onclick="counterController('card-1-counter', 'increase')">
+                                                +
+                                            </button>
+                                        </div>
+
+                                        <span
+                                            class="relative px-2.5 py-[5px] rounded-[20px] bg-mint-600 text-[10px] text-left text-white">
+                                            In Cart
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <!-- card 2 -->
+                                <div class="p-3 flex flex-col gap-7 rounded-xl border border-neutral-200 bg-white">
+                                    <div class="space-y-[10px]">
+                                        <p class="text-sm font-semibold text-left text-neutral-700">
+                                            Smock Dress
+                                        </p>
+
+
+                                        <div class="flex justify-start items-center relative">
+                                            <p class="text-lg font-bold text-start text-mint-600">$10</p>
+                                            <p class="text-xs font-medium text-start text-neutral-500">/items</p>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="flex items-center w-full h-10 bg-mint-600 text-white justify-center gap-[10px] text-xs text-mint-600 font-semibold leading-[133%] border-[1.50px] border-neutral-100 rounded-xl">
+
+
+                                        <img class="filter brightness-0 invert" src="../assets/icons/plus-white.svg"
+                                            alt="">
+
+                                        <p class="text-xs font-medium text-center text-white">Add Item</p>
+                                    </button>
+                                </div>
+
+
+                                <!-- card 3 -->
+                                <div class="p-3 flex flex-col gap-7 rounded-xl border border-neutral-200 bg-white">
+                                    <div class="space-y-[10px]">
+                                        <p class="text-sm font-semibold text-left text-neutral-700">
+                                            Smock Dress
+                                        </p>
+
+
+                                        <div class="flex justify-start items-center relative">
+                                            <p class="text-lg font-bold text-start text-mint-600">$10</p>
+                                            <p class="text-xs font-medium text-start text-neutral-500">/items</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+
+                                        <div class="counter_container w-[110px] h-8" id="card-3-counter">
+                                            <button class="decrease text-base font-medium text-center text-neutral-700"
+                                                onclick="counterController('card-3-counter', 'decrease')">
+                                                -
+                                            </button>
+                                            <div class="current_count ">
+                                                0
+                                            </div>
+                                            <button class="increase"
+                                                onclick="counterController('card-3-counter', 'increase')">
+                                                +
+                                            </button>
+                                        </div>
+
+                                        <span
+                                            class="relative px-2.5 py-[5px] rounded-[20px] bg-mint-600 text-[10px] text-left text-white">
+                                            In Cart
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- card 4 -->
+                                <div class="p-3 flex flex-col gap-7 rounded-xl border border-neutral-200 bg-white">
+                                    <div class="space-y-[10px]">
+                                        <p class="text-sm font-semibold text-left text-neutral-700">
+                                            Smock Dress
+                                        </p>
+
+
+                                        <div class="flex justify-start items-center relative">
+                                            <p class="text-lg font-bold text-start text-mint-600">$10</p>
+                                            <p class="text-xs font-medium text-start text-neutral-500">/items</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+
+                                        <div class="counter_container w-[110px] h-8" id="card-4-counter">
+                                            <button class="decrease text-base font-medium text-center text-neutral-700"
+                                                onclick="counterController('card-4-counter', 'decrease')">
+                                                -
+                                            </button>
+                                            <div class="current_count ">
+                                                0
+                                            </div>
+                                            <button class="increase"
+                                                onclick="counterController('card-4-counter', 'increase')">
+                                                +
+                                            </button>
+                                        </div>
+
+                                        <span
+                                            class="relative px-2.5 py-[5px] rounded-[20px] bg-mint-600 text-[10px] text-left text-white">
+                                            In Cart
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- Right Column -->
-                <div class="rs-services-right-area col-span-12 md:col-span-12 lg:col-span-9">
-                    <div class="rs-services-right-top flex items-center justify-between mb-6 flex-wrap gap-4">
-                        <p class="text-lg font-normal leading-[100%] text-neutral-500">Showing 6 services</p>
-                        <!-- filter sidebar opening button  -->
-                        <button
-                            class="h-10 w-10 border border-primary2-600 rounded p-1 flex justify-center items-center ml-auto block lg:hidden"
-                            onclick="toggleFilterSidebar()">
-                            <i class="fa-solid fa-filter"></i>
-                        </button>
-                        <div class="select-dropdown leading-[46px] text-start relative"><span>Sort by:</span> <b class="text-neutral-500">Recommended</b>
-                            <ul class="select-dropdown-option transition-all duration-300 absolute w-full bg-white left-0 top-48px z-10 p-2 opacity-0 invisible">
-                                <li class="pl-4">Sort by: <b>Recommended</b></li>
-                                <li class="pl-4">Sort by: <b>Price</b></li>
-                                <li class="pl-4">Sort by: <b>Rating</b></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
-                        class="rs-services-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                        <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
-                            <div class="rs-services-thumb relative">
-                                <img class="object-contain w-full" src="../assets/images/service/service-01.jpg" alt="">
-                                <div class="thumb-popular">
-                                    Popular
-                                </div>
-                            </div>
-                            <div class="rs-services-content p-4">
-                                <div class="rs-services-rat flex gap-[3px] mb-[10px]">
-                                    <img src="../assets/icons/star-small.svg" alt="">
-                                    <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.9</span>
-                                    <span class="text-sm text-neutral-700 font-normal leading-[140%]">(34)</span>
-                                </div>
-                                <h3 class="text-sm text-neutral-900 font-semibold leading-[140%] mb-[15px]">
-                                    Premium Wash & Fold
-                                </h3>
-                                <p class="text-[13px] text-neutral-500 font-medium leading-[140%] mb-[15px]">
-                                    Professional wash, dry, and fold service with eco friendly detergents</p>
-                                <p class="text-xs text-neutral-500 font-normal leading-[100%] mb-[15px]">By CleanPro
-                                    Laundry</p>
-                                <div class="rs-services-bottom-content flex items-center">
-                                    <h5 class="text-sm text-mint-600 font-semibold leading-[100%]">
-                                        $12.99
-                                    </h5>
-                                    <span
-                                        class="text-sm text-neutral-400 font-normal leading-[100%] line-through ml-[5px]">$15.99</span>
-                                    <button type="submit"
-                                        class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[32px] w-[110px] border-[1.50px] border-neutral-100 rounded-xl">Book
-                                        Now <img src="../assets/icons/green-right-arrow.svg" alt=""></button>
-                                </div>
-                            </div>
+                <div class="col-span-12 lg:col-span-4">
+                    <div class="p-6 px-4 rounded-3xl  bg-white w-full flex flex-col gap-4">
+                        <div>
+                            <p class="text-sm md:text-base font-semibold text-left text-neutral-700">
+                                Your Basket
+                            </p>
                         </div>
 
-                        <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
-                            <div class="rs-services-thumb relative">
-                                <img class="object-contain w-full" src="../assets/images/service/service-02.jpg" alt="">
-                            </div>
-                            <div class="rs-services-content p-4">
-                                <div class="rs-services-rat flex gap-[3px] mb-[10px]">
-                                    <img src="../assets/icons/star-small.svg" alt="">
-                                    <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.8</span>
-                                    <span class="text-sm text-neutral-700 font-normal leading-[140%]">(241)</span>
-                                </div>
-                                <h3 class="text-sm text-neutral-900 font-semibold leading-[140%] mb-[15px]">
-                                    Express Dry Cleaning
-                                </h3>
-                                <p class="text-[13px] text-neutral-500 font-medium leading-[140%] mb-[15px]">
-                                    Same-day dry cleaning for your delicate garments</p>
-                                <p class="text-xs text-neutral-500 font-normal leading-[100%] mb-[15px]">By CleanPro
-                                    Laundry</p>
-                                <div class="rs-services-bottom-content flex items-center">
-                                    <h5 class="text-sm text-mint-600 font-semibold leading-[100%]">
-                                        $24.99
-                                    </h5>
-                                    <button type="submit"
-                                        class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[32px] w-[110px] border-[1.50px] border-neutral-100 rounded-xl">Book
-                                        Now <img src="../assets/icons/green-right-arrow.svg" alt=""></button>
-                                </div>
-                            </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-neutral-200">
+                            <p class="text-[13px] md:text-sm font-medium text-left text-neutral-500">Selected Items</p>
+
+                            <span
+                                class="relative px-2.5 py-[5px] rounded-[20px] bg-mint-600 text-[10px] text-left text-white">
+                                6 items
+                            </span>
                         </div>
 
-                        <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
-                            <div class="rs-services-thumb relative">
-                                <img class="object-contain w-full" src="../assets/images/service/service-03.jpg" alt="">
-                                <div class="thumb-popular thumb-premium">
-                                    Premium
-                                </div>
-                            </div>
-                            <div class="rs-services-content p-4">
-                                <div class="rs-services-rat flex gap-[3px] mb-[10px]">
-                                    <img src="../assets/icons/star-small.svg" alt="">
-                                    <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.9</span>
-                                    <span class="text-sm text-neutral-700 font-normal leading-[140%]">(92)</span>
-                                </div>
-                                <h3 class="text-sm text-neutral-900 font-semibold leading-[140%] mb-[15px]">
-                                    Luxury Wash & Fold
-                                </h3>
-                                <p class="text-[13px] text-neutral-500 font-medium leading-[140%] mb-[15px]">
-                                    Premium service with fabric softener and folding</p>
-                                <p class="text-xs text-neutral-500 font-normal leading-[100%] mb-[15px]">By Premium
-                                    Cleaners</p>
-                                <div class="rs-services-bottom-content flex items-center">
-                                    <h5 class="text-sm text-mint-600 font-semibold leading-[100%]">
-                                        $18.99
-                                    </h5>
-                                    <button type="submit"
-                                        class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[32px] w-[110px] border-[1.50px] border-neutral-100 rounded-xl">Book
-                                        Now <img src="../assets/icons/green-right-arrow.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
-                            <div class="rs-services-thumb relative">
-                                <img class="object-contain w-full" src="../assets/images/service/service-04.jpg" alt="">
-                                <div class="thumb-popular thumb-fast">
-                                    Fast
+                        <!-- items -->
+                        <div class="flex flex-col items-start gap-4 pb-4 border-b border-neutral-200">
+
+                            <!-- item 1 -->
+                            <div class="flex justify-between items-center w-full">
+                                <div class="space-y-[6px]">
+                                    <p class="text-sm font-medium text-left text-neutral-500">Crepe Dress</p>
+                                    <p class="text-xs text-left text-neutral-500">
+                                        3 × $12
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="rs-services-content p-4">
-                                <div class="rs-services-rat flex gap-[3px] mb-[10px]">
-                                    <img src="../assets/icons/star-small.svg" alt="">
-                                    <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.9</span>
-                                    <span class="text-sm text-neutral-700 font-normal leading-[140%]">(94)</span>
-                                </div>
-                                <h3 class="text-sm text-neutral-900 font-semibold leading-[140%] mb-[15px]">
-                                    Shoe Spa Treatment
-                                </h3>
-                                <p class="text-[13px] text-neutral-500 font-medium leading-[140%] mb-[15px]">
-                                    Deep cleaning and restoration for all types of shoes</p>
-                                <p class="text-xs text-neutral-500 font-normal leading-[100%] mb-[15px]">By ShoeCare
-                                    Pro
+                                <p class="text-base font-medium text-right text-mint-600">
+                                    $36.00
                                 </p>
-                                <div class="rs-services-bottom-content flex items-center">
-                                    <h5 class="text-sm text-mint-600 font-semibold leading-[100%]">
-                                        $15.99
-                                    </h5>
-                                    <span
-                                        class="text-sm text-neutral-400 font-normal leading-[100%] line-through ml-[5px]">$24.99</span>
-                                    <button type="submit"
-                                        class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[32px] w-[110px] border-[1.50px] border-neutral-100 rounded-xl">Book
-                                        Now <img src="../assets/icons/green-right-arrow.svg" alt=""></button>
+                            </div>
+
+                            <!-- item 2 -->
+                            <div class="flex justify-between items-center w-full">
+                                <div class="space-y-[6px]">
+                                    <p class="text-sm font-medium text-left text-neutral-500">Crepe Dress</p>
+                                    <p class="text-xs text-left text-neutral-500">
+                                        3 × $12
+                                    </p>
                                 </div>
+                                <p class="text-base font-medium text-right text-mint-600">
+                                    $36.00
+                                </p>
                             </div>
                         </div>
 
-                        <div class="rs-services-box rounded-3xl overflow-hidden bg-white">
-                            <div class="rs-services-thumb relative">
-                                <img class="object-contain w-full" src="../assets/images/service/service-05.jpg" alt="">
-                                <div class="thumb-popular">
-                                    Popular
-                                </div>
+
+
+                        <!-- promo code -->
+                        <div class="pb-4 border-b border-neutral-200 flex flex-col gap-[10px]">
+                            <div class="flex justify-start items-center gap-1">
+                                <img src="../assets/icons/tag.svg" alt="">
+                                <p class="text-[13px] text-left text-[#2bbe90]">Promo Code</p>
                             </div>
-                            <div class="rs-services-content p-4">
-                                <div class="rs-services-rat flex gap-[3px] mb-[10px]">
-                                    <img src="../assets/icons/star-small.svg" alt="">
-                                    <span class="text-sm text-neutral-700 font-medium leading-[140%]">4.9</span>
-                                    <span class="text-sm text-neutral-700 font-normal leading-[140%]">(482)</span>
-                                </div>
-                                <h3 class="text-sm text-neutral-900 font-semibold leading-[140%] mb-[15px]">
-                                    Garment Alterations
-                                </h3>
-                                <p class="text-[13px] text-neutral-500 font-medium leading-[140%] mb-[15px]">
-                                    Professional alterations and repairs by expert tailors</p>
-                                <p class="text-xs text-neutral-500 font-normal leading-[100%] mb-[15px]">By Tailor
-                                    Express</p>
-                                <div class="rs-services-bottom-content flex items-center">
-                                    <h5 class="text-sm text-mint-600 font-semibold leading-[100%]">
-                                        $20.00
-                                    </h5>
-                                    <button type="submit"
-                                        class="flex items-center justify-center gap-[10px] ml-auto text-xs text-mint-600 font-semibold leading-[133%] h-[32px] w-[110px] border-[1.50px] border-neutral-100 rounded-xl">Book
-                                        Now <img src="../assets/icons/green-right-arrow.svg" alt=""></button>
-                                </div>
+                            <form class="promo-code flex flex-row justify-between gap-3">
+                                <label for="promo_code"
+                                    class="flex justify-start items-center px-4 rounded-xl border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px]">
+                                    <input type="text" name="promo_code" id="promo_code" placeholder="Enter promo code"
+                                        class="outline-none text-xs text-neutral-400" required="">
+                                </label>
+                                <button type="submit"
+                                    class="w-auto lg:w-fit h-12 md:h-[40px] relative rounded-xl text-xs font-medium text-center text-neutral-500 border-[1.5px] border-neutral-200  px-6">Apply</button>
+                            </form>
+                        </div>
+
+
+                        <!-- subtotal -->
+                        <div class="pb-4 border-b border-neutral-200 flex flex-col gap-[10px]">
+                            <div class="flex justify-between items-center">
+                                <p class="text-[13px] md:text-sm font-medium text-left text-neutral-500">Subtotal</p>
+                                <p class="text-[13px] md:text-base text-left text-neutral-700">$115.92</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[13px] md:text-sm font-medium text-left text-neutral-500">Delivery Fee
+                                </p>
+                                <p class="text-[13px] md:text-base text-left text-neutral-700">Free</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[13px] md:text-sm font-medium text-left text-neutral-500">Tax &amp; Vat
+                                    (+8%)</p>
+                                <p class="text-[13px] md:text-base text-left text-neutral-700">$9.27</p>
                             </div>
                         </div>
+
+
+
+                        <!-- total -->
+                        <div class="pb-4 border-b border-neutral-200 ">
+                            <div class="flex justify-between items-center p-2.5 rounded-lg bg-mint-50">
+                                <p class="text-base md:text-lg font-semibold text-left text-neutral-700">Total</p>
+                                <p class="text-base md:text-lg font-semibold text-left text-mint-700">$125.19</p>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="flex justify-center items-center h-10 md:h-12 relative overflow-hidden px-5 py-3.5 rounded-xl bg-mint-600 gap-[5px]">
+                            <img class="w-[14px] h-[14px] md:w-6 md:h-6" src="../assets/icons/shield-check.svg" alt="">
+                            <p
+                                class="flex-grow-0 flex-shrink-0 text-xs md:text-base font-semibold text-center text-white">
+                                Place Order — $86.04
+                            </p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -649,6 +678,7 @@
     <script src="../js/sidebar.js"></script>
     <script src="../js/modal.js"></script>
     <script src="../js/select-dropdown.js"></script>
+    <script src="../js/counterHandler.js"></script>
 </body>
 
 </html>
