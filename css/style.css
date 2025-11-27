@@ -437,6 +437,15 @@ body {
 }
 
 /* select dropdown css */
+
+.select-dropdown{
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'><path d='M1 1L6.20209 6.20209L11.4042 1' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px 8px;
+}
+
+
 .select-dropdown:hover .select-dropdown-option {
   opacity: 1;
   visibility: visible;

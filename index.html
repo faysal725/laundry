@@ -34,6 +34,47 @@
 
 <body>
 
+
+
+
+    <!-- manage-address-modal -->
+    <section id="area_modal" class="modal_container">
+
+        <!-- backdrop -->
+        <div onclick="toggleModal('area_modal')" class="modal_backdrop"></div>
+
+        <!-- modal content -->
+        <div class="modal_content w-full max-w-[558px]">
+            <div action="#" class="rs-manage-addresses-form space-y-[30px] ">
+                <div class="flex justify-between items-center mb-[30px]">
+                    <h3 class="text-neutral-700 text-lg font-semibold">Select Area</h3>
+                    <button type="button" onclick="toggleModal('area_modal')"
+                        class="transition-transform duration-300 hover:rotate-90">
+                        <img src="../assets/icons/close.svg" alt="" class="w-4 h-4">
+                    </button>
+                </div>
+
+                <div
+                    class="select-dropdown h-12 relative gap-3.5 px-4 py-2 rounded-lg flex justify-start items-center bg-white border-[1.5px] border-neutral-200 w-full">
+                    <p class="text-sm font-medium text-left text-neutral-700">
+                        Choose your service zone
+                    </p>
+                    <ul
+                        class="select-dropdown-option transition-all duration-300 absolute space-y-2 max-h-20 overflow-y-auto w-full bg-white left-0 top-[48px] z-10 p-2 opacity-0 invisible">
+                        <li class="pl-2">Dhaka</li>
+                        <li class="pl-2">Chittagong</li>
+                        <li class="pl-2">Natore</li>
+                    </ul>
+                </div>
+                <button
+                    class="rs-add-new-address-btn text-sm bg-linear-to-r from-cyan-500 to-blue-500 text-white h-[48px] text-center leading-[48px] w-[100%] rounded-xl">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </section>
+
+
     <!-- navbar -->
     <nav class="bg-white sticky top-0 py-4 md:py-6 z-40">
         <section class="max-w-2lg mx-auto px-4 xl-1:px-0 flex items-center justify-between">
@@ -146,15 +187,26 @@
                         </p>
                     </div>
                     <div class="space-y-6 mt-4 md:mt-9">
-                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
-                            <button class="btn_solid">
-                                <p>Book Now</p>
+
+                        <div
+                            class="flex flex-col md:flex-row justify-start items-center gap-[15px] p-4 rounded-3xl bg-white border-[1.5px] border-mint-600">
+                            <div
+                                class="select-dropdown h-12 relative gap-3.5 px-4 py-2 rounded-lg flex justify-start items-center bg-white border-[1.5px] border-neutral-200 w-full">
+                                <p class="text-sm font-medium text-left text-neutral-700">
+                                    Choose your service zone
+                                </p>
+                                <ul
+                                    class="select-dropdown-option transition-all duration-300 absolute space-y-2 w-full bg-white left-0 top-[48px] z-10 p-2 opacity-0 invisible">
+                                    <li class="pl-2">Dhaka</li>
+                                    <li class="pl-2">Chittagong</li>
+                                    <li class="pl-2">Natore</li>
+                                </ul>
+                            </div>
+
+                            <button onclick="toggleModal('area_modal')" class="btn_solid text-nowrap w-full md:max-w-[200px]">
+                                <p>Browse Services</p>
 
                                 <img src="./assets/icons/arrow-left.svg" alt="">
-                            </button>
-
-                            <button class="btn_outline">
-                                <p>Find Stores Near You</p>
                             </button>
                         </div>
 
@@ -909,7 +961,8 @@
 
             <div class="absolute top-0 right-0 w-full h-full z-0 bg-[#32d3a0]/5"></div>
 
-            <section class=" max-w-2lg mx-auto px-4 xl-1:px-0 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-[70px]">
+            <section
+                class=" max-w-2lg mx-auto px-4 xl-1:px-0 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-[70px]">
                 <div class="flex flex-col justify-center">
                     <div>
                         <p class="headline text-left">Join <span>Our Stores</span> Network</p>
@@ -1466,6 +1519,8 @@
 
     <script src="./js/accordion.js"></script>
     <script src="./js/sidebar.js"></script>
+    <script src="./js/select-dropdown.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
