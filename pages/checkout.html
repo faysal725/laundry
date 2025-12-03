@@ -445,7 +445,7 @@
                                     Schedule</label>
 
                                 <input type="date" id="pickup_schadule" name="Pickup Schedule"
-                                    class="p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1"
+                                    class="p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 outline-none"
                                     required />
                             </div>
 
@@ -456,8 +456,10 @@
                                     Time</label>
 
                                 <select name="pickup time" id="pickup_time"
-                                    class="select-dropdown p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 appearance-none">
+                                    class="select-dropdown p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 appearance-none outline-none disabled:bg-slate-100" >
                                     <option value="">--Select Pickup Slot--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
                                 </select>
                             </div>
 
@@ -468,7 +470,7 @@
                                     Schedule</label>
 
                                 <input type="date" id="delivery_schadule" name="Delivery Schedule"
-                                    class="p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1"
+                                    class="p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 outline-none"
                                     required />
                             </div>
 
@@ -479,7 +481,7 @@
                                     Time</label>
 
                                 <select name="delivery time" id="delivery_time"
-                                    class="select-dropdown p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 appearance-none">
+                                    class="select-dropdown p-3 rounded-md border-[1.5px] border-neutral-100 flex-1 h-12 md:h-[40px] w-full text-xs text-neutral-600 font-normal leading-[140%] mt-1 appearance-none outline-none disabled:bg-slate-100" disabled>
                                     <option value="">--Select Delivery Slot--</option>
                                 </select>
                             </div>
